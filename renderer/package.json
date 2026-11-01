@@ -1,0 +1,33 @@
+{
+  "name": "reelforge-renderer",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Remotion compositions for ReelForge (1080x1920 Instagram Reels)",
+  "type": "module",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "node render.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/fonts": "4.0.535",
+    "@remotion/google-fonts": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "@remotion/transitions": "4.0.535",
+    "d3-geo": "3.1.1",
+    "lucide-static": "1.56.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "remotion": "4.0.535",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/d3-geo": "3.1.0",
+    "@types/react": "19.1.12",
+    "@types/topojson-client": "3.1.5",
+    "typescript": "5.9.2"
+  }
+}

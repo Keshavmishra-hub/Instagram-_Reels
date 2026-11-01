@@ -1,0 +1,187 @@
+{
+  "created_at": "2026-11-01T08:06:27+00:00",
+  "video_file": "output/reel.mp4",
+  "checks": [
+    {
+      "id": "research",
+      "name": "Research is sufficient",
+      "severity": "critical",
+      "status": "pass",
+      "details": "0 claims corroborated by independent/official sources and 10 single-source claims, from 3 sources.",
+      "data": {}
+    },
+    {
+      "id": "claims",
+      "name": "All factual claims are supported",
+      "severity": "critical",
+      "status": "warn",
+      "details": "Every factual sentence cites checked claims (10 used) and every on-screen number is backed, but 10 claim(s) rest on a single source (C1, C10, C2, C3, C4, C5, C6, C7, C8, C9); the source is attributed in the narration. Corroborate with an independent or official source when possible.",
+      "data": {}
+    },
+    {
+      "id": "sources",
+      "name": "Sources are accessible and relevant",
+      "severity": "critical",
+      "status": "pass",
+      "details": "3 cited sources, each with a stored snapshot of the text that was read. Live re-check OK for 3.",
+      "data": {
+        "used": [
+          "S1",
+          "S2",
+          "S3"
+        ]
+      }
+    },
+    {
+      "id": "integrity_language",
+      "name": "No misleading clickbait or hype",
+      "severity": "major",
+      "status": "pass",
+      "details": "No hype/clickbait phrases found in narration, on-screen text or caption.",
+      "data": {}
+    },
+    {
+      "id": "spelling",
+      "name": "Spelling and grammar",
+      "severity": "major",
+      "status": "pass",
+      "details": "No spelling issues or repeated words found in the narration.",
+      "data": {}
+    },
+    {
+      "id": "sync",
+      "name": "Narration and subtitles are synchronised",
+      "severity": "critical",
+      "status": "pass",
+      "details": "Independent ASR (sherpa-onnx/parakeet-tdt): median |offset| 71 ms, 90th percentile 153 ms over 86 matched words.",
+      "data": {
+        "median_ms": 71,
+        "p90_ms": 153
+      }
+    },
+    {
+      "id": "narration",
+      "name": "Narration matches the script (clear audio, pronunciation)",
+      "severity": "major",
+      "status": "pass",
+      "details": "97% of subtitle words matched the recognised speech.",
+      "data": {
+        "unmatched": []
+      }
+    },
+    {
+      "id": "silent_viewing",
+      "name": "Understandable without sound",
+      "severity": "critical",
+      "status": "pass",
+      "details": "Word-by-word captions cover 100% of the narration; text on screen from 0.2s; key numbers highlighted.",
+      "data": {}
+    },
+    {
+      "id": "clipping",
+      "name": "Audio does not clip",
+      "severity": "critical",
+      "status": "pass",
+      "details": "True peak of the encoded file: -1.5 dBTP.",
+      "data": {}
+    },
+    {
+      "id": "audio",
+      "name": "Audio is clear and well balanced",
+      "severity": "major",
+      "status": "pass",
+      "details": "Integrated -14.1 LUFS, true peak -1.5 dBTP; voice sits 19 dB above the music during speech.",
+      "data": {}
+    },
+    {
+      "id": "specs",
+      "name": "Technical specs (1080x1920, 30 fps, H.264/AAC MP4)",
+      "severity": "critical",
+      "status": "pass",
+      "details": "1080x1920, 30/1 fps, h264 High yuv420p, aac 48000 Hz stereo, 42.67s, faststart=True.",
+      "data": {}
+    },
+    {
+      "id": "decode",
+      "name": "Video plays correctly (full decode)",
+      "severity": "critical",
+      "status": "pass",
+      "details": "Decoded 1280 frames (expected 1280) with no errors.",
+      "data": {}
+    },
+    {
+      "id": "black_frames",
+      "name": "No black frames or rendering gaps",
+      "severity": "critical",
+      "status": "pass",
+      "details": "No black or frozen segments detected.",
+      "data": {}
+    },
+    {
+      "id": "assets",
+      "name": "No missing assets",
+      "severity": "critical",
+      "status": "warn",
+      "details": "All referenced media present. Scenes SC4, SC6 use motion graphics because no licensed footage was found.",
+      "data": {}
+    },
+    {
+      "id": "licensing",
+      "name": "All media is licensed and credited",
+      "severity": "critical",
+      "status": "pass",
+      "details": "Every asset has a recorded licence; score is original; fonts OFL; map data public domain.",
+      "data": {}
+    },
+    {
+      "id": "labels",
+      "name": "Illustrative/AI visuals are labelled",
+      "severity": "critical",
+      "status": "pass",
+      "details": "Stock media carries a 'Representative' label; documentary media carries credits; no AI-generated visuals used.",
+      "data": {}
+    },
+    {
+      "id": "visual_relevance",
+      "name": "Visuals are relevant to the narration",
+      "severity": "major",
+      "status": "pass",
+      "details": "Each scene has a stated visual purpose; graphics are generated from the cited claims; 6 different visual types used.",
+      "data": {}
+    },
+    {
+      "id": "pacing",
+      "name": "Hook timing and retention pacing",
+      "severity": "major",
+      "status": "pass",
+      "details": "first word at 0.17s, hook lasts 3.0s, average shot 4.7s, longest 9.2s.",
+      "data": {}
+    },
+    {
+      "id": "duration",
+      "name": "Duration fits the target",
+      "severity": "major",
+      "status": "pass",
+      "details": "42.7s for a 45s target.",
+      "data": {}
+    },
+    {
+      "id": "cover",
+      "name": "Cover image",
+      "severity": "major",
+      "status": "pass",
+      "details": "1080x1920, headline 3 words, readable in the 3:4 grid crop.",
+      "data": {}
+    },
+    {
+      "id": "caption",
+      "name": "Caption, hashtags, sources",
+      "severity": "major",
+      "status": "pass",
+      "details": "970 characters, 5 hashtags, sources included.",
+      "data": {}
+    }
+  ],
+  "passed": true,
+  "summary": "PASSED - ready to publish; 2 warning(s) to review."
+}

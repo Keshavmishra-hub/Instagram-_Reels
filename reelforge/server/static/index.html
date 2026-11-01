@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReelForge Studio</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#/new"><span class="logo-mark">▶</span> ReelForge <span class="logo-sub">Studio</span></a>
+    <div id="caps" class="caps"></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="btn btn-primary btn-block" href="#/new">+ New reel</a>
+      <div class="sidebar-title">Projects</div>
+      <div id="projects" class="project-list"></div>
+    </aside>
+    <main id="main" class="main"></main>
+  </div>
+  <div id="toast" class="toast hidden"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

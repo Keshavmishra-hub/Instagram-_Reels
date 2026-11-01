@@ -1,0 +1,5 @@
+# Optional speech recognition for subtitle-sync QC and for aligning cloud TTS voices.
+# Offline English (Parakeet-TDT via sherpa-onnx; model downloaded by `python -m reelforge setup-models --asr`):
+sherpa-onnx==2.0.1
+# Multilingual alternative (Whisper; models download automatically from Hugging Face on first use):
+# faster-whisper

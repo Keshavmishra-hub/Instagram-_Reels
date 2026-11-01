@@ -1,0 +1,66 @@
+{
+  "id": "indias-solar-power-surge-2015-2025-902201",
+  "created_at": "2026-11-01T07:45:20+00:00",
+  "updated_at": "2026-11-01T08:06:27+00:00",
+  "settings": {
+    "topic": "India's solar power surge, 2015-2025",
+    "language": "en",
+    "duration": 45,
+    "style": "science",
+    "narration": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 1.0,
+      "tone": "auto"
+    },
+    "brand": "default",
+    "music_mood": "uplifting",
+    "music_level_db": -12.0,
+    "audience": "Indian students, professionals and anyone curious about energy",
+    "angle": ""
+  },
+  "stages": {
+    "research": {
+      "status": "done",
+      "updated_at": "2026-11-01T07:45:23+00:00",
+      "message": "Ten specific, mechanically checkable figures from one reputable compiled dataset; enough for a short data story if the source is attributed. All usable claims rest on a single source, so the script must attribute them to that source."
+    },
+    "script": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:00:17+00:00",
+      "message": "10 beats (claude_code (Claude Code mode))"
+    },
+    "storyboard": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:00:17+00:00",
+      "message": "9 scenes (claude_code (Claude Code mode))"
+    },
+    "voice": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:00:35+00:00",
+      "message": ""
+    },
+    "assets": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:00:35+00:00",
+      "message": ""
+    },
+    "render": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:03:51+00:00",
+      "message": ""
+    },
+    "qc": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:06:27+00:00",
+      "message": "PASSED - ready to publish; 2 warning(s) to review."
+    },
+    "package": {
+      "status": "done",
+      "updated_at": "2026-11-01T08:05:44+00:00",
+      "message": ""
+    }
+  },
+  "complete": true,
+  "complete_reason": "PASSED - ready to publish; 2 warning(s) to review."
+}

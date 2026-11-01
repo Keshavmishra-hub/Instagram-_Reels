@@ -1,0 +1,32 @@
+# Brand kit: controls typography, colours, subtitles and the on-screen handle.
+# Copy this file to brands/<name>.yaml to create another brand; it appears in the UI automatically.
+name: "Midnight Documentary"
+handle: "@yourhandle"          # shown as a small watermark; set to "" to hide
+watermark: true
+progress_bar: true
+colors:
+  background: "#0A0F1C"
+  surface: "#121A2E"
+  primary: "#FFC93C"           # accent: highlights, key numbers, active subtitle word
+  secondary: "#4FD1C5"
+  text: "#FFFFFF"
+  muted: "#A3ADC6"
+  danger: "#FF6B6B"
+  map_ocean: "#060A14"
+  map_land: "#1B2540"
+  map_border: "#2F3D63"
+fonts:                         # Latin script; other scripts use languages.FONT_STACKS
+  display: "Anton"
+  body: "Inter"
+  subtitle: "Montserrat"
+subtitles:
+  case: "upper"                # upper | sentence
+  size: 64
+  max_words: 3
+  max_chars: 22
+  style: "outline"             # outline | box
+grade:
+  vignette: 0.42
+  grain: 0.05
+  contrast: 1.06
+  saturation: 1.04

@@ -1,0 +1,27 @@
+# Core (Python 3.10+)
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.33
+pydantic==2.14.2
+python-dotenv==1.2.4
+PyYAML==6.0.3
+requests==2.34.2
+beautifulsoup4==4.15.0
+trafilatura==2.3.1
+pypdf==6.1.1
+rapidfuzz==3.14.6
+pyspellchecker==0.9.1
+num2words==0.5.14
+numpy==2.5.4
+scipy==1.18.1
+soundfile==0.14.0
+pillow==13.0.0
+# Claude API (official Anthropic SDK)
+anthropic==2.3.0
+# Local neural TTS (Kokoro-82M via ONNX) + graph patch for exact word timings
+kokoro-onnx==0.6.1
+onnxruntime==1.31.1
+onnx==1.23.2
+# Tests
+pytest==9.2.0
+httpx==0.28.1

@@ -1,0 +1,251 @@
+{
+  "music_mood": "uplifting",
+  "cover": {
+    "headline": "India's solar surge",
+    "highlight": "solar",
+    "kicker": "2015 → 2025",
+    "beat_id": "B6"
+  },
+  "scenes": [
+    {
+      "beat_ids": [
+        "B1"
+      ],
+      "transition": "cut",
+      "subtitle_position": "lower",
+      "visual": {
+        "kind": "map",
+        "purpose": "Open on a turning globe that lands on India: sets the place and the open question in the first second.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "center": [
+            78.9,
+            22.5
+          ],
+          "from": [
+            20,
+            10
+          ],
+          "zoom": 1.9,
+          "highlight": [
+            "India"
+          ],
+          "marker": {
+            "lon": 78.9,
+            "lat": 22.5,
+            "label": "India",
+            "sublabel": "#3 in solar power, 2025"
+          },
+          "title": "Only two countries made more solar power"
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B2"
+      ],
+      "transition": "slide_up",
+      "subtitle_position": "lower",
+      "visual": {
+        "kind": "icon",
+        "purpose": "Show where the numbers come from before using them.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "icons": [
+            "database",
+            "zap"
+          ],
+          "label": "Ember electricity data",
+          "caption": "2025 · compiled by Our World in Data"
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B3"
+      ],
+      "transition": "whip",
+      "subtitle_position": "lower",
+      "sfx": "whoosh",
+      "visual": {
+        "kind": "kinetic",
+        "purpose": "A fast 'rewind' beat that resets the timeline before the 2015 baseline.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "text": "Rewind to 2015",
+          "highlight": [
+            "2015"
+          ]
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B4"
+      ],
+      "transition": "zoom",
+      "subtitle_position": "lower",
+      "background_queries": [
+        "solar panels field sunrise"
+      ],
+      "visual": {
+        "kind": "stat",
+        "purpose": "Make the tiny 2015 starting point unmissable.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "value": 0.54,
+          "decimals": 2,
+          "suffix": "%",
+          "label": "of India's electricity came from solar",
+          "kicker": "2015"
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B5",
+        "B6"
+      ],
+      "transition": "whip",
+      "subtitle_position": "lower",
+      "visual": {
+        "kind": "chart",
+        "purpose": "Draw the growth curve while the two numbers are spoken.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "type": "line",
+          "title": "India's solar generation",
+          "unit": "terawatt-hours (TWh) per year",
+          "decimals": 0,
+          "data": [
+            {
+              "label": "2015",
+              "value": 7.09
+            },
+            {
+              "label": "2017",
+              "value": 22.36
+            },
+            {
+              "label": "2020",
+              "value": 52.91
+            },
+            {
+              "label": "2022",
+              "value": 95.92
+            },
+            {
+              "label": "2025",
+              "value": 195.99
+            }
+          ]
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B7"
+      ],
+      "transition": "zoom",
+      "subtitle_position": "lower",
+      "sfx": "pop",
+      "background_queries": [
+        "rooftop solar panels india"
+      ],
+      "visual": {
+        "kind": "stat",
+        "purpose": "Contrast with the 2015 share.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "value": 9.4,
+          "decimals": 1,
+          "suffix": "%",
+          "label": "of India's electricity came from solar",
+          "kicker": "2025",
+          "sublabel": "up from 0.54% in 2015"
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B8"
+      ],
+      "transition": "whip",
+      "subtitle_position": "lower",
+      "sfx": "impact",
+      "visual": {
+        "kind": "chart",
+        "purpose": "Payoff: reveal the two countries ahead, with India highlighted.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "type": "bar",
+          "title": "Solar electricity, 2025",
+          "unit": "terawatt-hours (TWh)",
+          "decimals": 0,
+          "highlight": 2,
+          "data": [
+            {
+              "label": "China",
+              "value": 1174.96
+            },
+            {
+              "label": "United States",
+              "value": 388.82
+            },
+            {
+              "label": "India",
+              "value": 195.99
+            }
+          ]
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B9"
+      ],
+      "transition": "slide_left",
+      "subtitle_position": "lower",
+      "visual": {
+        "kind": "comparison",
+        "purpose": "Keep the context, revealing each share as it is spoken: coal first, then renewables.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "title": "India's electricity, 2025",
+          "left": {
+            "label": "Coal",
+            "value": "71%",
+            "note": "share of generation",
+            "at_word": 1
+          },
+          "right": {
+            "label": "All renewables",
+            "value": "24%",
+            "note": "hydro, wind, solar, bioenergy",
+            "at_word": 9
+          }
+        }
+      }
+    },
+    {
+      "beat_ids": [
+        "B10"
+      ],
+      "transition": "fade",
+      "subtitle_position": "lower",
+      "visual": {
+        "kind": "icon",
+        "purpose": "Invite viewers to share what they see locally.",
+        "authenticity": "generated_graphic",
+        "params": {
+          "icons": [
+            "solar-panel",
+            "house"
+          ],
+          "label": "Seen solar near you?",
+          "caption": "Tell us in the comments"
+        }
+      }
+    }
+  ]
+}

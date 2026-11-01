@@ -1,0 +1,457 @@
+{
+  "topic": "India's solar power surge, 2015-2025",
+  "language": "en",
+  "created_at": "2026-11-01T07:45:21+00:00",
+  "method": "claude_code: research by Claude Code; dataset files downloaded and every figure recomputed by ReelForge from its own download",
+  "summary": "Ember's yearly electricity data, compiled by Our World in Data (OWID) in its energy dataset, shows India's solar electricity generation rising from 7.09 TWh in 2015 to 195.99 TWh in 2025, lifting solar's share of India's electricity from 0.541% to 9.415%. Among individual countries in the dataset, India ranked third for solar generation in 2025, behind China and the United States. Coal still generated 70.818% of India's electricity in 2025, while all renewables together generated 24.067%.",
+  "angles": [
+    "Only two countries generated more solar electricity than India in 2025 (curiosity hook, verified ranking).",
+    "Solar's share of India's electricity went from about half a percent (2015) to over 9% (2025).",
+    "Context matters: coal still dominates India's electricity mix even as solar grows."
+  ],
+  "uncertainties": [
+    "The 2025 figures come from Ember's 2026 data release; latest-year values can be revised in later releases.",
+    "The legacy OWID file reports exactly 37.45 TWh of Indian solar generation for both 2018 and 2019; identical values suggest a data artifact, so those two years are not used.",
+    "Rankings compare individual countries only (regional aggregates such as 'World' or 'Asia' are excluded) and depend on the countries covered by the dataset.",
+    "OWID notes its energy dataset has moved to a new methodology for primary energy; electricity-generation figures in the new files may differ slightly from this legacy release."
+  ],
+  "limitations": [
+    "From this build environment only GitHub-hosted files were reachable. Primary publisher sites (ember-energy.org, energyinst.org, ourworldindata.org, government sites) could not be opened, so every claim rests on one compiled source and is attributed to it in the script.",
+    "The legacy OWID energy dataset is no longer updated (stated in its README)."
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv",
+      "final_url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv",
+      "title": "owid-energy-data.csv - Our World in Data energy dataset (legacy release)",
+      "publisher": "Our World in Data",
+      "domain": "raw.githubusercontent.com",
+      "tier": "reference",
+      "primary": false,
+      "published": "2026",
+      "accessed_at": "2026-11-01T07:45:21+00:00",
+      "access_method": "app_fetch",
+      "http_status": 200,
+      "snapshot_file": "sources/S1.txt",
+      "snapshot_sha256": "266f2e2baad7975351bc9bb4aa061d22b1da9fe4c47d51d2ac6071e01e171f76",
+      "snapshot_kind": "raw_text",
+      "last_check": "2026-11-01T07:45:22+00:00",
+      "notes": "Electricity figures compiled from Ember's Yearly Electricity Data (2026) and the Energy Institute Statistical Review (2025). [fetched by app]"
+    },
+    {
+      "id": "S2",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv",
+      "final_url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv",
+      "title": "owid-energy-codebook.csv - variable definitions and sources",
+      "publisher": "Our World in Data",
+      "domain": "raw.githubusercontent.com",
+      "tier": "reference",
+      "primary": false,
+      "published": "2026",
+      "accessed_at": "2026-11-01T07:45:21+00:00",
+      "access_method": "app_fetch",
+      "http_status": 200,
+      "snapshot_file": "sources/S2.txt",
+      "snapshot_sha256": "3cc9b7db0d921496e2988568ce3aee5ed41f50431dd234a0663b5f0a4b2e32bb",
+      "snapshot_kind": "raw_text",
+      "last_check": "2026-11-01T07:45:22+00:00",
+      "notes": "[fetched by app]"
+    },
+    {
+      "id": "S3",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/README.md",
+      "final_url": "https://raw.githubusercontent.com/owid/energy-data/master/README.md",
+      "title": "Data on Energy by Our World in Data - README",
+      "publisher": "Our World in Data",
+      "domain": "raw.githubusercontent.com",
+      "tier": "reference",
+      "primary": false,
+      "published": "2026",
+      "accessed_at": "2026-11-01T07:45:21+00:00",
+      "access_method": "app_fetch",
+      "http_status": 200,
+      "snapshot_file": "sources/S3.txt",
+      "snapshot_sha256": "d014045a2eeb06343f9f107af80c2e86959df320525faf16cfb9155f9f3007d0",
+      "snapshot_kind": "raw_text",
+      "last_check": "2026-11-01T07:45:22+00:00",
+      "notes": "[fetched by app]"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "statement": "In 2025, India generated the third-most solar electricity of any country in the dataset, behind China and the United States.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Ranking of 90 entities by solar_electricity [year=2025], aggregates excluded: 1. China = 1174.960; 2. United States = 388.820; 3. India = 195.990. India ranks #3.",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "rank",
+            "group": {
+              "year": "2025"
+            },
+            "column": "solar_electricity",
+            "entity_column": "country",
+            "entity": "India",
+            "exclude_if": {
+              "iso_code": [
+                "",
+                "OWID_*"
+              ]
+            },
+            "top": 3
+          }
+        }
+      ],
+      "as_of": "2025",
+      "caveats": "Countries only; regional aggregates excluded. 2025 values are from Ember's 2026 release and may be revised.",
+      "numbers": [
+        "2025"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C2",
+      "statement": "Solar power generated 0.541% of India's electricity in 2015.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2015]: solar_share_elec = 0.541",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2015"
+            },
+            "column": "solar_share_elec"
+          }
+        }
+      ],
+      "as_of": "2015",
+      "caveats": "",
+      "numbers": [
+        "0.541",
+        "2015"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C3",
+      "statement": "India generated 7.09 terawatt-hours of solar electricity in 2015.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2015]: solar_electricity = 7.090",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2015"
+            },
+            "column": "solar_electricity"
+          }
+        }
+      ],
+      "as_of": "2015",
+      "caveats": "",
+      "numbers": [
+        "7.09",
+        "2015"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C4",
+      "statement": "India generated 195.99 terawatt-hours of solar electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2025]: solar_electricity = 195.990",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "solar_electricity"
+          }
+        }
+      ],
+      "as_of": "2025",
+      "caveats": "Latest-year figure; may be revised.",
+      "numbers": [
+        "195.99",
+        "2025"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C5",
+      "statement": "Solar power generated 9.415% of India's electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2025]: solar_share_elec = 9.415",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "solar_share_elec"
+          }
+        }
+      ],
+      "as_of": "2025",
+      "caveats": "Latest-year figure; may be revised.",
+      "numbers": [
+        "9.415",
+        "2025"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C6",
+      "statement": "Coal generated 70.818% of India's electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2025]: coal_share_elec = 70.818",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "coal_share_elec"
+          }
+        }
+      ],
+      "as_of": "2025",
+      "caveats": "",
+      "numbers": [
+        "70.818",
+        "2025"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C7",
+      "statement": "Renewable sources together generated 24.067% of India's electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2025]: renewables_share_elec = 24.067",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "renewables_share_elec"
+          }
+        }
+      ],
+      "as_of": "2025",
+      "caveats": "Renewables include hydro, wind, solar and bioenergy.",
+      "numbers": [
+        "24.067",
+        "2025"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C8",
+      "statement": "India's solar electricity generation was 7.09 TWh in 2015, 22.36 TWh in 2017, 52.91 TWh in 2020, 95.92 TWh in 2022 and 195.99 TWh in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2015]: solar_electricity = 7.090",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2015"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2017]: solar_electricity = 22.360",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2017"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2020]: solar_electricity = 52.910",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2020"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2022]: solar_electricity = 95.920",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2022"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "quote": "Dataset row [country=India, year=2025]: solar_electricity = 195.990",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "solar_electricity"
+          }
+        }
+      ],
+      "as_of": "2015-2025",
+      "caveats": "2018 and 2019 omitted because the legacy file reports identical values for both years.",
+      "numbers": [
+        "7.09",
+        "2015",
+        "22.36",
+        "2017",
+        "52.91",
+        "2020",
+        "95.92",
+        "2022",
+        "195.99",
+        "2025"
+      ],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C9",
+      "statement": "The dataset's solar electricity figures are sourced from Ember's Yearly Electricity Data.",
+      "category": "definition",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S2",
+          "quote": "solar_electricity,Electricity generation from solar power,Measured in terawatt-hours.,terawatt-hours (TWh),Ember - Yearly Electricity Data Europe (2026)",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": null
+        }
+      ],
+      "as_of": null,
+      "caveats": "",
+      "numbers": [],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    },
+    {
+      "id": "C10",
+      "statement": "Our World in Data compiles the energy dataset; this legacy release is no longer updated.",
+      "category": "other",
+      "certainty": "established",
+      "status": "single_source",
+      "evidence": [
+        {
+          "source_id": "S3",
+          "quote": "It remains available for download but is no longer updated.",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": null
+        },
+        {
+          "source_id": "S3",
+          "quote": "Our complete energy dataset is a collection of key metrics compiled by",
+          "verification": "exact",
+          "match_score": 100.0,
+          "data": null
+        }
+      ],
+      "as_of": null,
+      "caveats": "",
+      "numbers": [],
+      "use_in_script": true,
+      "notes": "Only one independent source; corroborate or attribute it in the script."
+    }
+  ],
+  "sufficiency": {
+    "enough": true,
+    "reason": "Ten specific, mechanically checkable figures from one reputable compiled dataset; enough for a short data story if the source is attributed. All usable claims rest on a single source, so the script must attribute them to that source."
+  },
+  "approved": true,
+  "approved_at": "2026-11-01T07:45:35+00:00"
+}

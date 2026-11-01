@@ -1,0 +1,1174 @@
+{
+  "duration": 42.68,
+  "narration_file": "audio/narration.wav",
+  "sample_rate": 48000,
+  "provider": "kokoro",
+  "voice": "af_heart",
+  "alignment": "kokoro-durations",
+  "beats": [
+    {
+      "beat_id": "B1",
+      "start": 0.12,
+      "end": 3.09,
+      "audio_file": "audio/beat_B1.wav"
+    },
+    {
+      "beat_id": "B2",
+      "start": 3.37,
+      "end": 7.47,
+      "audio_file": "audio/beat_B2.wav"
+    },
+    {
+      "beat_id": "B3",
+      "start": 7.71,
+      "end": 9.31,
+      "audio_file": "audio/beat_B3.wav"
+    },
+    {
+      "beat_id": "B4",
+      "start": 9.55,
+      "end": 14.15,
+      "audio_file": "audio/beat_B4.wav"
+    },
+    {
+      "beat_id": "B5",
+      "start": 14.43,
+      "end": 18.22,
+      "audio_file": "audio/beat_B5.wav"
+    },
+    {
+      "beat_id": "B6",
+      "start": 18.46,
+      "end": 23.44,
+      "audio_file": "audio/beat_B6.wav"
+    },
+    {
+      "beat_id": "B7",
+      "start": 23.68,
+      "end": 27.42,
+      "audio_file": "audio/beat_B7.wav"
+    },
+    {
+      "beat_id": "B8",
+      "start": 27.76,
+      "end": 31.68,
+      "audio_file": "audio/beat_B8.wav"
+    },
+    {
+      "beat_id": "B9",
+      "start": 32.02,
+      "end": 38.57,
+      "audio_file": "audio/beat_B9.wav"
+    },
+    {
+      "beat_id": "B10",
+      "start": 38.81,
+      "end": 41.28,
+      "audio_file": "audio/beat_B10.wav"
+    }
+  ],
+  "words": [
+    {
+      "text": "Only",
+      "start": 0.171,
+      "end": 0.446,
+      "beat_id": "B1",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "two",
+      "start": 0.521,
+      "end": 0.671,
+      "beat_id": "B1",
+      "index": 1,
+      "emphasis": true
+    },
+    {
+      "text": "countries",
+      "start": 0.721,
+      "end": 1.396,
+      "beat_id": "B1",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "made",
+      "start": 1.471,
+      "end": 1.596,
+      "beat_id": "B1",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "more",
+      "start": 1.646,
+      "end": 1.821,
+      "beat_id": "B1",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "solar",
+      "start": 1.896,
+      "end": 2.171,
+      "beat_id": "B1",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "power",
+      "start": 2.221,
+      "end": 2.496,
+      "beat_id": "B1",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "than",
+      "start": 2.546,
+      "end": 2.621,
+      "beat_id": "B1",
+      "index": 7,
+      "emphasis": false
+    },
+    {
+      "text": "India.",
+      "start": 2.671,
+      "end": 3.107,
+      "beat_id": "B1",
+      "index": 8,
+      "emphasis": false
+    },
+    {
+      "text": "That's",
+      "start": 3.421,
+      "end": 3.646,
+      "beat_id": "B2",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "2025",
+      "start": 3.696,
+      "end": 4.571,
+      "beat_id": "B2",
+      "index": 1,
+      "emphasis": true
+    },
+    {
+      "text": "data",
+      "start": 4.621,
+      "end": 4.896,
+      "beat_id": "B2",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "from",
+      "start": 4.946,
+      "end": 5.071,
+      "beat_id": "B2",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "Ember,",
+      "start": 5.121,
+      "end": 5.621,
+      "beat_id": "B2",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "compiled",
+      "start": 5.771,
+      "end": 6.246,
+      "beat_id": "B2",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "by",
+      "start": 6.296,
+      "end": 6.421,
+      "beat_id": "B2",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "Our",
+      "start": 6.446,
+      "end": 6.546,
+      "beat_id": "B2",
+      "index": 7,
+      "emphasis": false
+    },
+    {
+      "text": "World",
+      "start": 6.596,
+      "end": 6.896,
+      "beat_id": "B2",
+      "index": 8,
+      "emphasis": false
+    },
+    {
+      "text": "in",
+      "start": 6.946,
+      "end": 7.046,
+      "beat_id": "B2",
+      "index": 9,
+      "emphasis": false
+    },
+    {
+      "text": "Data.",
+      "start": 7.096,
+      "end": 7.466,
+      "beat_id": "B2",
+      "index": 10,
+      "emphasis": false
+    },
+    {
+      "text": "Rewind",
+      "start": 7.808,
+      "end": 8.283,
+      "beat_id": "B3",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "to",
+      "start": 8.333,
+      "end": 8.408,
+      "beat_id": "B3",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "2015.",
+      "start": 8.458,
+      "end": 9.331,
+      "beat_id": "B3",
+      "index": 2,
+      "emphasis": true
+    },
+    {
+      "text": "Solar",
+      "start": 9.669,
+      "end": 10.044,
+      "beat_id": "B4",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "supplied",
+      "start": 10.094,
+      "end": 10.469,
+      "beat_id": "B4",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "just",
+      "start": 10.519,
+      "end": 10.769,
+      "beat_id": "B4",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "0.54%",
+      "start": 10.869,
+      "end": 12.769,
+      "beat_id": "B4",
+      "index": 3,
+      "emphasis": true
+    },
+    {
+      "text": "of",
+      "start": 12.869,
+      "end": 12.969,
+      "beat_id": "B4",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "India's",
+      "start": 13.019,
+      "end": 13.419,
+      "beat_id": "B4",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "electricity.",
+      "start": 13.469,
+      "end": 14.158,
+      "beat_id": "B4",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "Its",
+      "start": 14.503,
+      "end": 14.628,
+      "beat_id": "B5",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "solar",
+      "start": 14.678,
+      "end": 14.953,
+      "beat_id": "B5",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "plants",
+      "start": 15.003,
+      "end": 15.553,
+      "beat_id": "B5",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "generated",
+      "start": 15.653,
+      "end": 16.153,
+      "beat_id": "B5",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "about",
+      "start": 16.178,
+      "end": 16.428,
+      "beat_id": "B5",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "7",
+      "start": 16.528,
+      "end": 16.828,
+      "beat_id": "B5",
+      "index": 5,
+      "emphasis": true
+    },
+    {
+      "text": "terawatt-hours",
+      "start": 16.903,
+      "end": 17.703,
+      "beat_id": "B5",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "that",
+      "start": 17.753,
+      "end": 17.903,
+      "beat_id": "B5",
+      "index": 7,
+      "emphasis": false
+    },
+    {
+      "text": "year.",
+      "start": 17.953,
+      "end": 18.206,
+      "beat_id": "B5",
+      "index": 8,
+      "emphasis": false
+    },
+    {
+      "text": "By",
+      "start": 18.498,
+      "end": 18.648,
+      "beat_id": "B6",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "2025,",
+      "start": 18.698,
+      "end": 19.923,
+      "beat_id": "B6",
+      "index": 1,
+      "emphasis": true
+    },
+    {
+      "text": "that",
+      "start": 20.048,
+      "end": 20.198,
+      "beat_id": "B6",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "had",
+      "start": 20.223,
+      "end": 20.323,
+      "beat_id": "B6",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "climbed",
+      "start": 20.373,
+      "end": 20.748,
+      "beat_id": "B6",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "to",
+      "start": 20.823,
+      "end": 20.923,
+      "beat_id": "B6",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "about",
+      "start": 20.973,
+      "end": 21.223,
+      "beat_id": "B6",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "196",
+      "start": 21.273,
+      "end": 22.423,
+      "beat_id": "B6",
+      "index": 7,
+      "emphasis": true
+    },
+    {
+      "text": "terawatt-hours.",
+      "start": 22.473,
+      "end": 23.421,
+      "beat_id": "B6",
+      "index": 8,
+      "emphasis": false
+    },
+    {
+      "text": "Solar's",
+      "start": 23.803,
+      "end": 24.178,
+      "beat_id": "B7",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "share",
+      "start": 24.253,
+      "end": 24.453,
+      "beat_id": "B7",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "of",
+      "start": 24.478,
+      "end": 24.528,
+      "beat_id": "B7",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "India's",
+      "start": 24.578,
+      "end": 24.903,
+      "beat_id": "B7",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "power",
+      "start": 24.953,
+      "end": 25.528,
+      "beat_id": "B7",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "rose",
+      "start": 25.628,
+      "end": 25.853,
+      "beat_id": "B7",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "to",
+      "start": 25.903,
+      "end": 25.978,
+      "beat_id": "B7",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "9.4%.",
+      "start": 26.028,
+      "end": 27.413,
+      "beat_id": "B7",
+      "index": 7,
+      "emphasis": true
+    },
+    {
+      "text": "The",
+      "start": 27.808,
+      "end": 27.908,
+      "beat_id": "B8",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "only",
+      "start": 27.958,
+      "end": 28.283,
+      "beat_id": "B8",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "two",
+      "start": 28.358,
+      "end": 28.533,
+      "beat_id": "B8",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "countries",
+      "start": 28.583,
+      "end": 28.983,
+      "beat_id": "B8",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "ahead",
+      "start": 29.033,
+      "end": 29.208,
+      "beat_id": "B8",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "of",
+      "start": 29.233,
+      "end": 29.283,
+      "beat_id": "B8",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "India?",
+      "start": 29.333,
+      "end": 29.933,
+      "beat_id": "B8",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "China",
+      "start": 30.133,
+      "end": 30.583,
+      "beat_id": "B8",
+      "index": 7,
+      "emphasis": true
+    },
+    {
+      "text": "and",
+      "start": 30.633,
+      "end": 30.708,
+      "beat_id": "B8",
+      "index": 8,
+      "emphasis": false
+    },
+    {
+      "text": "the",
+      "start": 30.733,
+      "end": 30.783,
+      "beat_id": "B8",
+      "index": 9,
+      "emphasis": false
+    },
+    {
+      "text": "United",
+      "start": 30.808,
+      "end": 31.133,
+      "beat_id": "B8",
+      "index": 10,
+      "emphasis": true
+    },
+    {
+      "text": "States.",
+      "start": 31.183,
+      "end": 31.664,
+      "beat_id": "B8",
+      "index": 11,
+      "emphasis": true
+    },
+    {
+      "text": "Still,",
+      "start": 32.125,
+      "end": 32.575,
+      "beat_id": "B9",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "coal",
+      "start": 32.7,
+      "end": 32.975,
+      "beat_id": "B9",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "produced",
+      "start": 33.025,
+      "end": 33.4,
+      "beat_id": "B9",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "about",
+      "start": 33.425,
+      "end": 33.7,
+      "beat_id": "B9",
+      "index": 3,
+      "emphasis": false
+    },
+    {
+      "text": "71%",
+      "start": 33.8,
+      "end": 34.75,
+      "beat_id": "B9",
+      "index": 4,
+      "emphasis": true
+    },
+    {
+      "text": "of",
+      "start": 34.775,
+      "end": 34.85,
+      "beat_id": "B9",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "India's",
+      "start": 34.9,
+      "end": 35.3,
+      "beat_id": "B9",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "electricity,",
+      "start": 35.35,
+      "end": 36.325,
+      "beat_id": "B9",
+      "index": 7,
+      "emphasis": false
+    },
+    {
+      "text": "and",
+      "start": 36.475,
+      "end": 36.55,
+      "beat_id": "B9",
+      "index": 8,
+      "emphasis": false
+    },
+    {
+      "text": "renewables",
+      "start": 36.6,
+      "end": 37.175,
+      "beat_id": "B9",
+      "index": 9,
+      "emphasis": false
+    },
+    {
+      "text": "about",
+      "start": 37.225,
+      "end": 37.45,
+      "beat_id": "B9",
+      "index": 10,
+      "emphasis": false
+    },
+    {
+      "text": "24%.",
+      "start": 37.525,
+      "end": 38.559,
+      "beat_id": "B9",
+      "index": 11,
+      "emphasis": true
+    },
+    {
+      "text": "Have",
+      "start": 38.879,
+      "end": 39.004,
+      "beat_id": "B10",
+      "index": 0,
+      "emphasis": false
+    },
+    {
+      "text": "you",
+      "start": 39.029,
+      "end": 39.104,
+      "beat_id": "B10",
+      "index": 1,
+      "emphasis": false
+    },
+    {
+      "text": "seen",
+      "start": 39.154,
+      "end": 39.379,
+      "beat_id": "B10",
+      "index": 2,
+      "emphasis": false
+    },
+    {
+      "text": "solar",
+      "start": 39.454,
+      "end": 39.754,
+      "beat_id": "B10",
+      "index": 3,
+      "emphasis": true
+    },
+    {
+      "text": "panels",
+      "start": 39.804,
+      "end": 40.229,
+      "beat_id": "B10",
+      "index": 4,
+      "emphasis": false
+    },
+    {
+      "text": "spreading",
+      "start": 40.304,
+      "end": 40.629,
+      "beat_id": "B10",
+      "index": 5,
+      "emphasis": false
+    },
+    {
+      "text": "where",
+      "start": 40.654,
+      "end": 40.754,
+      "beat_id": "B10",
+      "index": 6,
+      "emphasis": false
+    },
+    {
+      "text": "you",
+      "start": 40.804,
+      "end": 40.879,
+      "beat_id": "B10",
+      "index": 7,
+      "emphasis": false
+    },
+    {
+      "text": "live?",
+      "start": 40.929,
+      "end": 41.285,
+      "beat_id": "B10",
+      "index": 8,
+      "emphasis": false
+    }
+  ],
+  "cues": [
+    {
+      "start": 0.171,
+      "end": 1.471,
+      "word_indices": [
+        0,
+        1,
+        2
+      ],
+      "text": "Only two countries"
+    },
+    {
+      "start": 1.471,
+      "end": 2.221,
+      "word_indices": [
+        3,
+        4,
+        5
+      ],
+      "text": "made more solar"
+    },
+    {
+      "start": 2.221,
+      "end": 3.3270000000000004,
+      "word_indices": [
+        6,
+        7,
+        8
+      ],
+      "text": "power than India."
+    },
+    {
+      "start": 3.421,
+      "end": 4.946,
+      "word_indices": [
+        9,
+        10,
+        11
+      ],
+      "text": "That's 2025 data"
+    },
+    {
+      "start": 4.946,
+      "end": 5.771,
+      "word_indices": [
+        12,
+        13
+      ],
+      "text": "from Ember,"
+    },
+    {
+      "start": 5.771,
+      "end": 6.596,
+      "word_indices": [
+        14,
+        15,
+        16
+      ],
+      "text": "compiled by Our"
+    },
+    {
+      "start": 6.596,
+      "end": 7.686,
+      "word_indices": [
+        17,
+        18,
+        19
+      ],
+      "text": "World in Data."
+    },
+    {
+      "start": 7.808,
+      "end": 9.551,
+      "word_indices": [
+        20,
+        21,
+        22
+      ],
+      "text": "Rewind to 2015."
+    },
+    {
+      "start": 9.669,
+      "end": 10.869,
+      "word_indices": [
+        23,
+        24,
+        25
+      ],
+      "text": "Solar supplied just"
+    },
+    {
+      "start": 10.869,
+      "end": 13.469,
+      "word_indices": [
+        26,
+        27,
+        28
+      ],
+      "text": "0.54% of India's"
+    },
+    {
+      "start": 13.469,
+      "end": 14.378,
+      "word_indices": [
+        29
+      ],
+      "text": "electricity."
+    },
+    {
+      "start": 14.503,
+      "end": 15.653,
+      "word_indices": [
+        30,
+        31,
+        32
+      ],
+      "text": "Its solar plants"
+    },
+    {
+      "start": 15.653,
+      "end": 16.903,
+      "word_indices": [
+        33,
+        34,
+        35
+      ],
+      "text": "generated about 7"
+    },
+    {
+      "start": 16.903,
+      "end": 17.953,
+      "word_indices": [
+        36,
+        37
+      ],
+      "text": "terawatt-hours that"
+    },
+    {
+      "start": 17.953,
+      "end": 18.426,
+      "word_indices": [
+        38
+      ],
+      "text": "year."
+    },
+    {
+      "start": 18.498,
+      "end": 20.048,
+      "word_indices": [
+        39,
+        40
+      ],
+      "text": "By 2025,"
+    },
+    {
+      "start": 20.048,
+      "end": 20.823,
+      "word_indices": [
+        41,
+        42,
+        43
+      ],
+      "text": "that had climbed"
+    },
+    {
+      "start": 20.823,
+      "end": 22.473,
+      "word_indices": [
+        44,
+        45,
+        46
+      ],
+      "text": "to about 196"
+    },
+    {
+      "start": 22.473,
+      "end": 23.641,
+      "word_indices": [
+        47
+      ],
+      "text": "terawatt-hours."
+    },
+    {
+      "start": 23.803,
+      "end": 24.578,
+      "word_indices": [
+        48,
+        49,
+        50
+      ],
+      "text": "Solar's share of"
+    },
+    {
+      "start": 24.578,
+      "end": 25.903,
+      "word_indices": [
+        51,
+        52,
+        53
+      ],
+      "text": "India's power rose"
+    },
+    {
+      "start": 25.903,
+      "end": 27.633,
+      "word_indices": [
+        54,
+        55
+      ],
+      "text": "to 9.4%."
+    },
+    {
+      "start": 27.808,
+      "end": 28.583,
+      "word_indices": [
+        56,
+        57,
+        58
+      ],
+      "text": "The only two"
+    },
+    {
+      "start": 28.583,
+      "end": 29.333,
+      "word_indices": [
+        59,
+        60,
+        61
+      ],
+      "text": "countries ahead of"
+    },
+    {
+      "start": 29.333,
+      "end": 30.133,
+      "word_indices": [
+        62
+      ],
+      "text": "India?"
+    },
+    {
+      "start": 30.133,
+      "end": 30.808,
+      "word_indices": [
+        63,
+        64,
+        65
+      ],
+      "text": "China and the"
+    },
+    {
+      "start": 30.808,
+      "end": 31.884,
+      "word_indices": [
+        66,
+        67
+      ],
+      "text": "United States."
+    },
+    {
+      "start": 32.125,
+      "end": 32.7,
+      "word_indices": [
+        68
+      ],
+      "text": "Still,"
+    },
+    {
+      "start": 32.7,
+      "end": 33.8,
+      "word_indices": [
+        69,
+        70,
+        71
+      ],
+      "text": "coal produced about"
+    },
+    {
+      "start": 33.8,
+      "end": 35.35,
+      "word_indices": [
+        72,
+        73,
+        74
+      ],
+      "text": "71% of India's"
+    },
+    {
+      "start": 35.35,
+      "end": 36.475,
+      "word_indices": [
+        75
+      ],
+      "text": "electricity,"
+    },
+    {
+      "start": 36.475,
+      "end": 37.525,
+      "word_indices": [
+        76,
+        77,
+        78
+      ],
+      "text": "and renewables about"
+    },
+    {
+      "start": 37.525,
+      "end": 38.778999999999996,
+      "word_indices": [
+        79
+      ],
+      "text": "24%."
+    },
+    {
+      "start": 38.879,
+      "end": 39.454,
+      "word_indices": [
+        80,
+        81,
+        82
+      ],
+      "text": "Have you seen"
+    },
+    {
+      "start": 39.454,
+      "end": 40.654,
+      "word_indices": [
+        83,
+        84,
+        85
+      ],
+      "text": "solar panels spreading"
+    },
+    {
+      "start": 40.654,
+      "end": 41.504999999999995,
+      "word_indices": [
+        86,
+        87,
+        88
+      ],
+      "text": "where you live?"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "SC1",
+      "start": 0.0,
+      "end": 3.25
+    },
+    {
+      "scene_id": "SC2",
+      "start": 3.25,
+      "end": 7.59
+    },
+    {
+      "scene_id": "SC3",
+      "start": 7.59,
+      "end": 9.43
+    },
+    {
+      "scene_id": "SC4",
+      "start": 9.43,
+      "end": 14.31
+    },
+    {
+      "scene_id": "SC5",
+      "start": 14.31,
+      "end": 23.56
+    },
+    {
+      "scene_id": "SC6",
+      "start": 23.56,
+      "end": 27.64
+    },
+    {
+      "scene_id": "SC7",
+      "start": 27.64,
+      "end": 31.9
+    },
+    {
+      "scene_id": "SC8",
+      "start": 31.9,
+      "end": 38.69
+    },
+    {
+      "scene_id": "SC9",
+      "start": 38.69,
+      "end": 42.68
+    }
+  ]
+}

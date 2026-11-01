@@ -1,0 +1,18 @@
+Only two countries made more solar power than India.
+
+That's 2025 data from Ember, compiled by Our World in Data. Rewind to 2015. Solar supplied just 0.54% of India's electricity.
+
+Its solar plants generated about 7 terawatt-hours that year. By 2025, that had climbed to about 196 terawatt-hours. Solar's share of India's power rose to 9.4%.
+
+The only two countries ahead of India? China and the United States.
+
+Still, coal produced about 71% of India's electricity, and renewables about 24%.
+
+Have you seen solar panels spreading where you live?
+
+Sources:
+• Our World in Data, owid-energy-data.csv: raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv
+• Our World in Data, owid-energy-codebook.csv: raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv
+• Our World in Data, Data on Energy by Our World in Data: raw.githubusercontent.com/owid/energy-data/master/README.md
+
+#India #SolarPower #Science #DidYouKnow #LearnOnInstagram

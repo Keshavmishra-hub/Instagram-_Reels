@@ -1,0 +1,150 @@
+{
+  "title": "India's solar surge, in numbers",
+  "hook_type": "surprising verified ranking (open loop: which two countries?)",
+  "style": "science",
+  "language": "en",
+  "beats": [
+    {
+      "id": "B1",
+      "section": "hook",
+      "text": "Only two countries made more solar power than India.",
+      "claim_ids": [
+        "C1"
+      ],
+      "emphasis": [
+        "two"
+      ],
+      "on_screen_text": "Only two countries made more solar power",
+      "spoken": null
+    },
+    {
+      "id": "B2",
+      "section": "context",
+      "text": "That's 2025 data from Ember, compiled by Our World in Data.",
+      "claim_ids": [
+        "C1",
+        "C9",
+        "C10"
+      ],
+      "emphasis": [
+        "2025"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B3",
+      "section": "context",
+      "text": "Rewind to 2015.",
+      "claim_ids": [
+        "C2"
+      ],
+      "emphasis": [
+        "2015"
+      ],
+      "on_screen_text": "Rewind to 2015",
+      "spoken": null
+    },
+    {
+      "id": "B4",
+      "section": "context",
+      "text": "Solar supplied just 0.54% of India's electricity.",
+      "claim_ids": [
+        "C2"
+      ],
+      "emphasis": [
+        "0.54%"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B5",
+      "section": "story",
+      "text": "Its solar plants generated about 7 terawatt-hours that year.",
+      "claim_ids": [
+        "C3",
+        "C8"
+      ],
+      "emphasis": [
+        "7"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B6",
+      "section": "story",
+      "text": "By 2025, that had climbed to about 196 terawatt-hours.",
+      "claim_ids": [
+        "C4",
+        "C8"
+      ],
+      "emphasis": [
+        "196"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B7",
+      "section": "story",
+      "text": "Solar's share of India's power rose to 9.4%.",
+      "claim_ids": [
+        "C5",
+        "C2"
+      ],
+      "emphasis": [
+        "9.4%"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B8",
+      "section": "payoff",
+      "text": "The only two countries ahead of India? China and the United States.",
+      "claim_ids": [
+        "C1"
+      ],
+      "emphasis": [
+        "China",
+        "United States"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B9",
+      "section": "ending",
+      "text": "Still, coal produced about 71% of India's electricity, and renewables about 24%.",
+      "claim_ids": [
+        "C6",
+        "C7"
+      ],
+      "emphasis": [
+        "71%",
+        "24%"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    },
+    {
+      "id": "B10",
+      "section": "ending",
+      "text": "Have you seen solar panels spreading where you live?",
+      "claim_ids": [],
+      "emphasis": [
+        "solar"
+      ],
+      "on_screen_text": null,
+      "spoken": null
+    }
+  ],
+  "cta_question": "Have you seen solar panels spreading where you live?",
+  "approved": true,
+  "approved_at": "2026-11-01T08:00:17+00:00",
+  "version": 4,
+  "issues": [],
+  "written_by": "claude_code (Claude Code mode)"
+}

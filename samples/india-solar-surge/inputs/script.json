@@ -1,0 +1,115 @@
+{
+  "title": "India's solar surge, in numbers",
+  "hook_type": "surprising verified ranking (open loop: which two countries?)",
+  "beats": [
+    {
+      "section": "hook",
+      "text": "Only two countries made more solar power than India.",
+      "claim_ids": [
+        "C1"
+      ],
+      "emphasis": [
+        "two"
+      ],
+      "on_screen_text": "Only two countries made more solar power"
+    },
+    {
+      "section": "context",
+      "text": "That's 2025 data from Ember, compiled by Our World in Data.",
+      "claim_ids": [
+        "C1",
+        "C9",
+        "C10"
+      ],
+      "emphasis": [
+        "2025"
+      ]
+    },
+    {
+      "section": "context",
+      "text": "Rewind to 2015.",
+      "claim_ids": [
+        "C2"
+      ],
+      "emphasis": [
+        "2015"
+      ],
+      "on_screen_text": "Rewind to 2015"
+    },
+    {
+      "section": "context",
+      "text": "Solar supplied just 0.54% of India's electricity.",
+      "claim_ids": [
+        "C2"
+      ],
+      "emphasis": [
+        "0.54%"
+      ]
+    },
+    {
+      "section": "story",
+      "text": "Its solar plants generated about 7 terawatt-hours that year.",
+      "claim_ids": [
+        "C3",
+        "C8"
+      ],
+      "emphasis": [
+        "7"
+      ]
+    },
+    {
+      "section": "story",
+      "text": "By 2025, that had climbed to about 196 terawatt-hours.",
+      "claim_ids": [
+        "C4",
+        "C8"
+      ],
+      "emphasis": [
+        "196"
+      ]
+    },
+    {
+      "section": "story",
+      "text": "Solar's share of India's power rose to 9.4%.",
+      "claim_ids": [
+        "C5",
+        "C2"
+      ],
+      "emphasis": [
+        "9.4%"
+      ]
+    },
+    {
+      "section": "payoff",
+      "text": "The only two countries ahead of India? China and the United States.",
+      "claim_ids": [
+        "C1"
+      ],
+      "emphasis": [
+        "China",
+        "United States"
+      ]
+    },
+    {
+      "section": "ending",
+      "text": "Still, coal produced about 71% of India's electricity, and renewables about 24%.",
+      "claim_ids": [
+        "C6",
+        "C7"
+      ],
+      "emphasis": [
+        "71%",
+        "24%"
+      ]
+    },
+    {
+      "section": "ending",
+      "text": "Have you seen solar panels spreading where you live?",
+      "claim_ids": [],
+      "emphasis": [
+        "solar"
+      ]
+    }
+  ],
+  "cta_question": "Have you seen solar panels spreading where you live?"
+}

@@ -1,0 +1,31 @@
+# Earthy, warm identity suited to agriculture, rural economy and human stories.
+name: "Field Notes"
+handle: "@yourhandle"
+watermark: true
+progress_bar: true
+colors:
+  background: "#14120C"
+  surface: "#211E14"
+  primary: "#F2B134"
+  secondary: "#8BC34A"
+  text: "#FFF8E7"
+  muted: "#C9BFA5"
+  danger: "#E4572E"
+  map_ocean: "#0E0D08"
+  map_land: "#2C3A22"
+  map_border: "#4B5E37"
+fonts:
+  display: "Anton"
+  body: "Inter"
+  subtitle: "Poppins"
+subtitles:
+  case: "sentence"
+  size: 62
+  max_words: 3
+  max_chars: 22
+  style: "box"
+grade:
+  vignette: 0.38
+  grain: 0.07
+  contrast: 1.04
+  saturation: 0.98

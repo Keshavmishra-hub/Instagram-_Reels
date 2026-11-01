@@ -1,0 +1,294 @@
+{
+  "summary": "Ember's yearly electricity data, compiled by Our World in Data (OWID) in its energy dataset, shows India's solar electricity generation rising from 7.09 TWh in 2015 to 195.99 TWh in 2025, lifting solar's share of India's electricity from 0.541% to 9.415%. Among individual countries in the dataset, India ranked third for solar generation in 2025, behind China and the United States. Coal still generated 70.818% of India's electricity in 2025, while all renewables together generated 24.067%.",
+  "angles": [
+    "Only two countries generated more solar electricity than India in 2025 (curiosity hook, verified ranking).",
+    "Solar's share of India's electricity went from about half a percent (2015) to over 9% (2025).",
+    "Context matters: coal still dominates India's electricity mix even as solar grows."
+  ],
+  "uncertainties": [
+    "The 2025 figures come from Ember's 2026 data release; latest-year values can be revised in later releases.",
+    "The legacy OWID file reports exactly 37.45 TWh of Indian solar generation for both 2018 and 2019; identical values suggest a data artifact, so those two years are not used.",
+    "Rankings compare individual countries only (regional aggregates such as 'World' or 'Asia' are excluded) and depend on the countries covered by the dataset.",
+    "OWID notes its energy dataset has moved to a new methodology for primary energy; electricity-generation figures in the new files may differ slightly from this legacy release."
+  ],
+  "limitations": [
+    "From this build environment only GitHub-hosted files were reachable. Primary publisher sites (ember-energy.org, energyinst.org, ourworldindata.org, government sites) could not be opened, so every claim rests on one compiled source and is attributed to it in the script.",
+    "The legacy OWID energy dataset is no longer updated (stated in its README)."
+  ],
+  "sufficiency": {
+    "enough": true,
+    "reason": "Ten specific, mechanically checkable figures from one reputable compiled dataset; enough for a short data story if the source is attributed."
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-data.csv",
+      "title": "owid-energy-data.csv - Our World in Data energy dataset (legacy release)",
+      "publisher": "Our World in Data",
+      "published": "2026",
+      "tier": "reference",
+      "primary": false,
+      "access_method": "app_fetch",
+      "notes": "Electricity figures compiled from Ember's Yearly Electricity Data (2026) and the Energy Institute Statistical Review (2025)."
+    },
+    {
+      "id": "S2",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/owid-energy-codebook.csv",
+      "title": "owid-energy-codebook.csv - variable definitions and sources",
+      "publisher": "Our World in Data",
+      "published": "2026",
+      "tier": "reference",
+      "primary": false,
+      "access_method": "app_fetch",
+      "excerpt": "solar_electricity,Electricity generation from solar power,Measured in terawatt-hours.,terawatt-hours (TWh),Ember - Yearly Electricity Data Europe (2026)"
+    },
+    {
+      "id": "S3",
+      "url": "https://raw.githubusercontent.com/owid/energy-data/master/README.md",
+      "title": "Data on Energy by Our World in Data - README",
+      "publisher": "Our World in Data",
+      "published": "2026",
+      "tier": "reference",
+      "primary": false,
+      "access_method": "app_fetch",
+      "excerpt": "It remains available for download but is no longer updated."
+    }
+  ],
+  "claims": [
+    {
+      "statement": "In 2025, India generated the third-most solar electricity of any country in the dataset, behind China and the United States.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2025",
+      "caveats": "Countries only; regional aggregates excluded. 2025 values are from Ember's 2026 release and may be revised.",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "rank",
+            "group": {
+              "year": "2025"
+            },
+            "column": "solar_electricity",
+            "entity_column": "country",
+            "entity": "India",
+            "exclude_if": {
+              "iso_code": [
+                "",
+                "OWID_*"
+              ]
+            },
+            "top": 3
+          }
+        }
+      ]
+    },
+    {
+      "statement": "Solar power generated 0.541% of India's electricity in 2015.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2015",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2015"
+            },
+            "column": "solar_share_elec"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "India generated 7.09 terawatt-hours of solar electricity in 2015.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2015",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2015"
+            },
+            "column": "solar_electricity"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "India generated 195.99 terawatt-hours of solar electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2025",
+      "caveats": "Latest-year figure; may be revised.",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "solar_electricity"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "Solar power generated 9.415% of India's electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2025",
+      "caveats": "Latest-year figure; may be revised.",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "solar_share_elec"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "Coal generated 70.818% of India's electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2025",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "coal_share_elec"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "Renewable sources together generated 24.067% of India's electricity in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2025",
+      "caveats": "Renewables include hydro, wind, solar and bioenergy.",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "renewables_share_elec"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "India's solar electricity generation was 7.09 TWh in 2015, 22.36 TWh in 2017, 52.91 TWh in 2020, 95.92 TWh in 2022 and 195.99 TWh in 2025.",
+      "category": "statistic",
+      "certainty": "established",
+      "as_of": "2015-2025",
+      "caveats": "2018 and 2019 omitted because the legacy file reports identical values for both years.",
+      "evidence": [
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2015"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2017"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2020"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2022"
+            },
+            "column": "solar_electricity"
+          }
+        },
+        {
+          "source_id": "S1",
+          "data": {
+            "type": "value",
+            "filters": {
+              "country": "India",
+              "year": "2025"
+            },
+            "column": "solar_electricity"
+          }
+        }
+      ]
+    },
+    {
+      "statement": "The dataset's solar electricity figures are sourced from Ember's Yearly Electricity Data.",
+      "category": "definition",
+      "certainty": "established",
+      "evidence": [
+        {
+          "source_id": "S2",
+          "quote": "solar_electricity,Electricity generation from solar power,Measured in terawatt-hours.,terawatt-hours (TWh),Ember - Yearly Electricity Data Europe (2026)"
+        }
+      ]
+    },
+    {
+      "statement": "Our World in Data compiles the energy dataset; this legacy release is no longer updated.",
+      "category": "other",
+      "certainty": "established",
+      "evidence": [
+        {
+          "source_id": "S3",
+          "quote": "It remains available for download but is no longer updated."
+        },
+        {
+          "source_id": "S3",
+          "quote": "Our complete energy dataset is a collection of key metrics compiled by"
+        }
+      ]
+    }
+  ]
+}
