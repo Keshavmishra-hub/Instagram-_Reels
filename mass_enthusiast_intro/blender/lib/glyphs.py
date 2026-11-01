@@ -247,8 +247,8 @@ def lockup(gap=0.17, track_top=0.075, track_bottom=0.13):
     for word, items, y0, cap in (("MASS", top, y_top, 1.0), ("ENTHUSIAST", bot, 0.0, cap2)):
         for i, (ch, p, x0, x1) in enumerate(items):
             p2 = affinity.translate(p, -wt / 2, y0)
-            ins = p2.buffer(-0.050 * cap, join_style=2, mitre_limit=3.0)
-            gro = p2.buffer(-0.030 * cap, join_style=2, mitre_limit=3.0)
+            ins = p2.buffer(-0.047 * cap, join_style=2, mitre_limit=3.0)
+            gro = p2.buffer(-0.034 * cap, join_style=2, mitre_limit=3.0)
             placed.append(PlacedGlyph(ch, i, word, p2, ins, gro, x0 - wt / 2, x1 - wt / 2, cap))
     height = y_top + 1.0
     return placed, wt, height, cap2

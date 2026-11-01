@@ -158,7 +158,7 @@ def mat_metal(name, color=(0.56, 0.57, 0.6), rough=0.25, rough_var=0.08, aniso=0
         if brushed:
             mp.inputs["Scale"].default_value = (scale * 0.25, scale * 0.25, scale * 0.25)
         nb.l(co, mp.inputs["Vector"])
-        nz = nb.n("ShaderNodeTexNoise", Scale=2.5, Detail=6.0, Roughness=0.6)
+        nz = nb.n("ShaderNodeTexNoise", Scale=2.5, Detail=3.0, Roughness=0.6)
         nb.l(mp.outputs[0], nz.inputs["Vector"])
         mr = nb.n("ShaderNodeMapRange")
         mr.inputs["To Min"].default_value = rough - rough_var
@@ -217,7 +217,7 @@ def mat_metal(name, color=(0.56, 0.57, 0.6), rough=0.25, rough_var=0.08, aniso=0
         nb.l(bmp2.outputs[0], p.inputs["Normal"])
     if dirt > 0:
         # darken crevices / random grime on base colour
-        nz4 = nb.n("ShaderNodeTexNoise", Scale=scale * 1.5, Detail=8.0, Roughness=0.7)
+        nz4 = nb.n("ShaderNodeTexNoise", Scale=scale * 1.5, Detail=4.0, Roughness=0.7)
         nb.l(co, nz4.inputs["Vector"])
         mix = nb.n("ShaderNodeMix", _data_type="RGBA", _blend_type="MULTIPLY")
         mix.inputs[0].default_value = dirt
@@ -263,6 +263,68 @@ def mat_blackbody_glow(name, temp=1500.0, strength=5.0):
     nb.l(bb.outputs[0], e.inputs["Color"])
     nb.l(e.outputs[0], out.inputs[0])
     return m, bb, e
+
+
+def mat_molten(name, crust=True):
+    """Molten metal: blackbody emission broken up by a drifting crust pattern.
+
+    Returns (material, blackbody node, emission node, noise node) - animate the blackbody
+    temperature, the emission strength and the noise 'W' input per frame.
+    """
+    m, out = new_material(name)
+    nb = NodeBuilder(m)
+    e = nb.n("ShaderNodeEmission", Strength=0.0)
+    nb.l(e.outputs[0], out.inputs[0])
+    bb = nb.n("ShaderNodeBlackbody", Temperature=1500.0)
+    tc = nb.n("ShaderNodeTexCoord")
+    nz = nb.n("ShaderNodeTexNoise", _noise_dimensions="4D", Scale=6.0, Detail=4.0, Roughness=0.6,
+              Distortion=1.2)
+    nb.l(tc.outputs["Object"], nz.inputs["Vector"])
+    # wobble the crack pattern with the noise so the crust is irregular, not cellular
+    warp = nb.n("ShaderNodeVectorMath", _operation="MULTIPLY_ADD")
+    nb.l(nz.outputs["Color"], warp.inputs[0])
+    warp.inputs[1].default_value = (0.12, 0.12, 0.12)
+    nb.l(tc.outputs["Object"], warp.inputs[2])
+    use_crust = crust
+    crust = nb.n("ShaderNodeMapRange")
+    crust.inputs["From Min"].default_value = 0.0
+    crust.inputs["From Max"].default_value = 0.11
+    crust.inputs["To Min"].default_value = 1.35
+    crust.inputs["To Max"].default_value = 0.06
+    vor = None
+    if use_crust:
+        vor = nb.n("ShaderNodeTexVoronoi", _feature="DISTANCE_TO_EDGE", Scale=17.0)
+        vor.voronoi_dimensions = "4D"
+        nb.l(warp.outputs[0], vor.inputs["Vector"])
+        nb.l(vor.outputs["Distance"], crust.inputs["Value"])
+    else:
+        crust.inputs["Value"].default_value = 0.11
+    flow = nb.n("ShaderNodeMapRange")
+    flow.inputs["From Min"].default_value = 0.32
+    flow.inputs["From Max"].default_value = 0.7
+    flow.inputs["To Min"].default_value = 0.15
+    flow.inputs["To Max"].default_value = 1.6
+    nb.l(nz.outputs["Fac"], flow.inputs["Value"])
+    mul = nb.n("ShaderNodeMath", _operation="MAXIMUM")
+    nb.l(crust.outputs[0], mul.inputs[0])
+    nb.l(flow.outputs[0], mul.inputs[1])
+    mul2 = nb.n("ShaderNodeMath", _operation="MULTIPLY")
+    nb.l(mul.outputs[0], mul2.inputs[0])
+    nb.l(flow.outputs[0], mul2.inputs[1])
+    mul = mul2
+    # hotter where the melt is bright: colour = blackbody(T) * (0.6 + 0.6*mask)
+    tint = nb.n("ShaderNodeMix", _data_type="RGBA", _blend_type="MULTIPLY")
+    tint.inputs[0].default_value = 1.0
+    nb.l(bb.outputs[0], tint.inputs[6])
+    nb.l(mul.outputs[0], tint.inputs[7])
+    nb.l(tint.outputs[2], e.inputs["Color"])
+    strength = nb.n("ShaderNodeValue")
+    strength.outputs[0].default_value = 0.0
+    sm = nb.n("ShaderNodeMath", _operation="MULTIPLY")
+    nb.l(strength.outputs[0], sm.inputs[0])
+    nb.l(mul.outputs[0], sm.inputs[1])
+    nb.l(sm.outputs[0], e.inputs["Strength"])
+    return m, bb, strength, tuple(n for n in (nz, vor) if n is not None)
 
 
 def mat_image(name, path, emission=0.0, rough=0.5, alpha=False, metallic=0.0, extension="CLIP"):
