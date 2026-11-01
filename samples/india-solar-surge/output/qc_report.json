@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-01T08:06:27+00:00",
+  "created_at": "2026-11-01T08:27:27+00:00",
   "video_file": "output/reel.mp4",
   "checks": [
     {
@@ -82,7 +82,7 @@
       "name": "Audio does not clip",
       "severity": "critical",
       "status": "pass",
-      "details": "True peak of the encoded file: -1.5 dBTP.",
+      "details": "True peak of the encoded file: -1.4 dBTP.",
       "data": {}
     },
     {
@@ -90,7 +90,7 @@
       "name": "Audio is clear and well balanced",
       "severity": "major",
       "status": "pass",
-      "details": "Integrated -14.1 LUFS, true peak -1.5 dBTP; voice sits 19 dB above the music during speech.",
+      "details": "Integrated -14.1 LUFS, true peak -1.4 dBTP; voice sits 19 dB above the music during speech.",
       "data": {}
     },
     {

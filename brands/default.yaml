@@ -1,7 +1,7 @@
 # Brand kit: controls typography, colours, subtitles and the on-screen handle.
 # Copy this file to brands/<name>.yaml to create another brand; it appears in the UI automatically.
 name: "Midnight Documentary"
-handle: "@yourhandle"          # shown as a small watermark; set to "" to hide
+handle: "@massenthusiast"     # shown as a small watermark; set to "" to hide
 watermark: true
 progress_bar: true
 colors:

@@ -5,7 +5,7 @@ import type {ReelProps} from './types';
 const brand: ReelProps['brand'] = {
   key: 'default',
   name: 'Midnight Documentary',
-  handle: '@yourhandle',
+  handle: '@massenthusiast',
   watermark: true,
   progress_bar: true,
   colors: {

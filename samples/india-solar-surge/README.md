@@ -5,7 +5,7 @@ writing and storyboard; the app did verification, narration, rendering, packagin
 
 | | |
 |---|---|
-| Video | `output/reel.mp4` — 42.7 s, 1080 × 1920, 30 fps, H.264 High + AAC 48 kHz stereo, −14.1 LUFS, −1.5 dBTP |
+| Video | `output/reel.mp4` — 42.7 s, 1080 × 1920, 30 fps, H.264 High + AAC 48 kHz stereo, −14.1 LUFS, −1.4 dBTP |
 | Cover | `output/cover.jpg` (+ `cover_grid_preview.jpg`, the 3:4 profile-grid crop) |
 | Publishing | `output/caption.txt` (with sources + 5 hashtags), `pinned_comment.txt`, `captions.srt/.vtt`, `instagram.json` |
 | Research | `research.md` / `research.json`, `output/sources.md`, `source_snapshots/` |

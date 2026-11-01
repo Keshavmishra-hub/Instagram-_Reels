@@ -2,7 +2,7 @@
 
 **PASSED - ready to publish; 2 warning(s) to review.**
 
-Checked: 2026-11-01T08:06:27+00:00
+Checked: 2026-11-01T08:27:27+00:00
 
 | Result | Severity | Check | Details |
 |---|---|---|---|
@@ -14,8 +14,8 @@ Checked: 2026-11-01T08:06:27+00:00
 | PASS | critical | Narration and subtitles are synchronised | Independent ASR (sherpa-onnx/parakeet-tdt): median /offset/ 71 ms, 90th percentile 153 ms over 86 matched words. |
 | PASS | major | Narration matches the script (clear audio, pronunciation) | 97% of subtitle words matched the recognised speech. |
 | PASS | critical | Understandable without sound | Word-by-word captions cover 100% of the narration; text on screen from 0.2s; key numbers highlighted. |
-| PASS | critical | Audio does not clip | True peak of the encoded file: -1.5 dBTP. |
-| PASS | major | Audio is clear and well balanced | Integrated -14.1 LUFS, true peak -1.5 dBTP; voice sits 19 dB above the music during speech. |
+| PASS | critical | Audio does not clip | True peak of the encoded file: -1.4 dBTP. |
+| PASS | major | Audio is clear and well balanced | Integrated -14.1 LUFS, true peak -1.4 dBTP; voice sits 19 dB above the music during speech. |
 | PASS | critical | Technical specs (1080x1920, 30 fps, H.264/AAC MP4) | 1080x1920, 30/1 fps, h264 High yuv420p, aac 48000 Hz stereo, 42.67s, faststart=True. |
 | PASS | critical | Video plays correctly (full decode) | Decoded 1280 frames (expected 1280) with no errors. |
 | PASS | critical | No black frames or rendering gaps | No black or frozen segments detected. |
