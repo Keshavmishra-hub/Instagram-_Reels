@@ -97,6 +97,16 @@ def setup_render(sc, variant="16x9", samples=16, scale=1.0, motion_blur=True, sh
     return sc
 
 
+def shot_scene(variant, samples, scale, **kw):
+    sc = reset_scene()
+    setup_render(sc, variant, samples=samples, scale=scale, **kw)
+    return sc
+
+
+def single_camera(cam):
+    return lambda f: cam
+
+
 # ----------------------------------------------------------------------------- nodes
 class NodeBuilder:
     """Tiny helper to write shader graphs compactly."""
@@ -337,9 +347,8 @@ def mat_image(name, path, emission=0.0, rough=0.5, alpha=False, metallic=0.0, ex
     tex.extension = extension
     tex.interpolation = "Cubic"
     nb.l(tex.outputs["Color"], p.inputs["Base Color"])
-    if emission > 0:
-        nb.l(tex.outputs["Color"], p.inputs["Emission Color"])
-        p.inputs["Emission Strength"].default_value = emission
+    nb.l(tex.outputs["Color"], p.inputs["Emission Color"])
+    p.inputs["Emission Strength"].default_value = emission
     if alpha:
         nb.l(tex.outputs["Alpha"], p.inputs["Alpha"])
     return m, tex, p

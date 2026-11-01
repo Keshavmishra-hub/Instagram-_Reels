@@ -46,7 +46,7 @@ def parse_frames(spec, lo, hi, step):
     return [f for f in out if lo <= f <= hi]
 
 
-def dump_camera(sc, cam_for, frames, path):
+def dump_camera(sc, cam_for, frames, path, track=None):
     data = {}
     rx, ry = sc.render.resolution_x, sc.render.resolution_y
     for f in frames:
@@ -60,6 +60,9 @@ def dump_camera(sc, cam_for, frames, path):
             shift_x=d.shift_x, shift_y=d.shift_y, res=[rx, ry],
             focus=d.dof.focus_distance if d.dof.use_dof else None,
         )
+        if track:
+            data[str(f)]["track"] = {k: list(o.matrix_world.translation) + list(o.matrix_world.to_3x3().col[2])
+                                     for k, o in track.items()}
     with open(path, "w") as fh:
         json.dump(data, fh)
 
@@ -95,7 +98,8 @@ def main():
     print(f"[build] {a.shot} {a.variant} built in {time.time() - t0:.1f}s; {len(frames)} frames -> {outdir}", flush=True)
 
     if not a.preview:
-        dump_camera(sc, built["camera_for"], list(range(lo, hi + 1)), os.path.join(outdir, "camera.json"))
+        dump_camera(sc, built["camera_for"], list(range(lo, hi + 1)), os.path.join(outdir, "camera.json"),
+                    built.get("track"))
         with open(os.path.join(outdir, "meta.json"), "w") as fh:
             json.dump(built.get("meta", {}), fh)
     if a.save_blend:

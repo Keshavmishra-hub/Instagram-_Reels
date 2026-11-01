@@ -19,13 +19,13 @@ def sec(t: float) -> int:
 # (id, first frame, last frame inclusive, description)
 SHOTS = [
     ("s01_chain", sec(0.0), sec(5.0) - 1, "A suspended steel chain turning in the dark"),
-    ("s02_reel", sec(5.0), sec(6.3) - 1, "Match cut: 35mm film reel turning, lamp light through the spokes"),
-    ("s03_film", sec(6.3), sec(7.5) - 1, "Film strip racing through the projector gate"),
-    ("s04_projector", sec(7.5), sec(8.6) - 1, "Projector lens ignites, beam through haze"),
-    ("s05_ticket", sec(8.6), sec(9.8) - 1, "Theatre ticket burning at the edges"),
-    ("s06_lens", sec(9.8), sec(10.8) - 1, "Cine lens: the iris snaps shut"),
-    ("s07_speaker", sec(10.8), sec(12.0) - 1, "Speaker cone pumping with the bass"),
-    ("s08_redline", sec(12.0), sec(13.4) - 1, "A red light races along the coiled chain"),
+    ("s02_reel", sec(5.0), sec(6.2) - 1, "Match cut: 35mm film reel turning, lamp light through the windows"),
+    ("s03_film", sec(6.2), sec(7.4) - 1, "Film strip clacking through the projector gate"),
+    ("s04_projector", sec(7.4), sec(8.9) - 1, "Projector lens ignites; the beam finds the screen"),
+    ("s05_ticket", sec(8.9), sec(10.0) - 1, "Theatre ticket burning at the edges"),
+    ("s06_lens", sec(10.0), sec(10.9) - 1, "Cine lens: the iris snaps shut"),
+    ("s07_speaker", sec(10.9), sec(12.0) - 1, "Speaker cone pumping with the bass"),
+    ("s08_redline", sec(12.0), sec(13.4) - 1, "A red light races along the chain on the floor"),
     ("s09_sparks", sec(13.4), sec(14.6) - 1, "Sparks scream across steel"),
     ("s10_spot", sec(14.6), sec(15.8) - 1, "Spotlight swings into camera through smoke"),
     ("s11_vortex", sec(15.8), sec(18.3) - 1, "Every object turns toward camera; push through"),
@@ -50,6 +50,25 @@ TITLE = {
     "fade": (sec(32.0), N_FRAMES - 1),
 }
 TITLE["enth_slams"] = [TITLE["enth_first"] + i * TITLE["enth_step"] for i in range(10)]
+
+# Montage beats (global frames) shared by picture and sound
+BEATS = {
+    "chain_first_glint": sec(0.45),
+    "chain_clinks": [sec(t) for t in (0.45, 1.25, 2.05, 2.7, 3.35, 3.9, 4.35)],
+    "ring_turn": sec(3.85),
+    "reel_cut": sec(5.0),
+    "gate_pulldowns": [sec(6.2) + 4 + 9 * k for k in range(4)],
+    "lamp_ignite": sec(7.62),
+    "screen_on": sec(7.78),
+    "ticket_ignite": sec(8.9),
+    "iris_close": (sec(10.08), sec(10.72)),
+    "bass_hits": [sec(11.05), sec(11.55)],
+    "redline_start": sec(12.05),
+    "grinder": (sec(13.4), sec(14.6)),
+    "spot_face": sec(15.35),
+    "vortex_hits": [sec(16.6), sec(17.2), sec(17.6), sec(17.9)],
+    "flash": sec(18.3),
+}
 
 # Title sub-cameras inside s13 (first frame of each camera)
 TITLE_CAMS = [

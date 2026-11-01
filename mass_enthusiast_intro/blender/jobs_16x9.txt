@@ -1,0 +1,16 @@
+# 16:9 master. Close-ups at 75% (upscaled in comp, hidden by DOF/motion blur);
+# the title pull-back and the hero shot at full resolution so the final title is crisp.
+s14_hero 16x9 1.0 16
+s13_title 16x9 1.0 16 750-809
+s13_title 16x9 0.75 16 570-749
+s01_chain 16x9 0.75 16
+s02_reel 16x9 0.75 16
+s03_film 16x9 0.75 16
+s04_projector 16x9 0.75 16
+s05_ticket 16x9 0.75 16
+s06_lens 16x9 0.75 16
+s07_speaker 16x9 0.75 16
+s08_redline 16x9 0.75 16
+s09_sparks 16x9 0.75 16
+s10_spot 16x9 0.75 16
+s11_vortex 16x9 0.75 16
