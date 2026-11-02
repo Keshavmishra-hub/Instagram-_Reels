@@ -102,7 +102,7 @@ def build(variant="16x9", samples=16, scale=1.0):
         k += 1
     red = C.point_light("red", (0, 0, 0.35), energy=0.0, color=(1.0, 0.05, 0.02), radius=0.15)
     C.area_light("key", (-3.0, -2.0, 4.0), (0, 3, 0), energy=150, size=3.0, color=(0.9, 0.93, 1.0))
-    C.area_light("back", (1.0, 14.0, 2.0), (0, 3, 0), energy=700, size=3.0, color=(1.0, 0.25, 0.06))
+    C.area_light("back", (1.0, 14.0, 2.0), (0, 3, 0), energy=220, size=3.0, color=(1.0, 0.1, 0.04))
     C.card("card", (0.0, -8.0, 2.5), (0, 3, 0), 10, 1.2, strength=1.2)
 
     t0 = TL.BEATS["redline_start"]

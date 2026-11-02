@@ -40,7 +40,7 @@ def build(variant="16x9", samples=16, scale=1.0):
         elif kind == "lens":
             o, blades, be = A.cine_lens(f"vl{k}", M)
             A.set_iris(blades, 0.35, 0.3)
-            be.inputs["Strength"].default_value = 6.0
+            be.outputs[0].default_value = 6.0
         elif kind == "ring":
             o = C.empty(f"vg{k}")
             A.ring(f"vg{k}_r", R=0.62, t=0.15, mat=M["chain"]).parent = o

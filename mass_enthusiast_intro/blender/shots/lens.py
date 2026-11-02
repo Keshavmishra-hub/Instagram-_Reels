@@ -34,7 +34,7 @@ def build(variant="16x9", samples=16, scale=1.0):
         for bl in blades:
             bl.keyframe_insert("location", frame=f)
             bl.keyframe_insert("rotation_euler", frame=f)
-        C.key_value(back_e.inputs["Strength"], f, 1.3 * (1.0 + 0.1 * math.sin(f * 1.3)))
+        C.key_value(back_e.outputs[0], f, 5.0 * (1.0 + 0.1 * math.sin(f * 1.3)))
     v = variant == "9x16"
 
     def loc(f):

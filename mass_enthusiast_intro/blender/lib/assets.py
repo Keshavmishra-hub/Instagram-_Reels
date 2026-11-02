@@ -509,6 +509,42 @@ def cine_lens(name, M, n_blades=9, R=0.62):
         bl.parent = root
         blades.append(bl)
     back_m, back_e = C.mat_emission(f"{name}_backlight", (1.0, 0.02, 0.01), 0.0)
+    # glowing filament look: hot centre, falloff to the rim, smoky breakup
+    nt = back_m.node_tree
+    em = [n for n in nt.nodes if n.type == "EMISSION"][0]
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    grad = nt.nodes.new("ShaderNodeTexGradient")
+    grad.gradient_type = "SPHERICAL"
+    mp = nt.nodes.new("ShaderNodeMapping")
+    mp.inputs["Scale"].default_value = (1.0 / (R * 1.1), 1.0 / (R * 1.1), 1.0)
+    nt.links.new(tc.outputs["Object"], mp.inputs["Vector"])
+    nt.links.new(mp.outputs[0], grad.inputs["Vector"])
+    nz = nt.nodes.new("ShaderNodeTexNoise")
+    nz.inputs["Scale"].default_value = 6.0
+    nz.inputs["Detail"].default_value = 4.0
+    nt.links.new(tc.outputs["Object"], nz.inputs["Vector"])
+    pw = nt.nodes.new("ShaderNodeMath")
+    pw.operation = "POWER"
+    pw.inputs[1].default_value = 2.2
+    nt.links.new(grad.outputs["Fac"], pw.inputs[0])
+    mul = nt.nodes.new("ShaderNodeMath")
+    mul.operation = "MULTIPLY"
+    nt.links.new(pw.outputs[0], mul.inputs[0])
+    nt.links.new(nz.outputs["Fac"], mul.inputs[1])
+    strength_in = nt.nodes.new("ShaderNodeValue")
+    strength_in.outputs[0].default_value = 0.0
+    mul2 = nt.nodes.new("ShaderNodeMath")
+    mul2.operation = "MULTIPLY"
+    nt.links.new(mul.outputs[0], mul2.inputs[0])
+    nt.links.new(strength_in.outputs[0], mul2.inputs[1])
+    nt.links.new(mul2.outputs[0], em.inputs["Strength"])
+    hot = nt.nodes.new("ShaderNodeMix")
+    hot.data_type = "RGBA"
+    hot.inputs[6].default_value = (1.0, 0.015, 0.008, 1.0)
+    hot.inputs[7].default_value = (1.0, 0.32, 0.12, 1.0)
+    nt.links.new(pw.outputs[0], hot.inputs[0])
+    nt.links.new(hot.outputs[2], em.inputs["Color"])
+    back_e = strength_in
     back = disc(f"{name}_back", R * 1.1)
     back.location = (0, 0, -0.55)
     C.assign(back, back_m)
