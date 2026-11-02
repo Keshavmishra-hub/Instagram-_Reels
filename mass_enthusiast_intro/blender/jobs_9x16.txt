@@ -12,4 +12,4 @@ s07_speaker 9x16 0.6 12
 s08_redline 9x16 0.6 12
 s09_sparks 9x16 0.6 12
 s10_spot 9x16 0.6 12
-s11_vortex 9x16 0.6 12
+s11_vortex 9x16 0.5 8

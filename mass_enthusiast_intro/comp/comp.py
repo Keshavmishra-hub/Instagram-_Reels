@@ -332,11 +332,12 @@ def r_s10(ctx):
         ctx["rgb"] += fx.soft_glow(W, H, u, v, 0.05 * W, (1.0, 0.7, 0.5), 6.0 * k ** 2)
         if k > 0.02:
             ctx["rgb"] = fx.god_rays(ctx["rgb"], u, v, strength=0.8 * k, decay=0.96, threshold=1.5)
+        ctx["flash_xy"] = (u, v)
     ctx["rgb"] = fx.anamorphic_streak(ctx["rgb"], threshold=2.5, strength=0.10, color=(1.0, 0.25, 0.12))
     atmosphere(ctx, glow=0.3, smoke_d=0.14, smoke_color=(0.55, 0.08, 0.04))
     # the flare swallows the frame right before the cut into the vortex
     f1 = TL.SHOT["s10_spot"][1]
-    ctx["white"] = max(ctx.get("white", 0.0), smoothstep(f1 - 4, f1, f) * 0.85)
+    ctx["white"] = max(ctx.get("white", 0.0), smoothstep(f1 - 5, f1, f) ** 1.5 * 0.9)
 
 
 def r_s11(ctx):
@@ -359,10 +360,11 @@ def r_s11(ctx):
     for h in TL.BEATS["vortex_hits"]:
         if 0 <= f - h < 4:
             e = max(e, math.exp(-(f - h) / 0.7))
-    ctx["exposure"] *= 1.0 + 0.5 * e
-    ctx["white"] = max(ctx.get("white", 0.0), 0.5 * e)
-    if f - TL.SHOT["s11_vortex"][0] < 5:          # coming out of the spotlight flare
-        ctx["white"] = max(ctx["white"], 0.8 * (1 - (f - TL.SHOT["s11_vortex"][0]) / 5))
+    ctx["exposure"] *= 1.0 + 0.4 * e
+    ctx["white"] = max(ctx.get("white", 0.0), 0.22 * e)
+    k0 = f - TL.SHOT["s11_vortex"][0]
+    if k0 < 4:                                   # coming out of the spotlight burst
+        ctx["white"] = max(ctx["white"], 0.9 * math.exp(-k0 / 1.2))
     atmosphere(ctx, glow=0.45, smoke_d=0.12, smoke_color=(0.6, 0.12, 0.04))
 
 
@@ -374,12 +376,13 @@ def r_s12(ctx):
     k = (f - f0)
     rgb = np.zeros((H, W, 3), np.float32)
     if k < 6:
-        a = math.exp(-k / 1.8)
-        rgb += np.array([1.0, 0.9, 0.85], np.float32) * 3.0 * a
-        rgb += np.array([1.0, 0.1, 0.03], np.float32) * 1.4 * (1 - a) * (k < 6)
+        a = math.exp(-k / 1.6)
+        rgb += fx.soft_glow(W, H, W * 0.5, H * 0.5, 0.8 * max(W, H), (1.0, 0.88, 0.78), 6.0 * a ** 1.5)
+        rgb += fx.soft_glow(W, H, W * 0.5, H * 0.5, 0.33 * max(W, H), (1.0, 0.06, 0.02), 2.5 * (1 - a))
     else:
         u = (f - f0 - 6) / max(1, f1 - f0 - 6)
-        g = fx.soft_glow(W, H, W * 0.5, H * 0.5, max(W, H) * (0.5 - 0.42 * u), (1.0, 0.06, 0.02), 0.5 * (1 - u) ** 2)
+        g = fx.soft_glow(W, H, W * 0.5, H * 0.5, max(W, H) * (0.33 - 0.28 * u), (1.0, 0.05, 0.02),
+                         2.0 * (1 - u) ** 2.2)
         rgb += g
     ctx["rgb"] = rgb
     ctx["alpha"] = np.zeros((H, W), np.float32)
@@ -483,8 +486,11 @@ def render_frame(variant, f):
     img = ctx["rgb"]
     img = fx.bloom(img, strength=0.16, threshold=0.85)
     img = fx.chromatic(img, ctx["ca"])
-    if ctx["white"] > 0:
-        img = img + ctx["white"] * 4.0
+    if ctx["white"] > 0:      # light burst: brighten the scene and blow out a hot centre
+        w_ = ctx["white"]
+        cx, cy = ctx.get("flash_xy", (ctx["W"] / 2, ctx["H"] / 2))
+        img = img * (1.0 + 1.6 * w_) + fx.soft_glow(ctx["W"], ctx["H"], cx, cy, 0.6 * max(ctx["W"], ctx["H"]),
+                                                     (1.0, 0.86, 0.72), 2.4 * w_ ** 1.3)
     img = fx.tonemap(img, exposure=exp * ctx["exposure"])
     img = fx.grade(img, gain=gain, sat=sat, contrast=con)
     up = getattr(sh, "upscale", 1.0)
