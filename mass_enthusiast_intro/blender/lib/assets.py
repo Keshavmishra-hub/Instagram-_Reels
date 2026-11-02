@@ -235,7 +235,7 @@ def mat_ticket_burn(path, aspect):
     # ember band
     ember = nb.n("ShaderNodeMapRange")
     ember.inputs["From Min"].default_value = 0.0
-    ember.inputs["From Max"].default_value = 0.03
+    ember.inputs["From Max"].default_value = 0.018
     ember.inputs["To Min"].default_value = 1.0
     ember.inputs["To Max"].default_value = 0.0
     nb.l(d.outputs[0], ember.inputs["Value"])
@@ -245,7 +245,7 @@ def mat_ticket_burn(path, aspect):
     nb.l(ember.outputs[0], emul.inputs[0])
     nb.l(emn.outputs["Fac"], emul.inputs[1])
     estr = nb.n("ShaderNodeMath", _operation="MULTIPLY")
-    estr.inputs[1].default_value = 60.0
+    estr.inputs[1].default_value = 16.0
     nb.l(emul.outputs[0], estr.inputs[0])
     bb = nb.n("ShaderNodeBlackbody", Temperature=1700.0)
     nb.l(bb.outputs[0], p.inputs["Emission Color"])
@@ -508,7 +508,7 @@ def cine_lens(name, M, n_blades=9, R=0.62):
         C.assign(bl, bm_m)
         bl.parent = root
         blades.append(bl)
-    back_m, back_e = C.mat_emission(f"{name}_backlight", (1.0, 0.08, 0.03), 0.0)
+    back_m, back_e = C.mat_emission(f"{name}_backlight", (1.0, 0.02, 0.01), 0.0)
     back = disc(f"{name}_back", R * 1.1)
     back.location = (0, 0, -0.55)
     C.assign(back, back_m)

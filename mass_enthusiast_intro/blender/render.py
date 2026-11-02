@@ -33,6 +33,11 @@ MODULE_FOR = {
 }
 
 
+# 9:16 keeps the horizontal field of view of the 16:9 design; these shots read better a little tighter
+VERTICAL_ZOOM = {"s02_reel": 1.3, "s04_projector": 1.45, "s05_ticket": 1.3, "s07_speaker": 1.15,
+                 "s08_redline": 1.2, "s09_sparks": 1.2, "s10_spot": 1.1}
+
+
 def parse_frames(spec, lo, hi, step):
     if not spec:
         return list(range(lo, hi + 1, step))
@@ -91,6 +96,13 @@ def main():
     t0 = time.time()
     built = mod.build(**kw)
     sc = built["scene"]
+    if a.variant == "9x16" and a.shot in VERTICAL_ZOOM:
+        for ob in sc.objects:
+            if ob.type == "CAMERA":
+                ad = ob.data.animation_data
+                keyed = ad is not None and ad.action is not None
+                if not keyed:
+                    ob.data.lens *= VERTICAL_ZOOM[a.shot]
     lo, hi = TL.SHOT[a.shot]
     frames = parse_frames(a.frames, lo, hi, a.step)
     outdir = os.path.join(a.out, ("preview_" if a.preview else "") + a.variant, a.shot)

@@ -40,7 +40,7 @@ EMBER = (1.0, 0.36, 0.08)
 class Shot:
     def __init__(self, variant, sid):
         self.sid = sid
-        self.dir = os.path.join(ROOT, "render", variant, sid)
+        self.dir = os.path.join(os.environ.get("COMP_RENDER_DIR", os.path.join(ROOT, "render")), variant, sid)
         self.W, self.H = SIZES[variant]
         self._cam = None
         self._meta = None
@@ -73,9 +73,12 @@ class Shot:
             return None
         rgb, alpha, depth = fx.load_exr(p)
         rgb = fx.fit(rgb, self.W, self.H)
-        alpha = fx.fit(alpha, self.W, self.H, cv2.INTER_LINEAR)
         if depth is not None:
             depth = cv2.resize(depth, (self.W, self.H), interpolation=cv2.INTER_NEAREST)
+            # the renders have an opaque world, so build the object mask from the Z pass
+            alpha = cv2.GaussianBlur((depth < 1e6).astype(np.float32), (0, 0), 0.8)
+        else:
+            alpha = fx.fit(alpha, self.W, self.H, cv2.INTER_LINEAR)
         return rgb, alpha, depth
 
 
@@ -159,7 +162,7 @@ def add_layer_particles(ctx, draw_fn):
     ctx["rgb"] += layer
 
 
-def floor_reflection(ctx, src, floor_z=-0.06, y=-0.06, strength=0.32, decay=0.22):
+def floor_reflection(ctx, src, floor_z=-0.06, y=-0.06, strength=0.24, decay=0.2):
     cam = ctx["cam"]
     W, H = ctx["W"], ctx["H"]
     xs = np.linspace(-3.5, 3.5, 15)
@@ -193,10 +196,10 @@ def atmosphere(ctx, glow=0.6, smoke_d=0.18, top=True, color=CRIMSON, smoke_color
     W, H, t = ctx["W"], ctx["H"], ctx["t"]
     bg = 1.0 - np.clip(ctx["alpha"], 0, 1)[..., None]
     if top and glow > 0:
-        g = fx.soft_glow(W, H, W * 0.5, -H * 0.12, max(W, H) * 0.55, color, glow)
-        ctx["rgb"] += g * (0.35 + 0.65 * bg)
+        g = fx.soft_glow(W, H, W * 0.5, -H * 0.12, max(W, H) * 0.55, color, glow * 0.32)
+        ctx["rgb"] += g * (0.4 + 0.6 * bg)
     if smoke_d > 0:
-        sm = fx.smoke(ctx["noise"], W, H, t, smoke_color, density=smoke_d, seed=ctx["shot_index"])
+        sm = fx.smoke(ctx["noise"], W, H, t, smoke_color, density=smoke_d * 0.4, seed=ctx["shot_index"])
         ctx["rgb"] += sm * (0.3 + 0.7 * bg)
 
 
@@ -212,7 +215,7 @@ def r_s02(ctx):
     p, _ = ctx["shot"].track(ctx["f"], "lamp")
     if p is not None:
         u, v, z = screen_pt(ctx["cam"], p)
-        ctx["rgb"] = fx.god_rays(ctx["rgb"], u, v, strength=0.65, decay=0.95, threshold=1.0)
+        ctx["rgb"] = fx.god_rays(ctx["rgb"], u, v, strength=1.0, decay=0.95, threshold=0.5)
     add_layer_particles(ctx, lambda L: embers("dust").draw(L, ctx["cam"], ctx["t"], ctx["depth"], gain=0.3))
     atmosphere(ctx, glow=0.15, smoke_d=0.06, smoke_color=(0.35, 0.18, 0.08))
 
@@ -294,7 +297,7 @@ def r_s08(ctx):
     if p is not None:
         u, v, z = screen_pt(ctx["cam"], p)
         if z > 0:
-            ctx["rgb"] += fx.soft_glow(ctx["W"], ctx["H"], u, v, 0.08 * ctx["W"], (1.0, 0.04, 0.02), 0.7)
+            ctx["rgb"] += fx.soft_glow(ctx["W"], ctx["H"], u, v, 0.07 * ctx["W"], (1.0, 0.04, 0.02), 0.3)
     atmosphere(ctx, glow=0.25, smoke_d=0.07)
 
 
@@ -353,10 +356,10 @@ def r_s11(ctx):
     ctx["rgb"] += cv2.GaussianBlur(layer, (0, 0), 0.8)
     e = 0.0
     for h in TL.BEATS["vortex_hits"]:
-        if 0 <= f - h < 6:
-            e = max(e, math.exp(-(f - h) / 1.4))
-    ctx["exposure"] *= 1.0 + 0.6 * e
-    ctx["white"] = max(ctx.get("white", 0.0), 0.35 * e)
+        if 0 <= f - h < 4:
+            e = max(e, math.exp(-(f - h) / 0.7))
+    ctx["exposure"] *= 1.0 + 0.5 * e
+    ctx["white"] = max(ctx.get("white", 0.0), 0.5 * e)
     if f - TL.SHOT["s11_vortex"][0] < 5:          # coming out of the spotlight flare
         ctx["white"] = max(ctx["white"], 0.8 * (1 - (f - TL.SHOT["s11_vortex"][0]) / 5))
     atmosphere(ctx, glow=0.45, smoke_d=0.12, smoke_color=(0.6, 0.12, 0.04))
@@ -396,15 +399,15 @@ def r_title(ctx):
     add_layer_particles(ctx, lambda L: embers("title").draw(L, ctx["cam"], t, ctx["depth"], gain=0.55))
     hero = TT["hero_impact"]
     pulse = math.exp(-max(f - hero, 0) / 12.0) * (f >= hero)
-    atmosphere(ctx, glow=0.55 + 0.6 * pulse, smoke_d=0.13)
+    atmosphere(ctx, glow=0.55 + 0.35 * pulse, smoke_d=0.13)
     # impact flashes on the four MASS slams and the hero hit
     fl = 0.0
     for s in (TT["slam_M"], TT["slam_A"], TT["slam_S1"], TT["slam_S2"]):
         if 0 <= f - s < 4:
             fl = max(fl, math.exp(-(f - s) / 1.2))
-    ctx["exposure"] *= 1.0 + 0.45 * fl + 0.3 * pulse
+    ctx["exposure"] *= 1.0 + 0.45 * fl + 0.12 * pulse
     ctx["ca"] += 0.003 * fl
-    ctx["rgb"] = fx.anamorphic_streak(ctx["rgb"], threshold=10.0, strength=0.03)
+    ctx["rgb"] = fx.anamorphic_streak(ctx["rgb"], threshold=14.0, strength=0.015)
     if f < TL.SHOT["s13_title"][0] + 3:        # out of black
         ctx["exposure"] *= smoothstep(TL.SHOT["s13_title"][0] - 1, TL.SHOT["s13_title"][0] + 3, f)
     a, b = TT["fade"]

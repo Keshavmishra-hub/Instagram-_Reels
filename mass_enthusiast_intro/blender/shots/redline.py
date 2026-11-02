@@ -115,7 +115,7 @@ def build(variant="16x9", samples=16, scale=1.0):
         C.key_value(head.outputs[0], f, u)
         p = path_point(clamp(u))
         C.key_obj(red, f, loc=(p.x, p.y, 0.45))
-        C.key_value(red.data, f, 260.0 * smoothstep(t0, t0 + 3, f), attr="energy")
+        C.key_value(red.data, f, 130.0 * smoothstep(t0, t0 + 3, f), attr="energy")
     v = variant == "9x16"
 
     def loc(f):
