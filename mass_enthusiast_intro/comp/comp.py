@@ -72,6 +72,7 @@ class Shot:
         if not os.path.exists(p):
             return None
         rgb, alpha, depth = fx.load_exr(p)
+        self.upscale = self.W / rgb.shape[1]
         rgb = fx.fit(rgb, self.W, self.H)
         if depth is not None:
             depth = cv2.resize(depth, (self.W, self.H), interpolation=cv2.INTER_NEAREST)
@@ -486,6 +487,10 @@ def render_frame(variant, f):
         img = img + ctx["white"] * 4.0
     img = fx.tonemap(img, exposure=exp * ctx["exposure"])
     img = fx.grade(img, gain=gain, sat=sat, contrast=con)
+    up = getattr(sh, "upscale", 1.0)
+    if up > 1.05:   # frames rendered below output size: restore some acuity after the upscale
+        amt = min(0.6, 0.35 * (up - 1.0) / 0.33)
+        img = np.clip(img + amt * (img - cv2.GaussianBlur(img, (0, 0), 1.1 * up)), 0, 1)
     img = fx.shake(img, *ctx["shake"], zoom=ctx["zoom"])
     img = fx.vignette_cached(img, amount=ctx["vig"])
     img = _GRAIN[variant].apply(img, f, amount=0.022)
