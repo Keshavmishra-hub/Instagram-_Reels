@@ -476,7 +476,7 @@ def render_frame(variant, f):
             depth = np.full((H, W), 1e10, np.float32)
         else:
             rgb, alpha, depth = data
-        ctx.update(rgb=rgb, alpha=alpha, depth=depth, cam=sh.camera(f))
+        ctx.update(rgb=fx.rolloff(rgb), alpha=alpha, depth=depth, cam=sh.camera(f))
         if ctx["cam"] is not None:
             RECIPES[sid](ctx)
     exp, gain, sat, con = GRADE[sid]

@@ -93,6 +93,15 @@ def god_rays(img, cx, cy, strength=0.5, decay=0.94, samples=40, mask=None, thres
 
 
 # ----------------------------------------------------------------------------- tone / grade
+def rolloff(img, knee=2.0, soft=1.5):
+    """Hue-preserving highlight compression for very hot emitters (molten metal, lamps):
+    keeps texture inside them instead of clipping to a flat blob."""
+    L = img.max(axis=2, keepdims=True)
+    over = np.maximum(L - knee, 0.0)
+    Lc = np.where(L > knee, knee + soft * np.log1p(over / soft), L)
+    return img * (Lc / np.maximum(L, 1e-6))
+
+
 def aces(x):
     a, b, c, d, e = 2.51, 0.03, 2.43, 0.59, 0.14
     return np.clip((x * (a * x + b)) / (x * (c * x + d) + e), 0, 1)
