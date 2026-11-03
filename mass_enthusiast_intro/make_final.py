@@ -53,7 +53,7 @@ def main():
     ap.add_argument("--variant", default="16x9", choices=list(NAMES))
     ap.add_argument("--skip-comp", action="store_true")
     ap.add_argument("--workers", type=int, default=3)
-    ap.add_argument("--crf", type=int, default=18)
+    ap.add_argument("--mbps", type=float, default=18.0, help="video bit-rate for the two-pass encode")
     a = ap.parse_args()
     frames = os.path.join(ROOT, "build", f"frames_{a.variant}")
     audio = os.path.join(ROOT, "audio", "mass_enthusiast_mix.wav")
@@ -64,13 +64,18 @@ def main():
              "--png", frames, "--resume"])
     if not os.path.exists(audio):
         run([PY, os.path.join(ROOT, "audio", "sound_design.py")])
-    W, H = SIZES[a.variant]
-    run(["ffmpeg", "-v", "error", "-y", "-framerate", "30", "-start_number", "0", "-i",
-         os.path.join(frames, "%04d.png"), "-i", audio, "-map", "0:v:0", "-map", "1:a:0",
-         "-vf", "scale=out_color_matrix=bt709:out_range=tv:flags=lanczos+accurate_rnd+full_chroma_int",
-         "-c:v", "libx264", "-preset", "slow", "-crf", str(a.crf), "-tune", "film", "-profile:v", "high",
-         "-pix_fmt", "yuv420p", "-r", "30", "-colorspace", "bt709", "-color_primaries", "bt709",
-         "-color_trc", "bt709", "-color_range", "tv",
+    src = ["-framerate", "30", "-start_number", "0", "-i", os.path.join(frames, "%04d.png")]
+    vf = ["-vf", "scale=out_color_matrix=bt709:out_range=tv:flags=lanczos+accurate_rnd+full_chroma_int"]
+    x264 = ["-c:v", "libx264", "-preset", "slow", "-tune", "film", "-profile:v", "high", "-pix_fmt", "yuv420p",
+            "-r", "30", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", "-color_range", "tv"]
+    # two-pass at a fixed bit-rate keeps the file under GitHub's 100 MB limit while staying visually lossless;
+    # the film grain is what eats bits, so a CRF encode lands well above it
+    rate = ["-b:v", f"{a.mbps}M", "-maxrate", f"{a.mbps * 1.6:.0f}M", "-bufsize", f"{a.mbps * 2:.0f}M"]
+    log = os.path.join(ROOT, "build", f"x264_{a.variant}")
+    run(["ffmpeg", "-v", "error", "-y", *src, *vf, *x264, *rate, "-pass", "1", "-passlogfile", log, "-an",
+         "-f", "null", os.devnull])
+    run(["ffmpeg", "-v", "error", "-y", *src, "-i", audio, "-map", "0:v:0", "-map", "1:a:0", *vf, *x264, *rate,
+         "-pass", "2", "-passlogfile", log,
          "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2", "-shortest",
          "-movflags", "+faststart", "-metadata", "title=MASS ENTHUSIAST - Intro", out])
     ok = verify(out, a.variant)
