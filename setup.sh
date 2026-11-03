@@ -2,6 +2,7 @@
 # One-command setup for ReelForge on macOS / Linux (Windows: use WSL2).
 #   ./setup.sh            core install + local voice model (~350 MB)
 #   ./setup.sh --asr      also the offline speech recogniser used by QC (~460 MB)
+#   ./setup.sh --voice    also MY VOICE, the personal voice studio (python -m myvoice serve)
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -22,16 +23,23 @@ python3 -m venv .venv
 . .venv/bin/activate
 pip install --upgrade pip >/dev/null
 pip install -r requirements.txt
-if [[ "${1:-}" == "--asr" ]]; then pip install -r requirements-asr.txt; fi
+for arg in "$@"; do
+  if [[ "$arg" == "--asr" ]]; then pip install -r requirements-asr.txt; fi
+  if [[ "$arg" == "--voice" ]]; then pip install -r requirements-voice.txt; fi
+done
 
 echo "==> Renderer (Remotion)"
 (cd renderer && npm install --no-audit --no-fund)
 
 echo "==> Models"
-python -m reelforge setup-models ${1:-}
+if [[ " $* " == *" --asr "* ]]; then python -m reelforge setup-models --asr; else python -m reelforge setup-models; fi
 
 [[ -f .env ]] || cp .env.example .env
 echo
 python -m reelforge doctor
 echo
 echo "Done. Start the studio with:  . .venv/bin/activate && python -m reelforge serve   (http://127.0.0.1:8000)"
+if [[ " $* " == *" --voice "* ]]; then
+  python -m myvoice doctor
+  echo "MY VOICE:  . .venv/bin/activate && python -m myvoice serve   (http://127.0.0.1:8100)"
+fi

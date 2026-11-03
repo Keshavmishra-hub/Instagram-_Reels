@@ -1,0 +1,146 @@
+module: B
+sections:
+  - code: B-ENV
+    title: English vowels
+    core_first: 12
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Read naturally in your own accent. These sentences pack in particular vowel sounds; the goal is coverage, not "correct" pronunciation.
+    exercises:
+      - {text: "Keep the green sheets clean and neat for the meeting this week.", focus: ["iː (see)"]}
+      - {text: "His little sister will sit with him in the kitchen.", focus: ["ɪ (sit)"]}
+      - {text: "Many friends said the red bed was better than the rest.", focus: ["ɛ (bed)"]}
+      - {text: "The black cat sat on a flat mat and had a snack.", focus: ["æ (cat)"]}
+      - {text: "My father parked the car far from the large market.", focus: ["ɑː (car)"]}
+      - {text: "Paul bought a small ball and walked across the hall.", focus: ["ɔː (law)"]}
+      - {text: "Don't go home alone; the road is slow and the phone is low.", focus: ["oʊ (go)"]}
+      - {text: "Could you put the good book back where it should be?", focus: ["ʊ (book)"]}
+      - {text: "The new school food was too cool for June.", focus: ["uː (food)"]}
+      - {text: "Mother's younger brother runs a lovely sunny cup shop.", focus: ["ʌ (cup)"]}
+      - {text: "The first girl heard the bird early on Thursday.", focus: ["ɜː (bird)"]}
+      - {text: "The famous lady may take the late train today.", focus: ["eɪ (day)"]}
+      - {text: "I might try to ride my bike at night by the light of the tide.", focus: ["aɪ (my)"]}
+      - {text: "How now, brown cow? The loud crowd is out of town.", focus: ["aʊ (now)"]}
+      - {text: "The boy enjoyed the noisy toy and the oily coins.", focus: ["ɔɪ (boy)"]}
+      - {text: "Here, near the pier, the clear air is dearer than beer.", focus: ["ɪə (here)", "eə (there)"]}
+      - {text: "Are you sure the tourist was poor? The tour was pure luxury.", focus: ["ʊə (tour)"]}
+      - {text: "About a dozen people arrived at the station around eleven.", focus: ["ə (about)"]}
+
+  - code: B-ENC
+    title: English consonants
+    core_first: 12
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Read naturally. Each sentence repeats a few consonants in different positions in the word.
+    exercises:
+      - {text: "Peter's puppy picked up the paper and dropped it by the pool.", focus: [p, b]}
+      - {text: "Big Ben's bell rang above the busy blue bridge.", focus: [b]}
+      - {text: "Ten tired teachers took the last train to Delhi.", focus: [t, d]}
+      - {text: "Kind kids carry cookies in colourful bags to the garden gate.", focus: [k, g]}
+      - {text: "Five fine fishermen found a fresh fish in February.", focus: [f]}
+      - {text: "Very valuable vegetables arrived in the van on Saturday evening.", focus: [v]}
+      - {text: "Several sisters sang sweet songs at the seaside.", focus: [s]}
+      - {text: "Zara's zebra was lazy, so it dozed at the zoo.", focus: [z]}
+      - {text: "She shall share the shiny shells she washed on the shore.", focus: [ʃ]}
+      - {text: "Usually the treasure in the garage is a pleasure to measure.", focus: [ʒ]}
+      - {text: "Happy Harry hid his heavy hat behind the house.", focus: [h]}
+      - {text: "Charlie chose cheap cheese and a chocolate cherry cake.", focus: [tʃ]}
+      - {text: "The judge enjoyed the jam and the jelly in June.", focus: [dʒ]}
+      - {text: "Mum made mango milkshake on a misty Monday morning.", focus: [m]}
+      - {text: "Nine new neighbours never noticed the noise.", focus: [n]}
+      - {text: "The singer is bringing something amazing to the evening.", focus: [ŋ]}
+      - {text: "Lovely little lamps lit the long hall late at night.", focus: [l]}
+      - {text: "Rohan's red car raced around the rough rural road.", focus: [r]}
+      - {text: "William wanted warm water for the white wool.", focus: [w]}
+      - {text: "Yesterday the young yogi said yes to yellow yoghurt.", focus: [j]}
+
+  - code: B-ENIE
+    title: Indian-English sound contrasts
+    core_first: 5
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: These sentences contain sounds that Indian English handles in its own way (th, v and w, z, zh). Say them as you naturally would.
+    exercises:
+      - {text: "I think three thousand thirsty athletes ran through the thick forest.", focus: ["θ (think)"]}
+      - {text: "This is the weather they were talking about, though they didn't mention the other one.", focus: ["ð (this)"]}
+      - {text: "We visited a village where the wind and the waves were very wild.", focus: ["v / w"]}
+      - {text: "Vivek was worried when the van went the wrong way on the highway.", focus: ["v / w"]}
+      - {text: "The zoo was crazy busy, so the visitors used the zigzag route.", focus: ["z"]}
+      - {text: "Television division, casual vision, and a decision at leisure.", focus: ["ʒ"]}
+      - {text: "Breathe in, breathe out, and soothe your throat with warm water.", focus: ["ð", "θ"]}
+
+  - code: B-ENCL
+    title: Consonant clusters
+    core_first: 5
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Say every consonant in the cluster, but keep your natural rhythm.
+    exercises:
+      - {text: "Strong street traders sprayed the scrap metal with a splash of strange paint.", focus: ["str", "spr", "scr", "spl"]}
+      - {text: "She asks for the texts, the tests and the results of the last six months.", focus: ["-sks", "-ksts", "-nths"]}
+      - {text: "The twelfth student scripts the strengths and weaknesses of the project.", focus: ["-lfth", "-ŋθs"]}
+      - {text: "Glossy brown frogs crept slowly across the flat, grassy plain.", focus: ["initial clusters"]}
+      - {text: "He jumped, helped, asked and laughed in one breathless minute.", focus: ["-mpt", "-lpt", "-skt", "-ft"]}
+      - {text: "The prompt instructions describe the scripts and the screens.", focus: ["-mpt", "-str-", "-skr-"]}
+      - {text: "Squirrels squeezed through the square splinters of the crumbling fence.", focus: ["skw", "spl", "kr"]}
+      - {text: "Clothes, months, sixths and fifths are tricky words to say quickly.", focus: ["-ðz", "-nθs", "-ksθs", "-fθs"]}
+
+  - code: B-ENMP
+    title: English minimal pairs
+    core_first: 6
+    category: english_phonetics
+    defaults: {kind: word_list, lang: en, style: neutral}
+    instruction: Read each pair clearly, with a short pause after every word.
+    exercises:
+      - {text: "ship, sheep · bit, beat · fill, feel · live, leave · sit, seat", focus: ["ɪ / iː"]}
+      - {text: "full, fool · pull, pool · look, Luke · could, cooed · would, wooed", focus: ["ʊ / uː"]}
+      - {text: "bat, bet · man, men · sad, said · pan, pen · bag, beg", focus: ["æ / ɛ"]}
+      - {text: "cat, cut · hat, hut · ban, bun · match, much · cap, cup", focus: ["æ / ʌ"]}
+      - {text: "thin, tin · three, tree · thank, tank · bath, bat · both, boat", focus: ["θ / t"]}
+      - {text: "then, den · they, day · those, doze · breathe, breed · there, dare", focus: ["ð / d"]}
+      - {text: "vine, wine · vest, west · vet, wet · veil, whale · verse, worse", focus: ["v / w"]}
+      - {text: "zip, sip · zoo, sue · buzz, bus · rise, rice · eyes, ice", focus: ["z / s"]}
+      - {text: "sure, shore · ship, chip · wash, watch · share, chair · sheep, cheap", focus: ["ʃ / tʃ"]}
+      - {text: "light, right · lake, rake · collect, correct · glass, grass · fly, fry", focus: ["l / r"]}
+
+  - code: B-ENEND
+    title: Word endings
+    core_first: 4
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Finish every word clearly, especially the endings.
+    exercises:
+      - {text: "She walked, wanted, played and decided, then rested and smiled.", focus: ["-ed: t / ɪd / d"]}
+      - {text: "The cats, the dogs, the horses and the boxes all needed baths.", focus: ["-s: s / z / ɪz"]}
+      - {text: "Our nation's education and information depend on communication.", focus: ["-tion"]}
+      - {text: "The future of nature and culture is a measure of our adventure.", focus: ["-ture", "-sure"]}
+      - {text: "Kindness, happiness and fairness bring improvement and agreement.", focus: ["-ness", "-ment"]}
+      - {text: "Quickly, quietly and carefully, the family finally arrived.", focus: ["-ly"]}
+
+  - code: B-ENSYL
+    title: Syllable structures and long words
+    core_first: 3
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Read smoothly. Long words should flow, with the stress where you normally put it.
+    exercises:
+      - {text: "Entrepreneurship requires responsibility, creativity and perseverance.", focus: ["polysyllabic"]}
+      - {text: "The pharmaceutical laboratory published comprehensive documentation.", focus: ["polysyllabic"]}
+      - {text: "Go. Stop. Plan. Strength. Unbelievable. Opportunity. Extraordinarily.", focus: ["CV to CCCVCCC"]}
+      - {text: "Photography, photographer, photographic: the stress moves as the word grows.", focus: ["stress shift"]}
+      - {text: "Record the record, present the present, and object to the object.", focus: ["noun / verb stress"]}
+
+  - code: B-ENTW
+    title: Difficult combinations
+    category: english_phonetics
+    defaults: {kind: sentence, lang: en, style: neutral, core: false}
+    instruction: Tongue twisters. Accuracy first, then a little speed. It's fine to smile.
+    exercises:
+      - "She sells seashells by the seashore, and the shells she sells are surely seashells."
+      - "Red lorry, yellow lorry, red lorry, yellow lorry."
+      - "Six slippery snails slid slowly seaward."
+      - "Peter Piper picked a peck of pickled peppers."
+      - "How can a clam cram in a clean cream can?"
+      - "Fresh fried fish, fish fresh fried, fried fish fresh, fish fried fresh."
+      - "Thirty-three thousand thoughtful thinkers thought about the theory."
+      - "Unique New York, unique New York, you know you need unique New York."

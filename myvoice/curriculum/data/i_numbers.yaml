@@ -1,0 +1,135 @@
+module: I
+sections:
+  - code: I-N100E
+    title: Numbers 0–100 in English
+    category: numbers_special
+    defaults: {kind: word_list, lang: en, style: neutral}
+    instruction: Read each number in English at a steady pace, with a short pause after each.
+    exercises:
+      - {text: "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20", spoken: "zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty"}
+      - {text: "21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40", spoken: "twenty one, twenty two, twenty three, twenty four, twenty five, twenty six, twenty seven, twenty eight, twenty nine, thirty, thirty one, thirty two, thirty three, thirty four, thirty five, thirty six, thirty seven, thirty eight, thirty nine, forty"}
+      - {text: "41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60", spoken: "forty one, forty two, forty three, forty four, forty five, forty six, forty seven, forty eight, forty nine, fifty, fifty one, fifty two, fifty three, fifty four, fifty five, fifty six, fifty seven, fifty eight, fifty nine, sixty"}
+      - {text: "61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80", spoken: "sixty one, sixty two, sixty three, sixty four, sixty five, sixty six, sixty seven, sixty eight, sixty nine, seventy, seventy one, seventy two, seventy three, seventy four, seventy five, seventy six, seventy seven, seventy eight, seventy nine, eighty"}
+      - {text: "81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100", spoken: "eighty one, eighty two, eighty three, eighty four, eighty five, eighty six, eighty seven, eighty eight, eighty nine, ninety, ninety one, ninety two, ninety three, ninety four, ninety five, ninety six, ninety seven, ninety eight, ninety nine, one hundred"}
+
+  - code: I-N100H
+    title: Numbers 0–100 in Hindi
+    category: numbers_special
+    defaults: {kind: word_list, lang: hi, style: neutral}
+    instruction: हर संख्या हिंदी में पढ़िए, हर संख्या के बाद हल्का विराम। (१ से १०० तक हर संख्या का अपना अलग शब्द है।)
+    exercises:
+      - {text: "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20", spoken: "शून्य, एक, दो, तीन, चार, पाँच, छह, सात, आठ, नौ, दस, ग्यारह, बारह, तेरह, चौदह, पंद्रह, सोलह, सत्रह, अठारह, उन्नीस, बीस"}
+      - {text: "21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40", spoken: "इक्कीस, बाईस, तेईस, चौबीस, पच्चीस, छब्बीस, सत्ताईस, अट्ठाईस, उनतीस, तीस, इकतीस, बत्तीस, तैंतीस, चौंतीस, पैंतीस, छत्तीस, सैंतीस, अड़तीस, उनतालीस, चालीस"}
+      - {text: "41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60", spoken: "इकतालीस, बयालीस, तैंतालीस, चवालीस, पैंतालीस, छियालीस, सैंतालीस, अड़तालीस, उनचास, पचास, इक्यावन, बावन, तिरपन, चौवन, पचपन, छप्पन, सत्तावन, अट्ठावन, उनसठ, साठ"}
+      - {text: "61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80", spoken: "इकसठ, बासठ, तिरसठ, चौंसठ, पैंसठ, छियासठ, सड़सठ, अड़सठ, उनहत्तर, सत्तर, इकहत्तर, बहत्तर, तिहत्तर, चौहत्तर, पचहत्तर, छिहत्तर, सतहत्तर, अठहत्तर, उन्यासी, अस्सी"}
+      - {text: "81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100", spoken: "इक्यासी, बयासी, तिरासी, चौरासी, पचासी, छियासी, सत्तासी, अट्ठासी, नवासी, नब्बे, इक्यानबे, बानबे, तिरानबे, चौरानबे, पंचानबे, छियानबे, सत्तानबे, अट्ठानबे, निन्यानबे, एक सौ"}
+
+  - code: I-BIG
+    title: Large numbers (lakh, crore, million)
+    core_first: 2
+    category: numbers_special
+    defaults: {kind: sentence, style: neutral}
+    instruction: Read the figures as written underneath.
+    exercises:
+      - {lang: en, kind: word_list, text: "1,00,000 · 10,00,000 · 1,00,00,000 · 1 million · 1 billion", spoken: "one lakh, ten lakh, one crore, one million, one billion"}
+      - {lang: hi, kind: word_list, text: "1,00,000 · 25,00,000 · 3,50,00,000 · 100 करोड़", spoken: "एक लाख, पच्चीस लाख, साढ़े तीन करोड़, सौ करोड़"}
+      - {lang: en, text: "The project cost ₹47,85,000, nearly half a crore.", spoken: "The project cost forty seven lakh eighty five thousand rupees, nearly half a crore."}
+      - {lang: en, text: "The city has about 1.2 crore residents, or 12 million people.", spoken: "The city has about one point two crore residents, or twelve million people."}
+
+  - code: I-DATE
+    title: Dates and years
+    category: numbers_special
+    defaults: {kind: word_list, style: neutral}
+    instruction: Read the dates and years as written underneath.
+    exercises:
+      - {lang: en, text: "26 January 1950 · 15 August 1947 · 2 October 1869", spoken: "twenty sixth January nineteen fifty, fifteenth August nineteen forty seven, second October eighteen sixty nine"}
+      - {lang: hi, text: "26 जनवरी 1950 · 14 अप्रैल 2026 · 31 दिसंबर 1999", spoken: "छब्बीस जनवरी उन्नीस सौ पचास, चौदह अप्रैल दो हज़ार छब्बीस, इकतीस दिसंबर उन्नीस सौ निन्यानबे"}
+      - {lang: en, text: "1857 · 1991 · 2000 · 2008 · 2047", spoken: "eighteen fifty seven, nineteen ninety one, two thousand, two thousand eight, twenty forty seven"}
+      - {lang: hi, text: "1857 · 1991 · 2000 · 2047", spoken: "अठारह सौ सत्तावन, उन्नीस सौ इक्यानबे, दो हज़ार, दो हज़ार सैंतालीस"}
+
+  - code: I-TIME
+    title: Time
+    category: numbers_special
+    defaults: {kind: word_list, style: neutral}
+    instruction: Read the times as written underneath.
+    exercises:
+      - {lang: en, text: "7:00 AM · 9:15 AM · 12:30 PM · 4:45 PM · 11:59 PM", spoken: "seven A M, nine fifteen A M, twelve thirty P M, four forty five P M, eleven fifty nine P M"}
+      - {lang: hi, text: "सुबह 7:15 · दोपहर 1:30 · शाम 5:45 · रात 10:00 · 2:30", spoken: "सुबह सवा सात बजे, दोपहर डेढ़ बजे, शाम पौने छह बजे, रात दस बजे, ढाई बजे", instruction: "समय रोज़मर्रा की हिंदी में पढ़िए (सवा, साढ़े, पौने, डेढ़, ढाई), जैसा नीचे लिखा है।"}
+
+  - code: I-PHONE
+    title: Phone-style digit sequences (fictional)
+    category: numbers_special
+    defaults: {kind: sentence, style: neutral}
+    instruction: These numbers are fictional (no Indian mobile number starts with 0). Read them digit by digit, as written underneath.
+    exercises:
+      - {lang: en, text: "Call 01234 56789 or 04567 12398.", spoken: "Call zero one two three four five six seven eight nine or zero four five six seven one two three nine eight."}
+      - {lang: hi, text: "मेरा नंबर 03216 54987 है।", spoken: "मेरा नंबर शून्य तीन दो एक छह पाँच चार नौ आठ सात है।"}
+
+  - code: I-CUR
+    title: Currency amounts
+    category: numbers_special
+    defaults: {kind: word_list, style: neutral}
+    instruction: Read the amounts as written underneath.
+    exercises:
+      - {lang: en, text: "₹99 · ₹1,499 · ₹25,000 · $150 · €75.50", spoken: "ninety nine rupees, one thousand four hundred and ninety nine rupees, twenty five thousand rupees, one hundred and fifty dollars, seventy five euros fifty cents"}
+      - {lang: hi, text: "₹50 · ₹2,000 · ₹1.5 लाख · ₹10 करोड़", spoken: "पचास रुपये, दो हज़ार रुपये, डेढ़ लाख रुपये, दस करोड़ रुपये"}
+
+  - code: I-PCT
+    title: Percentages
+    category: numbers_special
+    defaults: {kind: word_list, style: neutral}
+    instruction: Read the percentages as written underneath.
+    exercises:
+      - {lang: en, text: "5% · 12.5% · 50% · 99.9% · 100%", spoken: "five percent, twelve point five percent, fifty percent, ninety nine point nine percent, one hundred percent"}
+      - {lang: hi, text: "10% · 25% · 33% · 75%", spoken: "दस प्रतिशत, पच्चीस प्रतिशत, तैंतीस प्रतिशत, पचहत्तर प्रतिशत"}
+
+  - code: I-MATH
+    title: Mathematical expressions
+    category: numbers_special
+    defaults: {kind: word_list, style: neutral}
+    instruction: Read each calculation aloud, as written underneath.
+    exercises:
+      - {lang: en, text: "2 + 2 = 4 · 15 − 7 = 8 · 6 × 7 = 42 · 81 ÷ 9 = 9 · 3² = 9 · √16 = 4", spoken: "two plus two equals four, fifteen minus seven equals eight, six times seven equals forty two, eighty one divided by nine equals nine, three squared equals nine, the square root of sixteen equals four"}
+      - {lang: hi, text: "12 + 8 = 20 · 9 × 9 = 81 · 100 ÷ 4 = 25", spoken: "बारह जमा आठ बराबर बीस, नौ गुणा नौ बराबर इक्यासी, सौ भाग चार बराबर पच्चीस"}
+
+  - code: I-SCI
+    title: Scientific terminology
+    core_first: 2
+    category: numbers_special
+    defaults: {kind: word_list, style: neutral}
+    instruction: Read each term clearly, with a short pause after each.
+    exercises:
+      - {lang: en, text: "photosynthesis, chlorophyll, mitochondria, deoxyribonucleic acid, hypothesis, electromagnetic radiation, carbohydrate, biodiversity"}
+      - {lang: en, kind: sentence, text: "Nitrogen, phosphorus and potassium are the primary macronutrients that plants need to grow."}
+      - {lang: hi, text: "प्रकाश संश्लेषण, गुरुत्वाकर्षण, ऊर्जा, परमाणु, जलवायु परिवर्तन, जैव विविधता, पारिस्थितिकी तंत्र"}
+
+  - code: I-BIZAB
+    title: Business abbreviations
+    core_first: 2
+    category: numbers_special
+    defaults: {kind: word_list, lang: en, style: business}
+    instruction: Read the abbreviations the way they are normally said, as written underneath.
+    exercises:
+      - {text: "ROI, KPI, CAGR, EBITDA, GST, B2B, B2C, SaaS, IPO, P&L", spoken: "R O I, K P I, C A G R, EBITDA, G S T, B two B, B two C, SaaS, I P O, P and L"}
+      - {kind: sentence, text: "Our CAGR over five years was eighteen percent, and the EBITDA margin improved every quarter."}
+      - {kind: sentence, text: "The CFO wants the P&L and the KPI dashboard before the board meeting.", spoken: "The C F O wants the P and L and the K P I dashboard before the board meeting."}
+
+  - code: I-AGRI
+    title: Agricultural terminology
+    core_first: 2
+    category: numbers_special
+    defaults: {kind: word_list, style: agriculture}
+    instruction: Read each term clearly, the way you would say it in a farming video.
+    exercises:
+      - {lang: en, text: "kharif, rabi, zaid, MSP, FPO, KCC, NPK, drip irrigation, vermicompost, mulching, crop rotation, soil health card"}
+      - {lang: hi, text: "ख़रीफ़, रबी, ज़ायद, न्यूनतम समर्थन मूल्य, किसान क्रेडिट कार्ड, सूक्ष्म सिंचाई, फ़सल चक्र, केंचुआ खाद"}
+      - {lang: hinglish, kind: sentence, text: "PM-KISAN के तहत eligible किसानों को साल में छह हज़ार रुपये तीन किस्तों में मिलते हैं।"}
+
+  - code: I-ACR
+    title: Common acronyms
+    category: numbers_special
+    defaults: {kind: word_list, lang: en, style: neutral}
+    instruction: Read each acronym the way it is normally said.
+    exercises:
+      - {text: "NASA, ISRO, UPI, RBI, GDP, AI, IIT, UPSC, WHO, UNESCO, CEO, NGO"}
+      - {kind: sentence, text: "ISRO and NASA built the NISAR satellite together to map changes on the Earth's surface."}

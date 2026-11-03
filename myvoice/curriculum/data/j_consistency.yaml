@@ -1,0 +1,14 @@
+module: J
+sections:
+  - code: J-ANC
+    title: Consistency anchor sentences
+    category: consistency
+    defaults: {kind: sentence, style: neutral, repeat: per_session}
+    instruction: Read in your normal, relaxed voice — the same way every session. Don't try to match previous takes; natural variation is what we want to measure.
+    exercises:
+      - {lang: en, text: "The quick brown fox jumps over the lazy dog, while the morning sun rises gently over the quiet hills."}
+      - {lang: en, style: narration, text: "Every story begins with a single moment, and this one begins on a cold winter morning in the mountains."}
+      - {lang: hi, text: "सुबह की ठंडी हवा में खेतों की हरियाली देखकर मन को बहुत सुकून मिलता है।"}
+      - {lang: hi, text: "भारत एक विशाल देश है, जहाँ हर कुछ किलोमीटर पर भाषा, खाना और पहनावा बदल जाता है।"}
+      - {lang: hinglish, text: "आज के video में हम समझेंगे कि एक simple idea को successful business में कैसे बदला जाए।"}
+      - {lang: en, text: "Six thin slices of fresh bread, a jar of strawberry jam and three cups of hot chai, please."}

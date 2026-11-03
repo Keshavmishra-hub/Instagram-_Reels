@@ -1,0 +1,24 @@
+# MY VOICE — Personal AI Voice Studio (python -m myvoice serve). Self-contained: this file alone is enough.
+# Versions are the ones the studio was tested with on Python 3.13.
+fastapi==0.162.0
+uvicorn==0.54.0
+python-multipart==0.0.33
+pydantic==2.14.2
+python-dotenv==1.2.4
+PyYAML==6.0.3
+numpy==2.5.4
+scipy==1.18.1
+soundfile==0.14.0
+rapidfuzz==3.14.6
+num2words==0.5.14
+# Speech analysis: Praat (pitch, harmonicity, jitter/shimmer), WebRTC voice activity detection,
+# eSpeak NG (English phonemes; bundled library, no system install)
+praat-parselmouth==0.4.7
+webrtcvad-wheels==2.0.14.post1
+espeakng-loader==0.2.4
+# Read-check (local speech recognition). Optional but recommended; the Whisper model (0.5–3 GB)
+# downloads from Hugging Face on first use and is cached. Remove this line to skip it.
+faster-whisper==1.2.1
+# Tests
+pytest==9.2.0
+httpx==0.28.1

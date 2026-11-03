@@ -1,0 +1,114 @@
+module: H
+sections:
+  - code: H-FRND
+    title: Talking to a friend
+    core_first: 3
+    category: conversational
+    defaults: {kind: dialogue, style: conversational}
+    instruction: Reply to your friend's line naturally, as if you're really talking.
+    exercises:
+      - {lang: hinglish, cue: "Yaar, kal tu party mein kyun nahi aaya?", text: "अरे, office में बहुत late हो गया था यार, next time पक्का {आऊँगा|आऊँगी}।"}
+      - {lang: en, cue: "So, how was the trip? Tell me everything!", text: "Honestly, it was amazing. The food, the people, the mountains — I didn't want to come back."}
+      - {lang: hi, cue: "तुमने वो नई वेब सीरीज़ देखी?", text: "हाँ, कल रात एक ही बार में पूरी देख डाली। आख़िरी एपिसोड तो कमाल का था!"}
+      - {lang: hinglish, cue: "Weekend pe kya plan hai?", text: "कुछ ख़ास नहीं, {सोच रहा था|सोच रही थी} कहीं पास में trekking पर चलें। तू चलेगा?"}
+      - {lang: en, cue: "You look tired. Everything okay?", text: "Yeah, just a long week. Nothing a good night's sleep and some chai won't fix."}
+
+  - code: H-BEGN
+    title: Explaining to a beginner
+    core_first: 2
+    category: conversational
+    defaults: {kind: dialogue, style: educational}
+    instruction: Explain patiently and simply, like to someone hearing this for the first time.
+    exercises:
+      - {lang: en, cue: "What exactly is a mutual fund?", text: "Think of it as a big pot of money from lots of people. A professional manager invests it for everyone, so you get a share of many companies, not just one."}
+      - {lang: hinglish, cue: "Instagram pe reach kaise badhaate hain?", text: "देखो, सबसे पहले consistent रहो। हर हफ़्ते fixed दिनों पर post करो, पहले तीन seconds में strong hook रखो, और comments का reply ज़रूर करो।"}
+      - {lang: hi, cue: "जैविक खेती आखिर होती क्या है?", text: "जैविक खेती में रासायनिक खाद और कीटनाशक की जगह गोबर की खाद, कंपोस्ट और प्राकृतिक तरीक़ों से फ़सल उगाई जाती है।"}
+
+  - code: H-INTV
+    title: Answering interview questions
+    core_first: 2
+    category: conversational
+    defaults: {kind: dialogue, style: interview}
+    instruction: "Answer as you would in a real interview: composed and genuine."
+    exercises:
+      - {lang: en, cue: "Tell me a little about yourself.", text: "I've spent the last few years working at the intersection of business and agriculture, and what drives me is turning good ideas into things that actually work on the ground."}
+      - {lang: en, cue: "What is your biggest weakness?", text: "I used to take on too much myself. I've learned to delegate earlier and to trust my team, and our results improved because of it."}
+      - {lang: hinglish, cue: "Aapne ye field kyun choose ki?", text: "सच कहूँ तो मुझे हमेशा से लोगों की real problems solve करना अच्छा लगता है, और इस field में वो मौक़ा हर दिन मिलता है।"}
+      - {lang: hi, cue: "पाँच साल बाद आप ख़ुद को कहाँ देखते हैं?", text: "मैं ख़ुद को एक ऐसी भूमिका में देखना {चाहता|चाहती} हूँ जहाँ मेरे काम से हज़ारों किसानों की ज़िंदगी पर सीधा असर पड़े।"}
+
+  - code: H-OPIN
+    title: Giving an opinion
+    core_first: 2
+    category: conversational
+    defaults: {kind: dialogue, style: opinion}
+    instruction: Give your opinion naturally, with conviction but not aggression.
+    exercises:
+      - {lang: en, cue: "Do you think working from home is better?", text: "For focused work, absolutely. But I think teams still need to meet in person regularly to build real trust."}
+      - {lang: hinglish, cue: "Online classes better hain ya offline?", text: "मेरे हिसाब से दोनों का अपना फ़ायदा है। Basics के लिए offline best है, लेकिन revision और flexibility के लिए online कमाल का है।"}
+      - {lang: hi, cue: "क्या शहरों में रहना गाँवों से बेहतर है?", text: "शहरों में मौक़े ज़्यादा हैं, लेकिन सुकून और अपनापन आज भी गाँवों में ही मिलता है।"}
+
+  - code: H-ASK
+    title: Asking questions
+    core_first: 2
+    category: conversational
+    defaults: {kind: sentence, style: conversational}
+    instruction: Ask as if you genuinely want the answer.
+    exercises:
+      - {lang: en, text: "Sorry to interrupt, but could you explain how you arrived at that number?"}
+      - {lang: hinglish, text: "Ek minute, ये discount सिर्फ़ online पर है या store में भी मिलेगा?"}
+      - {lang: hi, text: "माफ़ कीजिए, क्या आप बता सकते हैं कि यहाँ से रेलवे स्टेशन कितनी दूर है?"}
+
+  - code: H-DIS
+    title: Expressing disagreement
+    core_first: 2
+    category: conversational
+    defaults: {kind: dialogue, style: opinion}
+    instruction: Disagree politely but clearly.
+    exercises:
+      - {lang: en, cue: "Social media is just a waste of time.", text: "I see why people say that, but I don't fully agree. Used well, it's one of the best ways to learn and to build something of your own."}
+      - {lang: hinglish, cue: "Farming mein ab koi future nahi hai.", text: "Sorry, पर मैं agree नहीं {करता|करती}। सही technology और market access हो तो farming आज भी बहुत अच्छा business है।"}
+      - {lang: hi, cue: "पढ़ाई सिर्फ़ नौकरी पाने के लिए होती है।", text: "मैं इससे सहमत नहीं हूँ। पढ़ाई सोचने का तरीक़ा देती है, नौकरी तो उसका बस एक नतीजा है।"}
+
+  - code: H-CPX
+    title: Explaining a complex subject
+    core_first: 1
+    category: conversational
+    defaults: {kind: paragraph, style: educational}
+    instruction: Explain step by step, as if to a smart friend over coffee.
+    exercises:
+      - {lang: en, text: "Climate change is a bit like adding blankets to a bed. Greenhouse gases trap more of the sun's heat, so the planet slowly warms. That extra heat doesn't just mean hotter days; it changes rainfall, strengthens storms and shifts the seasons farmers depend on."}
+      - {lang: hinglish, text: "UPI को ऐसे समझो: आपका phone number या UPI ID एक तरह का address है। जब आप pay करते हो, तो आपका bank सीधे दूसरे के bank को message भेजता है, PIN से verify करता है, और कुछ ही seconds में पैसा transfer हो जाता है।"}
+
+  - code: H-INST
+    title: Giving instructions
+    core_first: 2
+    category: conversational
+    defaults: {kind: sentence, style: instructional}
+    instruction: Clear, step-by-step instructions, friendly and confident.
+    exercises:
+      - {lang: en, text: "First, open the app. Then tap on settings, scroll down to privacy, and switch off location sharing."}
+      - {lang: hi, text: "पहले पौधों को सुबह-सुबह पानी दीजिए, फिर हफ़्ते में एक बार मिट्टी की गुड़ाई कर दीजिए।"}
+      - {lang: hinglish, text: "Screen पर नीचे वाला blue button दबाओ, फिर अपना OTP डालो, और submit कर दो।"}
+
+  - code: H-SPON
+    title: Spontaneous speech
+    core_first: 6
+    category: conversational
+    defaults: {kind: prompt, style: spontaneous, readcheck: false, min_sec: 25, max_sec: 120}
+    instruction: Speak freely about the topic for 30–60 seconds. Don't read, don't rehearse; ums and pauses are fine. The transcript is generated for you to check.
+    exercises:
+      - {lang: en, text: "What does a perfect Sunday look like for you?", hints: ["morning", "food", "people", "how it ends"]}
+      - {lang: hi, text: "अपने बचपन की कोई एक याद सुनाइए जो आज भी आपको मुस्कुरा देती है।", hints: ["कहाँ", "कौन था", "क्या हुआ", "क्यों याद है"]}
+      - {lang: hinglish, text: "आपने Instagram पर content बनाना क्यों शुरू किया, या करना चाहते हैं?", hints: ["वजह", "पहला video", "सबसे बड़ा lesson"]}
+      - {lang: en, text: "Describe the place you grew up in to someone who has never been there.", hints: ["sounds", "smells", "people", "what changed"]}
+      - {lang: hi, text: "आपकी पसंदीदा खाने की चीज़ कौन-सी है, और उसे कैसे बनाया जाता है?", hints: ["नाम", "सामग्री", "बनाने का तरीक़ा", "कब खाते हैं"]}
+      - {lang: hinglish, text: "एक business idea बताइए जो आपको लगता है India में चल सकता है।", hints: ["problem", "solution", "customer", "कैसे कमाएगा"]}
+      - {lang: en, text: "What is one piece of advice you would give your younger self?", hints: ["the advice", "why", "a story"]}
+      - {lang: hi, text: "आज के किसानों के सामने सबसे बड़ी चुनौती क्या है, और उसका हल क्या हो सकता है?", hints: ["चुनौती", "उदाहरण", "हल"]}
+      - {lang: hinglish, text: "अपनी किसी एक mistake के बारे में बताइए, जिससे आपने बहुत कुछ सीखा।", hints: ["क्या हुआ", "उस वक़्त कैसा लगा", "क्या सीखा"]}
+      - {lang: en, text: "Explain a skill you're good at, as if teaching it to a friend.", hints: ["what it is", "first steps", "common mistakes"]}
+      - {lang: hi, text: "आपके शहर या गाँव का कोई त्योहार कैसे मनाया जाता है?", hints: ["तैयारी", "खाना", "रस्में", "माहौल"]}
+      - {lang: hinglish, text: "Technology ने आपकी daily life को कैसे बदला है?", hints: ["पहले", "अब", "अच्छा", "बुरा"]}
+      - {lang: en, text: "Tell the story of a journey that didn't go as planned.", hints: ["where", "what went wrong", "how it ended"]}
+      - {lang: hi, text: "अगर आपको एक दिन के लिए किसी भी जगह जाने का मौक़ा मिले, तो आप कहाँ जाएँगे और क्यों?", hints: ["जगह", "क्या करेंगे", "किसके साथ"]}
+      - {lang: hinglish, text: "आपकी morning routine कैसी है, और आप उसमें क्या बदलना चाहेंगे?", hints: ["उठने का time", "पहला काम", "बदलाव"]}

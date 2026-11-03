@@ -1,0 +1,171 @@
+module: F
+sections:
+  - code: F-HAP
+    title: Happiness
+    category: emotional
+    defaults: {kind: sentence, emotion: happiness, style: conversational}
+    instruction: Imagine the situation, then say the line with genuine happiness. Your voice should still sound like you.
+    exercises:
+      - {lang: en, context: "Your best friend has just told you they are getting married.", text: "That's wonderful news! I'm so happy for both of you, I honestly can't stop smiling."}
+      - {lang: hi, context: "Your younger sibling has just got their first job.", text: "अरे वाह! सच में? मुझे तुम पर बहुत गर्व है, आज तो पार्टी बनती है!"}
+      - {lang: hinglish, context: "Telling your followers the channel just crossed a big milestone.", text: "Guys, हमने कर दिखाया! आप सबके प्यार के लिए दिल से thank you!"}
+
+  - code: F-EXC
+    title: Excitement
+    category: emotional
+    defaults: {kind: sentence, emotion: excitement, style: conversational}
+    instruction: High energy and anticipation — but stay clear.
+    exercises:
+      - {lang: en, context: "Your favourite band has just announced a concert in your city.", text: "No way! They're actually coming here? We have to get tickets right now!"}
+      - {lang: hi, context: "You leave tomorrow morning for a trip you've waited years for.", text: "बस कल सुबह निकलना है, और मुझसे इंतज़ार ही नहीं हो रहा!"}
+      - {lang: hinglish, context: "Opening a product-launch reel.", text: "आज हम launch कर रहे हैं कुछ ऐसा, जो आपने पहले कभी नहीं देखा!"}
+
+  - code: F-CON
+    title: Confidence
+    category: emotional
+    defaults: {kind: sentence, emotion: confidence, style: professional}
+    instruction: Calm certainty. No rushing, no raised pitch at the end.
+    exercises:
+      - {lang: en, context: "Opening a pitch to investors.", text: "We know this market better than anyone, and we have the numbers to prove it."}
+      - {lang: hi, context: "Reassuring your team about a tight deadline.", text: "आप चिंता मत कीजिए, ये काम समय पर पूरा होगा, ये मेरी ज़िम्मेदारी है।"}
+      - {lang: hinglish, context: "Answering 'Why should we hire you?' in an interview.", text: "मुझे पूरा भरोसा है कि मैं इस role में real impact create कर {सकता|सकती} हूँ।"}
+
+  - code: F-AUT
+    title: Authority
+    category: emotional
+    defaults: {kind: sentence, emotion: authority, style: formal}
+    instruction: Firm and commanding, lower and steadier than usual. Not angry.
+    exercises:
+      - {lang: en, context: "Final instructions to a crew before a live event.", text: "Listen carefully. Everyone takes their position in five minutes, and nobody leaves without my approval."}
+      - {lang: hi, context: "A principal speaking to students about discipline.", text: "अनुशासन के बिना कोई भी सफलता टिकाऊ नहीं होती। आज से नियमों का पालन सबको करना होगा।"}
+      - {lang: hinglish, context: "A team lead setting expectations.", text: "Deadline final है। हर किसी को अपना part कल सुबह तक submit करना है, no excuses।"}
+
+  - code: F-SER
+    title: Seriousness
+    category: emotional
+    defaults: {kind: sentence, emotion: seriousness, style: narration}
+    instruction: Grave and measured, with weight on the key words.
+    exercises:
+      - {lang: en, context: "Giving a health warning in an awareness video.", text: "This is not something to ignore. If the symptoms continue, please see a doctor immediately."}
+      - {lang: hi, context: "A road-safety message.", text: "सड़क पर एक छोटी-सी लापरवाही किसी की पूरी ज़िंदगी बदल सकती है।"}
+      - {lang: hinglish, context: "Telling your team about a data breach.", text: "ये एक serious security issue है, और हमें इसे आज ही fix करना होगा।"}
+
+  - code: F-CUR
+    title: Curiosity
+    category: emotional
+    defaults: {kind: sentence, emotion: curiosity, style: narration}
+    instruction: Genuinely intrigued, as if you really want to know.
+    exercises:
+      - {lang: en, context: "Opening a mystery video.", text: "Have you ever wondered why this tiny village has no doors on any of its houses?"}
+      - {lang: hi, context: "Asking an old farmer about traditional methods.", text: "दादाजी, बिना किसी मशीन के आप लोग पहले बारिश का अंदाज़ा कैसे लगाते थे?"}
+      - {lang: hinglish, context: "Starting a tech explainer.", text: "क्या आपने कभी सोचा है कि airplane mode on करने से phone में actually क्या होता है?"}
+
+  - code: F-SUR
+    title: Surprise
+    category: emotional
+    defaults: {kind: sentence, emotion: surprise, style: conversational}
+    instruction: "Real astonishment: the words come out before you can think."
+    exercises:
+      - {lang: en, context: "You discover your old classmate is now a famous chef.", text: "Wait, that's you? The same guy who couldn't boil an egg in college?"}
+      - {lang: hi, context: "Your family has thrown you a surprise party.", text: "अरे! ये सब कब प्लान किया तुम लोगों ने? मुझे तो भनक तक नहीं लगी!"}
+      - {lang: hinglish, context: "Opening an unexpectedly huge electricity bill.", text: "What? पाँच हज़ार का bill? इस महीने तो हम घर पर थे भी नहीं!"}
+
+  - code: F-SAD
+    title: Sadness
+    category: emotional
+    defaults: {kind: sentence, emotion: sadness, style: narration}
+    instruction: Quiet and heavy. Let the pauses carry it.
+    exercises:
+      - {lang: en, context: "Remembering a grandparent who has passed away.", text: "She used to wait for me at the gate every evening. The gate is still there."}
+      - {lang: hi, context: "Saying goodbye to a close friend who is moving abroad.", text: "पता है, अब हर शाम की वो चाय तुम्हारे बिना अधूरी लगेगी।"}
+      - {lang: hinglish, context: "A farmer describing a crop destroyed by unseasonal rain.", text: "पूरे साल की मेहनत, सारी planning, एक ही रात की बारिश में ख़त्म हो गई।"}
+
+  - code: F-EMP
+    title: Empathy
+    category: emotional
+    defaults: {kind: sentence, emotion: empathy, style: conversational}
+    instruction: Warm, gentle and close, as if speaking to one person.
+    exercises:
+      - {lang: en, context: "Comforting a friend who has failed an exam.", text: "Hey, one result doesn't define you. Take a breath; we'll figure out the next step together."}
+      - {lang: hi, context: "Talking to someone who has lost a beloved pet.", text: "उसकी कमी हमेशा महसूस होगी, लेकिन उसके साथ बिताए पल भी हमेशा साथ रहेंगे।"}
+      - {lang: hinglish, context: "Supporting a colleague who is overwhelmed.", text: "Take your time यार, अगर कोई help चाहिए तो बस एक बार बोल देना।"}
+
+  - code: F-MOT
+    title: Motivation
+    category: emotional
+    defaults: {kind: sentence, emotion: motivation, style: motivational}
+    instruction: Energising and direct — push the listener to act.
+    exercises:
+      - {lang: en, context: "A morning gym reel.", text: "Nobody is coming to save you. Get up, show up, and do the work."}
+      - {lang: hi, context: "Encouraging students before their exams.", text: "बस कुछ दिन और, पूरी ताक़त लगा दो। मेहनत कभी बेकार नहीं जाती।"}
+      - {lang: hinglish, context: "Talking to new content creators.", text: "Followers आज कम हैं तो क्या? हर बड़ा creator कभी zero से ही शुरू हुआ था।"}
+
+  - code: F-DET
+    title: Determination
+    category: emotional
+    defaults: {kind: sentence, emotion: determination, style: narration}
+    instruction: "Steely resolve: quieter than motivation, harder underneath."
+    exercises:
+      - {lang: en, context: "An athlete speaking after a serious injury.", text: "I've been knocked down before, and I'll get back up again. This isn't the end."}
+      - {lang: hi, context: "A student who refuses to give up on a dream.", text: "चाहे कितनी भी मुश्किलें आएँ, ये सपना पूरा होकर रहेगा।"}
+      - {lang: hinglish, context: "A founder after being rejected by investors.", text: "Fifty investors ने मना किया? ठीक है, इक्यावनवाँ हाँ बोलेगा।"}
+
+  - code: F-SUS
+    title: Suspense
+    category: emotional
+    defaults: {kind: sentence, emotion: suspense, style: suspense}
+    instruction: "Hold the tension: slower, softer, deliberate pauses."
+    exercises:
+      - {lang: en, context: "The opening of a thriller.", text: "The lights went out at exactly midnight. And then, somewhere in the house, a door slowly opened."}
+      - {lang: hi, context: "Telling a ghost story around a campfire.", text: "उस रात हवेली के अंदर से किसी के चलने की आवाज़ आ रही थी, जबकि वहाँ सालों से कोई नहीं रहता था।"}
+      - {lang: hinglish, context: "A true-crime reel.", text: "Police को सब कुछ normal लगा, लेकिन CCTV footage में कुछ ऐसा था, जो किसी ने notice नहीं किया।"}
+
+  - code: F-HUM
+    title: Humour
+    category: emotional
+    defaults: {kind: sentence, emotion: humour, style: conversational}
+    instruction: Deadpan or playful, whatever is natural for you. Timing matters more than volume.
+    exercises:
+      - {lang: en, context: "A relatable reel about Monday mornings.", text: "My alarm and I have an agreement: it rings, and I ignore it. It's a very healthy relationship."}
+      - {lang: hi, context: "Teasing a friend about their cooking.", text: "भाई, तुम्हारी दाल इतनी पतली है कि उसमें तैरना सीखा जा सकता है।"}
+      - {lang: hinglish, context: "A reel about diets that never start.", text: "Diet कल से start {करूँगा|करूँगी}... ये बात मैं पिछले तीन साल से {बोल रहा|बोल रही} हूँ।"}
+
+  - code: F-CLM
+    title: Calmness
+    category: emotional
+    defaults: {kind: sentence, emotion: calmness, style: narration, pace: slow}
+    instruction: Slow, soft and steady, like a guided meditation.
+    exercises:
+      - {lang: en, context: "A guided relaxation.", text: "Close your eyes. Breathe in slowly, and let it go. There is nowhere else you need to be."}
+      - {lang: hi, context: "Reassuring a nervous passenger.", text: "घबराइए मत, सब ठीक है। बस आराम से बैठिए और गहरी साँस लीजिए।"}
+      - {lang: hinglish, context: "The intro of a meditation app.", text: "आज सिर्फ़ दस minutes अपने लिए निकालिए, और बाक़ी सब कुछ थोड़ी देर के लिए भूल जाइए।"}
+
+  - code: F-URG
+    title: Urgency
+    category: emotional
+    defaults: {kind: sentence, emotion: urgency, style: conversational, pace: fast}
+    instruction: Fast and pressing, but every word must be understood. Lean back from the mic if you get loud.
+    exercises:
+      - {lang: en, context: "Warning neighbours about a fire in the building.", text: "Everyone out, now! Leave everything and use the stairs, not the lift!"}
+      - {lang: hi, context: "Your train is about to leave the platform.", text: "जल्दी करो, ट्रेन चलने वाली है! सामान बाद में देखेंगे, पहले चढ़ो!"}
+      - {lang: hinglish, context: "A limited-time offer announcement.", text: "Offer सिर्फ़ आज रात बारह बजे तक है, जल्दी order कर लीजिए!"}
+
+  - code: F-DRA
+    title: Dramatic storytelling
+    category: emotional
+    defaults: {kind: sentence, emotion: dramatic, style: storytelling}
+    instruction: "Big, cinematic storytelling: build it, land it."
+    exercises:
+      - {lang: en, context: "Narrating a historic battle.", text: "The army stood at the river's edge. Behind them, everything they loved. Ahead, an enemy ten times their size."}
+      - {lang: hi, context: "Narrating a turning point in an epic.", text: "और फिर, पूरी सभा के सामने, उसने वो प्रतिज्ञा ली जिसने इतिहास बदल दिया।"}
+      - {lang: hinglish, context: "The dramatic arc of a company's story.", text: "एक छोटे से garage से शुरू हुई ये company, आज पूरी दुनिया में जानी जाती है।"}
+
+  - code: F-INS
+    title: Inspirational narration
+    category: emotional
+    defaults: {kind: sentence, emotion: inspirational, style: narration}
+    instruction: "Uplifting and sincere: warmth more than volume."
+    exercises:
+      - {lang: en, context: "The closing line of a documentary about a village teacher.", text: "She never became famous. But thousands of children learned to dream because of her."}
+      - {lang: hi, context: "A tribute to farmers.", text: "जो हाथ मिट्टी से सोना उगाते हैं, उन्हीं से इस देश की असली पहचान है।"}
+      - {lang: hinglish, context: "The ending of a startup story.", text: "Resources कम थे, लेकिन सपने बड़े थे, और बस यही फ़र्क़ था।"}

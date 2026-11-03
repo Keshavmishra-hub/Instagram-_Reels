@@ -1,5 +1,12 @@
 # ReelForge — research-first Instagram Reel studio
 
+> **New: MY VOICE — Personal AI Voice Studio** (`myvoice/`). A guided browser studio that records your
+> own voice across English, Hindi and Hinglish, every speech sound, 17 emotions and 15 narration genres,
+> checks every take (noise, clipping, Bluetooth audio, echo, truncation, speech-recognition read-check),
+> and builds an approved, documented dataset for cloning your voice as the narrator of future reels.
+> `pip install -r requirements-voice.txt && python -m myvoice serve` → http://127.0.0.1:8100 ·
+> full guide: [docs/MYVOICE.md](docs/MYVOICE.md)
+
 ReelForge turns a topic into a finished, fact-checked Instagram Reel:
 
 ```
@@ -194,8 +201,10 @@ reelforge/            Python package
   server/             FastAPI app + single-page studio (static/)
 renderer/             Remotion compositions (React/TypeScript), fonts, textures, render CLI
 brands/ data/         brand kits, pronunciation lexicon
-.claude/skills/       Claude Code mode
-tests/                pytest suite
+myvoice/              MY VOICE personal voice studio (recorder UI, analysis, curriculum, dataset, exports)
+docs/MYVOICE.md       MY VOICE guide: architecture, checks, curriculum, exports, cloning research
+.claude/skills/       Claude Code mode (incl. /voice-exercises for new voice-training material)
+tests/                pytest suite (+ tests/e2e browser test for MY VOICE)
 ```
 
 ## Licences and third-party terms

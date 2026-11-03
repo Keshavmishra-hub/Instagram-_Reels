@@ -1,0 +1,131 @@
+module: B
+sections:
+  - code: B-HIV
+    title: Hindi vowels
+    core_first: 5
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: स्वाभाविक ढंग से पढ़िए। छोटी और लंबी मात्राओं (इ / ई, उ / ऊ) का फ़र्क़ अपने आप आने दीजिए।
+    exercises:
+      - {text: "अमर आज इमली और ईख लेकर उमा के घर गया।", focus: ["अ आ इ ई उ"]}
+      - {text: "मेरे पैसे और तोहफ़े कौन ले गया?", focus: ["ए ऐ ओ औ"]}
+      - {kind: word_list, text: "दिन, दीन · कम, काम · सुना, सूना · मिल, मील · कुल, कूल · जल, जाल", focus: ["vowel length pairs"], instruction: "हर जोड़ी साफ़ पढ़िए, हर शब्द के बाद हल्का विराम।"}
+      - {kind: word_list, text: "ऋषि, ऋतु, कृपा, गृह, कृषि, मृदु, दृश्य", focus: ["ऋ"]}
+      - {kind: word_list, text: "डॉक्टर, कॉलेज, ऑफ़िस, बॉल, कॉफ़ी, हॉस्पिटल", focus: ["ऑ (English loan vowel)"]}
+      - {text: "ऊपर की मंज़िल पर बूढ़े दादाजी धूप में बैठकर ऊन बुन रहे थे।", focus: ["ऊ"]}
+      - {text: "ईद और दीवाली पर हम सब मिलकर मीठी सेवइयाँ और खीर खाते हैं।", focus: ["ई"]}
+
+  - code: B-HICON
+    title: Velar, palatal and labial consonants
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: स्वाभाविक रूप से पढ़िए, हर व्यंजन पूरा बोलिए।
+    exercises:
+      - {text: "कल खेत में गाय और घोड़ा घास चर रहे थे।", focus: ["क ख ग घ"]}
+      - {text: "चाचा छत पर जाकर झंडा लहरा रहे थे।", focus: ["च छ ज झ"]}
+      - {text: "पापा ने फूलों की बड़ी टोकरी भाई के हाथ में भेजी।", focus: ["प फ ब भ म"]}
+      - {text: "यहाँ रविवार को लोग वन में घूमने और शहर से दूर साँस लेने आते हैं।", focus: ["य र ल व श स ह"]}
+
+  - code: B-HIRET
+    title: Retroflex and dental sounds
+    core_first: 4
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: ट-वर्ग (मूर्धन्य) और त-वर्ग (दंत्य) को स्वाभाविक रूप से पढ़िए।
+    exercises:
+      - {text: "टीना ने ठंडे पानी से डिब्बा धोकर ढक्कन लगाया।", focus: ["ट ठ ड ढ"]}
+      - {text: "तोता थाली में दाना देखकर धीरे से नाचा।", focus: ["त थ द ध न"]}
+      - {kind: word_list, text: "टाल, ताल · डाल, दाल · बाट, बात · पटा, पता · गंडा, गंदा", focus: ["retroflex / dental pairs"], instruction: "हर जोड़ी में फ़र्क़ सुनाई दे, स्वाभाविक ढंग से।"}
+      - {kind: word_list, text: "प्राण, बाण, गुण, कारण, रामायण, पुराण, वीणा", focus: ["ण"]}
+      - {text: "ट्रेन टाइम पर नहीं थी, इसलिए दादाजी दो घंटे स्टेशन पर बैठे रहे।", focus: ["ʈ / t̪ mixed"]}
+
+  - code: B-HIASP
+    title: Aspirated and unaspirated consonants
+    core_first: 6
+    category: hindi_phonetics
+    defaults: {kind: word_list, lang: hi, style: neutral}
+    instruction: हर जोड़ी में अल्पप्राण और महाप्राण का फ़र्क़ अपने आप आने दीजिए। हर शब्द के बाद हल्का विराम।
+    exercises:
+      - {text: "कल, खल · कान, खान · गड़ा, घड़ा · गाना, घाना", focus: ["k/kʰ", "g/gʱ"]}
+      - {text: "चाल, छाल · चोर, छोर · जड़, झड़ · जाल, झाल", focus: ["tʃ/tʃʰ", "dʒ/dʒʱ"]}
+      - {text: "टीका, ठीका · डाल, ढाल · बड़ा, बढ़ा", focus: ["ʈ/ʈʰ", "ɖ/ɖʱ", "ɽ/ɽʱ"]}
+      - {text: "तल, थल · तान, थान · दान, धान · दाम, धाम", focus: ["t̪/t̪ʰ", "d̪/d̪ʱ"]}
+      - {text: "पल, फल · पूल, फूल · बाल, भाल · बार, भार", focus: ["p/pʰ", "b/bʱ"]}
+      - {kind: sentence, text: "भाई ने खेत में घूमकर फूल और फल तोड़े।", focus: ["aspirates in context"], instruction: "स्वाभाविक ढंग से पढ़िए।"}
+      - {kind: sentence, text: "धोबी ने धूप में धोती सुखाई, फिर थककर छाँव में बैठ गया।", focus: ["aspirates in context"], instruction: "स्वाभाविक ढंग से पढ़िए।"}
+      - {kind: sentence, text: "ठंडी हवा में झूला झूलते हुए बच्चे खिलखिला रहे थे।", focus: ["aspirates in context"], instruction: "स्वाभाविक ढंग से पढ़िए।"}
+
+  - code: B-HINAS
+    title: Nasal sounds
+    core_first: 4
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: अनुस्वार (ं) और चंद्रबिंदु (ँ) जैसे आप बोलते हैं, वैसे ही पढ़िए।
+    exercises:
+      - {kind: word_list, text: "गंगा, पंचम, घंटा, संदेश, संबंध, कंबल, ठंडा, अंत", focus: ["anusvara assimilation ŋ ɲ ɳ n m"]}
+      - {kind: word_list, text: "हँसना, आँख, गाँव, चाँद, माँ, पाँच, कहाँ, यहाँ, हूँ", focus: ["chandrabindu"]}
+      - {text: "माँ ने आँगन में बैठकर चाँद की कहानी सुनाई।", focus: ["nasal vowels"]}
+      - {text: "मैं नहीं {जानता|जानती} कि वे कहाँ गए हैं और कब लौटेंगे।", focus: ["nasal vowels"]}
+      - {text: "सुबह-सुबह मंदिर की घंटियाँ और पंछियों की आवाज़ें गूँज रही थीं।", focus: ["nasals mixed"]}
+
+  - code: B-HINUK
+    title: Nukta sounds and flaps
+    core_first: 4
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: क़, ख़, ग़, ज़, फ़ और ड़, ढ़ को वैसे ही बोलिए जैसे आप रोज़ बोलते हैं।
+    exercises:
+      - {text: "ज़रूरी काग़ज़ फ़ाइल में रखे हैं, ख़याल रखना।", focus: ["ज़ ग़ फ़ ख़"]}
+      - {kind: word_list, text: "क़लम, क़िस्मत, क़ानून, ख़बर, ख़ुश, ग़लत, ग़म, ज़िंदगी, फ़ायदा, फ़ैसला", focus: ["q x ɣ z f"]}
+      - {kind: word_list, text: "राज, राज़ · सजा, सज़ा · खाना, ख़ाना · फन, फ़न · कमर, क़मर", focus: ["nukta minimal pairs"], instruction: "हर जोड़ी का फ़र्क़ साफ़ रहे। हर शब्द के बाद हल्का विराम।"}
+      - {text: "लड़का पेड़ पर चढ़कर बड़ी सड़क देख रहा था।", focus: ["ड़ ढ़"]}
+      - {kind: word_list, text: "पढ़ाई, बढ़िया, गढ़, सीढ़ी, कढ़ाई, बूढ़ा, घोड़ा, पहाड़", focus: ["ɽ ɽʱ"]}
+
+  - code: B-HICL
+    title: Consonant clusters (conjuncts)
+    core_first: 3
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: संयुक्ताक्षरों को स्वाभाविक ढंग से पढ़िए, ज़बरदस्ती खींचकर नहीं।
+    exercises:
+      - {kind: word_list, text: "क्षमा, क्षेत्र, त्रिशूल, ज्ञान, श्रम, द्वार, स्वास्थ्य, स्त्री", focus: ["क्ष त्र ज्ञ श्र"]}
+      - {text: "प्रत्येक व्यक्ति को स्वच्छ वातावरण में स्वस्थ रहने का अधिकार है।", focus: ["pr ty vy sv"]}
+      - {text: "राष्ट्रीय स्तर पर उत्कृष्ट प्रदर्शन के लिए छात्रों को पुरस्कृत किया गया।", focus: ["ʃʈr st tkr"]}
+      - {text: "विद्यार्थियों ने स्कूल के प्रांगण में स्वतंत्रता दिवस धूमधाम से मनाया।", focus: ["dy sk pr sv"]}
+      - {text: "उद्योग, अर्थव्यवस्था और विज्ञान के क्षेत्र में भारत तेज़ी से आगे बढ़ रहा है।", focus: ["dy rth vy gy kʃ"]}
+
+  - code: B-HISCH
+    title: Syllable structure and schwa
+    core_first: 3
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: बिल्कुल वैसे बोलिए जैसे बातचीत में बोलते हैं (जैसे "समझना", "सम-झ-ना" नहीं)।
+    exercises:
+      - {kind: word_list, text: "समझदारी, कमज़ोरी, बदलना, पहचानना, धड़कन, सरकारी, नमकीन", focus: ["schwa deletion"]}
+      - {text: "कमला ने अपनी बहन के साथ बाज़ार जाकर नमक और मसाले ख़रीदे।", focus: ["schwa deletion in context"]}
+      - {text: "हमारे शहर में पहली बार इतनी बड़ी प्रदर्शनी लगी है।", focus: ["ɛ next to ह", "clusters"]}
+      - {text: "उसने कहा कि रहने के लिए सबसे अच्छी जगह वही है जहाँ मन लगे।", focus: ["ɛ next to ह"]}
+
+  - code: B-HITW
+    title: Hindi tongue twisters
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral, core: false}
+    instruction: पहले सही, फिर थोड़ा तेज़। मुस्कुराना मना नहीं है।
+    exercises:
+      - "कच्चा पापड़, पक्का पापड़, कच्चा पापड़, पक्का पापड़।"
+      - "चंदू के चाचा ने चंदू की चाची को चाँदनी चौक में चाँदी के चम्मच से चटनी चटाई।"
+      - "खड़क सिंह के खड़कने से खड़कती हैं खिड़कियाँ, खिड़कियों के खड़कने से खड़कता है खड़क सिंह।"
+      - "पीतल के पतीले में पपीता पीला-पीला।"
+      - "समझ समझ के समझ को समझो, समझ समझना भी एक समझ है।"
+
+  - code: B-HIRARE
+    title: Less common Hindi sounds
+    category: hindi_phonetics
+    defaults: {kind: sentence, lang: hi, style: neutral}
+    instruction: इन वाक्यों में कुछ कम आने वाली ध्वनियाँ हैं (ढ, ग़, उँ, इं)। स्वाभाविक ढंग से पढ़िए।
+    exercises:
+      - {text: "ढलती शाम में ढाबे पर ढोलक की आवाज़ दूर तक गूँज रही थी।", focus: ["ढ"]}
+      - {text: "सिंह की दहाड़ सुनकर राजा सिंहासन से उठ खड़े हुए।", focus: ["इं (सिंह)"]}
+      - {text: "ग़रीब किसान ने ग़ुस्से में बताया कि बाग़ के मुर्ग़े फिर से ग़ायब हैं।", focus: ["ग़"]}
+      - {text: "धुँआ इतना था कि मुँह पर कपड़ा बाँधकर ही कुँए तक पहुँच पाए।", focus: ["उँ"]}
+      - {text: "ढूँढते-ढूँढते हम उस पुराने कुँए तक पहुँचे, जहाँ से धुँआ उठ रहा था।", focus: ["ढ", "उँ", "ऊँ"]}

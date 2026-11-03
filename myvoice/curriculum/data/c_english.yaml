@@ -1,0 +1,145 @@
+module: C
+sections:
+  - code: C-BAS
+    title: Basic English
+    core_first: 4
+    category: conversational
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Simple, everyday English. Read it the way you would say it.
+    exercises:
+      - "My name is on the list, so I can go in first."
+      - "The shop opens at nine and closes at eight in the evening."
+      - "Please put the keys on the table near the door."
+      - "We need milk, bread, eggs and a bunch of bananas."
+      - "It was very hot today, so we stayed inside after lunch."
+      - "Can you send me the address when you get a minute?"
+      - "The bus was late again, but the driver was very polite."
+      - "I like to read a few pages before I go to sleep."
+
+  - code: C-FRM
+    title: Formal English
+    core_first: 3
+    category: professional_narration
+    defaults: {kind: sentence, lang: en, style: formal}
+    instruction: Formal and composed, like a speech or an official announcement. Keep your own voice.
+    exercises:
+      - "Ladies and gentlemen, on behalf of the organising committee, I welcome you to this year's annual conference."
+      - "We regret to inform you that the programme has been postponed until further notice."
+      - "It is with great pleasure that I invite our chief guest to deliver the inaugural address."
+      - "Kindly ensure that all documents are submitted before the end of the working day."
+      - "The committee has carefully considered every proposal and will announce its decision shortly."
+
+  - code: C-PRO
+    title: Professional English
+    core_first: 3
+    category: professional_narration
+    defaults: {kind: sentence, lang: en, style: professional}
+    instruction: Clear and confident, the way you would speak in a meeting or on a client call.
+    exercises:
+      - "Thank you for your time today. Let me quickly walk you through the agenda."
+      - "Based on the feedback we received, we have revised the timeline and the budget."
+      - "I'd like to propose a short pilot before we commit to a full rollout."
+      - "Could we align on the next steps and agree on an owner for each task?"
+      - "To summarise, the project is on track, and the main risk is the vendor's delivery date."
+
+  - code: C-BIZ
+    title: Business English
+    core_first: 3
+    category: professional_narration
+    defaults: {kind: sentence, lang: en, style: business}
+    instruction: Business vocabulary, delivered naturally and with authority.
+    exercises:
+      - "Our revenue grew steadily this quarter, driven by strong demand in tier-two cities."
+      - "The company plans to expand its distribution network and reduce logistics costs."
+      - "Customer acquisition is expensive, so retention has to be our first priority."
+      - "We are negotiating a long-term partnership with a leading agricultural cooperative."
+      - "The board approved the merger after a detailed review of the financial statements."
+      - "A strong brand is built on consistency, trust and a product that solves a real problem."
+
+  - code: C-ACD
+    title: Academic English
+    core_first: 2
+    category: professional_narration
+    defaults: {kind: sentence, lang: en, style: academic}
+    instruction: Measured and precise, like presenting research.
+    exercises:
+      - "This study examines the relationship between rainfall variability and crop yields in semi-arid regions."
+      - "The results suggest that access to credit significantly improves the adoption of new technology."
+      - "However, these findings should be interpreted with caution, given the limited sample size."
+      - "Further research is required to establish whether the effect persists over a longer period."
+
+  - code: C-CNV
+    title: Conversational English
+    core_first: 3
+    category: conversational
+    defaults: {kind: sentence, lang: en, style: conversational}
+    instruction: Relaxed and natural, as if chatting with someone you know well.
+    exercises:
+      - "Oh, you won't believe what happened on my way here this morning."
+      - "Honestly, I'm not a big fan of horror films, but this one was pretty good."
+      - "Let's just order something in tonight; I'm too tired to cook."
+      - "Wait, are you telling me you've never tried street food in Lucknow?"
+      - "Yeah, no, that's fine, we can figure it out tomorrow."
+      - "I was going to call you, but then my phone died, so here I am."
+
+  - code: C-STO
+    title: Storytelling
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: paragraph, lang: en, style: storytelling}
+    instruction: "Tell it like a story you love: let the pace and the voice follow the events."
+    exercises:
+      - "The old fisherman had sailed the same waters for forty years. Every morning, before the sun came up, he pushed his little boat into the sea and waited. One day, the nets came back so heavy that he thought he had caught a whale. What he found instead changed his life forever."
+      - "When Meera opened the letter, her hands were shaking. She had applied to the university three times, and three times she had been turned down. She read the first line, then read it again. Then she ran out into the courtyard, laughing and crying at the same time."
+      - "Nobody in the village believed the boy when he said he could fix the broken water pump. He was only twelve. But every evening he sat beside it with a box of borrowed tools, and one morning the whole village woke up to the sound of running water."
+
+  - code: C-TEC
+    title: Technical explanations
+    core_first: 3
+    category: professional_narration
+    defaults: {kind: sentence, lang: en, style: technical}
+    instruction: "Explain it as if to a smart colleague: clear, steady, no rush."
+    exercises:
+      - "A neural network learns by adjusting millions of small weights until its predictions match the examples it is shown."
+      - "Drip irrigation delivers water directly to the roots, which reduces evaporation and saves a large amount of water."
+      - "When you make a payment, the request is encrypted, verified by your bank, and settled in a matter of seconds."
+      - "Solar panels convert sunlight into direct current, and an inverter turns it into the alternating current your home uses."
+      - "Version control lets a team work on the same code at the same time without overwriting each other's changes."
+
+  - code: C-LNG
+    title: Long-form narration
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: paragraph, lang: en, style: narration}
+    instruction: Read the whole passage as continuous narration, like an audiobook or a documentary.
+    exercises:
+      - "For thousands of years, the river has shaped the lives of the people who live along its banks. It brings water for the fields, fish for the markets and silt that keeps the soil rich. But the river is also unpredictable. In some years it barely rises; in others it floods entire towns. Learning to live with that uncertainty is perhaps the oldest skill this region has ever known."
+      - "The spice trade did more than flavour food. It drew sailors across oceans that had never been mapped, built ports that grew into great cities, and connected cultures that had never met. A handful of black pepper could be worth more than its weight in silver, and kingdoms rose and fell on the routes that carried it."
+      - "Every great product begins with a small observation. Someone notices that people are struggling with a simple task, and asks a simple question: what if it were easier? The answer rarely arrives all at once. It comes in rough drafts, failed experiments and long nights, until one version finally works well enough to change the way people live."
+
+  - code: C-CPX
+    title: Complex sentence structures
+    core_first: 3
+    category: professional_narration
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Let the structure guide your phrasing; pause slightly where the meaning shifts.
+    exercises:
+      - "Had the rains arrived a week earlier, the farmers, who had already sown their seeds, would not have lost half of their crop."
+      - "The report, which was published only yesterday, has already been criticised by experts who question its methods."
+      - "Not only did the team finish ahead of schedule, but they also came in well under budget."
+      - "Whether or not the policy succeeds will depend less on its design than on how consistently it is implemented."
+      - "The more you practise speaking in front of a camera, the more natural and confident you will sound."
+
+  - code: C-NUM
+    title: Numbers, dates, currencies and abbreviations in English
+    core_first: 4
+    category: numbers_special
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Read the figures as written underneath, so the transcript matches what you say.
+    exercises:
+      - {text: "The meeting is on 14 March 2027 at 10:30 AM.", spoken: "The meeting is on fourteenth March twenty twenty seven at ten thirty A M."}
+      - {text: "Sales rose by 23% to ₹4.5 crore in FY 2025-26.", spoken: "Sales rose by twenty three percent to four point five crore rupees in F Y twenty five twenty six."}
+      - {text: "The CEO of the NGO met the RBI governor and two IAS officers.", spoken: "The C E O of the N G O met the R B I governor and two I A S officers."}
+      - {text: "India's GDP is expected to cross $5 trillion by 2030.", spoken: "India's G D P is expected to cross five trillion dollars by twenty thirty."}
+      - {text: "The temperature dropped from 38°C to 21°C in just 2 days.", spoken: "The temperature dropped from thirty eight degrees Celsius to twenty one degrees Celsius in just two days."}
+      - {text: "Mr Sharma, Dr Iyer and Prof. Khan joined the call at 3 PM.", spoken: "Mister Sharma, Doctor Iyer and Professor Khan joined the call at three P M."}

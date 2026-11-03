@@ -1,0 +1,124 @@
+module: E
+sections:
+  - code: E-HWE
+    title: Hindi sentences with English words
+    core_first: 5
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: conversational}
+    instruction: Speak it the way you'd naturally mix Hindi and English. English words in your normal Indian pronunciation.
+    exercises:
+      - "आज की meeting में हम next quarter का plan discuss करेंगे।"
+      - "मेरा phone charge नहीं हो रहा, शायद cable ख़राब है।"
+      - "इस weekend पर हम सब मिलकर एक road trip plan कर रहे हैं।"
+      - "Exam का result कल evening तक website पर आ जाएगा।"
+      - "Doctor ने बोला है कि रोज़ थोड़ी walking ज़रूर करो।"
+      - "Traffic इतना ज़्यादा था कि flight लगभग miss हो गई।"
+      - "उसने अपने startup के लिए पहली funding raise कर ली है।"
+      - "Gym join तो कर लिया, पर motivation दो हफ़्ते में ही ख़त्म हो गया।"
+
+  - code: E-EWH
+    title: English sentences with Hindi expressions
+    core_first: 4
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: conversational}
+    instruction: Mostly English with Hindi slipping in, as it does in real conversation.
+    exercises:
+      - "Honestly यार, this is the best chai I've had all week."
+      - "I told him, अरे भाई, relax, everything will be fine."
+      - "The plan is solid, बस the budget needs a little more thought."
+      - "We reached the venue on time, but the event started late, as usual, क्या करें।"
+      - "Okay, अच्छा, let me check and get back to you in ten minutes."
+      - "She cooked राजमा चावल for everyone, and trust me, मज़ा आ गया।"
+
+  - code: E-BIZ
+    title: Business and management Hinglish
+    core_first: 4
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: business}
+    instruction: Like explaining something at work, confident and clear.
+    exercises:
+      - "हमारी company का revenue पिछले साल से twenty percent बढ़ गया है।"
+      - "इस project की deadline बहुत tight है, तो हमें resources सही से allocate करने होंगे।"
+      - "Client को proposal भेजने से पहले एक बार pricing double-check कर लेना।"
+      - "Team की productivity बढ़ाने के लिए हमें clear targets और regular feedback चाहिए।"
+      - "Market research से पता चला कि customers के लिए delivery speed सबसे ज़्यादा matter करती है।"
+      - "हमने cost cutting के लिए कुछ processes automate कर दिए हैं।"
+      - "Startup शुरू करना आसान है, लेकिन cash flow manage करना असली challenge है।"
+      - "Quarterly review में हर department अपनी performance present करेगा।"
+
+  - code: E-MKT
+    title: Marketing Hinglish
+    core_first: 4
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: business}
+    instruction: Like a marketing lead explaining strategy to the team.
+    exercises:
+      - "अगर आपका content relatable नहीं है, तो audience scroll करके आगे निकल जाएगी।"
+      - "पहले तीन seconds में hook strong होना चाहिए, वरना reel की reach गिर जाती है।"
+      - "हमारी target audience tier-two cities के young professionals हैं।"
+      - "Brand awareness बढ़ाने के लिए हम influencers के साथ collaborate करेंगे।"
+      - "Engagement rate अच्छा है, लेकिन conversions अभी भी कम हैं।"
+      - "Festive season में discount offers से sales को अच्छा boost मिलता है।"
+      - "Customer reviews पढ़ो, उन्हीं में तुम्हारी अगली campaign का idea छुपा है।"
+      - "Instagram पर consistency ही सबसे बड़ा algorithm hack है।"
+
+  - code: E-AGR
+    title: Agriculture Hinglish
+    core_first: 4
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: conversational}
+    instruction: Like talking to farmers or explaining a farm practice in a video.
+    exercises:
+      - "इस बार ख़रीफ़ के season में धान की बुवाई थोड़ी late हुई है।"
+      - "Drip irrigation लगाने से पानी की काफ़ी बचत होती है और yield भी बढ़ती है।"
+      - "Soil testing करवाओ, फिर उसी हिसाब से fertilizer डालो।"
+      - "FPO से जुड़ने के बाद किसानों को अपनी फ़सल का बेहतर price मिलने लगा है।"
+      - "Organic farming में शुरुआत में production थोड़ा कम होता है, पर market में demand अच्छी है।"
+      - "मंडी में आज प्याज़ के rates अचानक गिर गए।"
+      - "Cold storage न होने की वजह से बहुत सारी सब्ज़ी ख़राब हो जाती है।"
+      - "Drone से spraying करने पर समय और labour दोनों बचते हैं।"
+
+  - code: E-TEC
+    title: Technology Hinglish
+    core_first: 4
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: technical}
+    instruction: Like explaining tech to a friend.
+    exercises:
+      - "मेरे laptop में RAM कम है, इसलिए software बार-बार hang होता है।"
+      - "Payment UPI से करो, instant हो जाएगा।"
+      - "App का new update install करने के बाद battery जल्दी drain हो रही है।"
+      - "AI tools से अब video editing और script writing बहुत आसान हो गई है।"
+      - "अपना password किसी के साथ share मत करो, और two-factor authentication on रखो।"
+      - "WiFi का signal weak है, router को थोड़ा center में रख दो।"
+      - "Cloud पर backup रखना ज़रूरी है, वरना data loss हो सकता है।"
+      - "Coding सीखनी है तो पहले basics clear करो, फिर छोटे projects बनाओ।"
+
+  - code: E-EVD
+    title: Everyday Indian expressions
+    core_first: 4
+    category: hinglish
+    defaults: {kind: sentence, lang: hinglish, style: conversational}
+    instruction: Casual and natural, the way you text or talk with friends.
+    exercises:
+      - "अरे, chill करो यार, सब sort हो जाएगा।"
+      - "बस, पाँच minute में {पहुँच रहा|पहुँच रही} हूँ।"
+      - "Sorry, traffic में {फँस गया था|फँस गई थी}।"
+      - "Full पैसा वसूल movie थी, ज़रूर देखना।"
+      - "Mood off है आज, बाद में बात करते हैं।"
+      - "थोड़ा adjust कर लो ना, please।"
+      - "Weekend का क्या plan है? कहीं बाहर चलें?"
+      - "Tension मत लो, मैं हूँ ना।"
+
+  - code: E-MON
+    title: Natural code-switching monologues
+    core_first: 3
+    category: hinglish
+    defaults: {kind: paragraph, lang: hinglish, style: storytelling}
+    instruction: Speak it like you're talking to your audience on camera. Let the Hindi and English flow into each other.
+    exercises:
+      - "देखो, मेरा simple सा rule है। हर सुबह उठकर सबसे पहले अपने दिन के तीन important tasks लिख लो। Phone बाद में, tasks पहले। शुरुआत में थोड़ा मुश्किल लगेगा, लेकिन दो हफ़्ते में ये आदत बन जाएगी, और आप ख़ुद notice करोगे कि productivity कितनी बढ़ गई है।"
+      - "जब मैंने अपना पहला Instagram page शुरू किया था, तो मुझे लगा था कि बस अच्छे videos डालो और followers अपने आप आ जाएँगे। Reality बिल्कुल अलग निकली। Consistency, सही timing और audience को समझना, ये तीन चीज़ें सीखने में मुझे पूरा एक साल लग गया।"
+      - "आजकल हर कोई बोलता है कि farming में future नहीं है। लेकिन अगर आप modern techniques use करो, soil health पर ध्यान दो और direct market से connect हो जाओ, तो यही खेती एक profitable business बन सकती है। कई young farmers ये करके दिखा भी रहे हैं।"
+      - "Interview में सबसे बड़ी गलती लोग ये करते हैं कि वो रटे-रटाए answers देते हैं। Interviewer आपकी personality देखना चाहता है। तो honest रहो, examples दो, और अगर किसी सवाल का answer नहीं पता, तो confidently बोलो कि मैं ये सीखना {चाहूँगा|चाहूँगी}।"
+      - "Budget planning बहुत simple है। हर महीने salary आते ही पहले savings अलग करो, फिर बाक़ी पैसों से खर्च चलाओ। ज़्यादातर लोग उल्टा करते हैं: पहले खर्च, फिर जो बचे वो savings। और यहीं से सारी problem शुरू होती है।"

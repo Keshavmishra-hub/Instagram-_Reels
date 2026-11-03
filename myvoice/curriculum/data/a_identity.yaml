@@ -1,0 +1,200 @@
+module: A
+sections:
+  - code: A-NORM
+    title: Normal conversational voice
+    core_first: 4
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational}
+    instruction: Speak in your everyday voice, as if you were talking to a friend across the table. Don't "perform".
+    exercises:
+      - "I usually start my day with a cup of tea and a quick look at the news."
+      - "Honestly, the best part of the weekend is not having to set an alarm."
+      - "We tried the new place near the station, and the food was actually pretty good."
+      - {lang: hi, text: "आज सुबह से बारिश हो रही है, इसलिए मैं घर पर ही काम कर {रहा|रही} हूँ।"}
+      - {lang: hi, text: "कल शाम हम सब दोस्त मिलकर चाय पीने गए थे, बहुत मज़ा आया।"}
+      - {lang: hinglish, text: "आज office में काफ़ी काम था, लेकिन evening तक सब finish हो गया।"}
+      - "If you ask me, a good conversation is worth more than a perfect plan."
+      - {lang: hi, text: "मुझे पुराने गाने सुनना बहुत पसंद है, ख़ासकर रात को सफ़र करते हुए।"}
+
+  - code: A-SLOW
+    title: Slow speaking
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: neutral, pace: slow}
+    instruction: Speak slowly and calmly, giving each word space. Slow, not robotic; keep your natural melody.
+    exercises:
+      - "Take a deep breath, relax your shoulders, and let the day slowly fall away."
+      - "Every great journey begins with a single, patient step in the right direction."
+      - {lang: hi, text: "धीरे-धीरे चलिए, रास्ता लंबा है, लेकिन मंज़िल ज़रूर मिलेगी।"}
+      - {lang: hi, text: "शाम का सूरज खेतों के पीछे धीरे से छिप रहा था।"}
+      - {lang: hinglish, text: "पहले problem को ध्यान से समझिए, फिर solution के बारे में सोचिए।"}
+
+  - code: A-FAST
+    title: Fast speaking
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational, pace: fast}
+    instruction: Speak quickly, like when you're excited or in a hurry, but keep every word clear.
+    exercises:
+      - "Quick, grab your bag, lock the door, and let's go before the traffic gets any worse!"
+      - "I've got three meetings, two deadlines and one very tired brain, so let's keep this short."
+      - {lang: hi, text: "जल्दी करो, ट्रेन छूट जाएगी, टिकट निकालो और प्लेटफ़ॉर्म नंबर पता करो!"}
+      - {lang: hinglish, text: "Fast, fast, fast! Deadline कल सुबह है और presentation अभी तक ready नहीं है।"}
+      - "Here's the deal: you check the numbers, I'll write the summary, and we send it tonight."
+
+  - code: A-SOFT
+    title: Soft speaking
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational, volume: soft}
+    instruction: Speak softly, as if someone is sleeping in the next room. Stay voiced (not a whisper).
+    exercises:
+      - "Shh, the baby has just fallen asleep, so let's talk quietly for a while."
+      - {lang: hi, text: "धीरे बोलो, सब सो रहे हैं, कल सुबह बात करेंगे।"}
+      - "It's late, the house is quiet, and I can hear the rain on the window."
+      - {lang: hinglish, text: "Library में हैं, इसलिए आराम से बात करो, ठीक है?"}
+
+  - code: A-LOUD
+    title: Loud, projected speaking
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational, volume: loud}
+    instruction: Project your voice, as if speaking to someone across a big room. Don't shout. Lean back from the mic a little.
+    exercises:
+      - "Can everyone at the back hear me clearly? Please come a little closer to the stage."
+      - {lang: hi, text: "सब लोग ध्यान दीजिए, कार्यक्रम दस मिनट में शुरू होने वाला है!"}
+      - "Welcome, everybody! Thank you for coming out on such a beautiful evening!"
+      - {lang: hinglish, text: "Team, सब लोग इधर आओ, final briefing अभी शुरू हो रही है!"}
+
+  - code: A-WHSP
+    title: Whisper-like speech
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational, volume: whisper}
+    instruction: Speak in a breathy, whisper-like voice, like telling a secret. Stay close to the mic and don't force it.
+    exercises:
+      - "Can you keep a secret? I've planned a surprise party for her birthday."
+      - {lang: hi, text: "किसी को बताना मत, लेकिन कल हम सब मिलकर उसे सरप्राइज़ देने वाले हैं।"}
+      - "Listen carefully. Do you hear footsteps outside the door?"
+
+  - code: A-CLR
+    title: Clear articulation
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: Speak crisply and precisely, like a presenter, finishing every consonant. Keep your natural accent.
+    exercises:
+      - "Precise pronunciation produces professional presentations."
+      - "Particular details matter: the first, the second, and the twenty-third street."
+      - {lang: hi, text: "स्पष्ट उच्चारण से हर शब्द साफ़ सुनाई देता है, चाहे बात छोटी हो या बड़ी।"}
+      - {lang: hinglish, text: "हर word clearly बोलिए, ताकि listener को एक भी detail miss न हो।"}
+
+  - code: A-BRTH
+    title: Natural breathing
+    core_first: 1
+    category: voice_identity
+    defaults: {kind: paragraph, lang: en, style: narration}
+    instruction: Read the whole passage in one go. Breathe where it feels natural; your breaths are part of your voice.
+    exercises:
+      - "The road climbed slowly through the hills, past tea gardens and sleepy villages. Every few minutes the mist lifted, and for a moment the whole valley appeared below us, green and silver in the morning light. Then the clouds rolled in again, and the world shrank to a few metres of wet road."
+      - {lang: hi, text: "गाँव की पगडंडी नदी के किनारे-किनारे चलती थी। सुबह-सुबह औरतें पानी भरने आतीं, बच्चे पत्थर फेंककर लहरें गिनते, और बूढ़े पीपल के नीचे बैठकर दुनिया भर की बातें करते। वहाँ समय जैसे थोड़ा धीरे चलता था।"}
+      - {lang: hinglish, text: "जब मैंने पहली बार अपना business शुरू किया, तो मेरे पास न कोई plan था, न ज़्यादा पैसे। बस एक idea था और थोड़ी हिम्मत। धीरे-धीरे customers आए, गलतियाँ हुईं, और हर गलती ने कुछ नया सिखाया।"}
+
+  - code: A-SHRT
+    title: Short sentences
+    core_first: 3
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational}
+    instruction: Say each short sentence naturally, the way it would come up in conversation.
+    exercises:
+      - "That makes sense."
+      - "I'll be right back."
+      - "Not today, maybe tomorrow."
+      - {lang: hi, text: "ठीक है, चलते हैं।"}
+      - {lang: hi, text: "मुझे नहीं पता।"}
+      - {lang: hi, text: "बिल्कुल सही कहा।"}
+      - {lang: hinglish, text: "Done, हो गया।"}
+      - {lang: hinglish, text: "Sorry, थोड़ा late हो गया।"}
+
+  - code: A-LONG
+    title: Long sentences
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: narration}
+    instruction: Carry the long sentence in one natural flow. Pause briefly at the commas.
+    exercises:
+      - "When the monsoon finally arrived after weeks of heat, the farmers stood at the edge of their fields, watching the dark clouds roll in, knowing that the next few days would decide the fortunes of the entire year."
+      - "Although the meeting started late and the projector refused to work, the team managed to present their plan so clearly that by the end everyone in the room wanted to be part of it."
+      - {lang: hi, text: "जिस दिन हमने पहली बार अपने गाँव के स्कूल में कंप्यूटर देखा, उस दिन हमें लगा कि दुनिया अचानक बहुत बड़ी हो गई है और हमारे सपनों की कोई सीमा नहीं है।"}
+      - {lang: hinglish, text: "अगर आप सच में अपनी audience को समझना चाहते हैं, तो सिर्फ़ numbers मत देखिए, उनके comments पढ़िए, उनकी problems समझिए, और फिर content बनाइए।"}
+
+  - code: A-QUES
+    title: Questions
+    core_first: 3
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational}
+    instruction: Ask each question as a real question, with your natural rising or falling tune.
+    exercises:
+      - "Are you coming with us tonight?"
+      - "What exactly did they say about the new plan?"
+      - "Why does this always happen on a Monday morning?"
+      - "You've finished the report, haven't you?"
+      - {lang: hi, text: "क्या तुमने खाना खा लिया?"}
+      - {lang: hi, text: "आप कहाँ से आए हैं, और यहाँ कब तक रुकेंगे?"}
+      - {lang: hi, text: "ये सब किसने किया, और क्यों किया?"}
+      - {lang: hinglish, text: "Meeting कितने बजे है, ग्यारह या बारह?"}
+      - {lang: hinglish, text: "तुमने वो new update देखा क्या?"}
+
+  - code: A-STMT
+    title: Statements
+    core_first: 2
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: neutral}
+    instruction: State each fact plainly and confidently, with a natural fall at the end.
+    exercises:
+      - "The train leaves at seven, and the journey takes about four hours."
+      - "Water boils at one hundred degrees Celsius at sea level."
+      - {lang: hi, text: "हिमालय भारत की उत्तरी सीमा पर फैला हुआ है।"}
+      - {lang: hinglish, text: "Results अगले हफ़्ते announce होंगे।"}
+
+  - code: A-EXCL
+    title: Exclamations
+    core_first: 3
+    category: voice_identity
+    defaults: {kind: sentence, lang: en, style: conversational}
+    instruction: Say it with real feeling, the way the words would naturally burst out.
+    exercises:
+      - "Wow, that's absolutely incredible!"
+      - "Oh no, I left my phone in the taxi!"
+      - "Finally, we did it!"
+      - {lang: hi, text: "अरे वाह, क्या बात है!"}
+      - {lang: hi, text: "हे भगवान, ये क्या हो गया!"}
+      - {lang: hinglish, text: "Yes! Finally selection हो गया!"}
+      - {lang: hinglish, text: "अरे यार, फिर से light चली गई!"}
+
+  - code: A-VOWL
+    title: Sustained vowels (voice analysis)
+    category: voice_identity
+    defaults: {kind: sustained, lang: none, style: analysis, train: false, readcheck: false}
+    instruction: Take a breath and hold this vowel steadily for about 4 seconds at a comfortable pitch and volume.
+    exercises:
+      - {text: "aaa  (as in 'father' / आ)"}
+      - {text: "eee  (as in 'see' / ई)"}
+      - {text: "ooo  (as in 'food' / ऊ)"}
+
+  - code: A-GLID
+    title: Pitch glide (voice analysis)
+    category: voice_identity
+    defaults: {kind: glide, lang: none, style: analysis, train: false, readcheck: false}
+    instruction: On "aaa", slide smoothly from your lowest comfortable note up to your highest, then back down. Never strain.
+    exercises:
+      - {text: "aaa ↗ ↘  (low → high → low)"}
+
+  - code: A-CNT
+    title: Counting
+    category: voice_identity
+    defaults: {kind: word_list, style: neutral}
+    instruction: Count at a steady, natural pace.
+    exercises:
+      - {lang: en, text: "One, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty."}
+      - {lang: hi, text: "एक, दो, तीन, चार, पाँच, छह, सात, आठ, नौ, दस, ग्यारह, बारह, तेरह, चौदह, पंद्रह, सोलह, सत्रह, अठारह, उन्नीस, बीस।"}

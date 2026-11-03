@@ -1,0 +1,200 @@
+module: G
+sections:
+  - code: G-INTRO
+    title: Cinematic introductions
+    core_first: 2
+    category: cinematic_narration
+    defaults: {kind: sentence, style: cinematic_intro}
+    instruction: Open a film. Unhurried, rich, with space between the phrases. Keep it your voice, not a "movie trailer" voice.
+    exercises:
+      - {lang: en, context: "The first line of a short film.", text: "In a world where every second counts, one decision can change everything."}
+      - {lang: hi, context: "The opening of a documentary series.", text: "हर कहानी की एक शुरुआत होती है... और ये कहानी शुरू होती है एक छोटे से गाँव से।"}
+      - {lang: hinglish, context: "The opening of a travel vlog film.", text: "ये सिर्फ़ एक journey नहीं, ये एक सपने की कहानी है।"}
+      - {lang: en, context: "A city portrait film.", text: "This is the story of a city that never sleeps, told by the people who keep it awake."}
+
+  - code: G-MOVIE
+    title: Movie-style narration
+    core_first: 2
+    category: cinematic_narration
+    defaults: {kind: sentence, style: movie_narration}
+    instruction: "Like the narrator of a feature film: intimate, deliberate, with weight."
+    exercises:
+      - {lang: en, context: "A thriller narrator.", text: "He had one chance to make it right. One night. One choice. And no way back."}
+      - {lang: hi, context: "A crime drama narrator.", text: "शहर सो रहा था, लेकिन उस रात कोई और भी जाग रहा था।"}
+      - {lang: hinglish, context: "A web-series recap narrator.", text: "सब कुछ perfect चल रहा था... तब तक, जब तक वो phone call नहीं आया।"}
+      - {lang: en, context: "An underdog story.", text: "Some heroes wear capes. Others just refuse to give up."}
+
+  - code: G-DOC
+    title: Documentary voice-overs
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: sentence, style: documentary}
+    instruction: "Documentary voice: calm authority and curiosity, every fact clear."
+    exercises:
+      - {lang: en, context: "A wildlife documentary.", text: "Every winter, millions of birds travel thousands of kilometres to reach these wetlands."}
+      - {lang: hi, context: "A documentary about the Sundarbans.", text: "सुंदरबन के घने जंगलों में इंसान और बाघ सदियों से एक-दूसरे के साथ जीना सीख रहे हैं।"}
+      - {lang: en, context: "An ocean documentary.", text: "Beneath the surface of the ocean lies a world we have only just begun to understand."}
+      - {lang: hinglish, context: "A short documentary about Mumbai's dabbawalas.", text: "Mumbai के dabbawalas हर दिन लाखों टिफ़िन सही जगह पहुँचाते हैं, और ग़लती बहुत ही कम होती है।"}
+
+  - code: G-HOOK
+    title: Instagram Reel hooks
+    core_first: 3
+    category: cinematic_narration
+    defaults: {kind: sentence, style: reel_hook}
+    instruction: The first two seconds of a reel. Grab attention instantly — direct, punchy, natural.
+    exercises:
+      - {lang: en, context: "A productivity reel.", text: "Stop scrolling. This one habit can save you hours every week."}
+      - {lang: en, context: "A career-advice reel.", text: "Nobody tells you this about your first job."}
+      - {lang: hi, context: "A health reel.", text: "ये गलती ज़्यादातर लोग रोज़ करते हैं, और उन्हें पता भी नहीं चलता।"}
+      - {lang: hinglish, context: "A mindset reel.", text: "सिर्फ़ तीस seconds दो, और आपका पूरा mindset बदल जाएगा।"}
+      - {lang: hinglish, context: "A business reel.", text: "अगर आप भी business शुरू करने का सोच रहे हो, तो ये video आपके लिए है।"}
+      - {lang: hi, context: "A food-facts reel.", text: "आपने ये सब्ज़ी हज़ार बार खाई होगी, लेकिन इसका ये सच शायद नहीं जानते होंगे।"}
+
+  - code: G-MOTIV
+    title: Motivational videos
+    core_first: 2
+    category: cinematic_narration
+    defaults: {kind: sentence, style: motivational, emotion: motivation}
+    instruction: "Motivational narration: conviction and drive, building to the last words."
+    exercises:
+      - {lang: en, context: "A discipline reel.", text: "Discipline is choosing what you want most over what you want now."}
+      - {lang: hi, context: "A reel about resilience.", text: "गिरना हार नहीं है, गिरकर रुक जाना हार है।"}
+      - {lang: hinglish, context: "A growth reel.", text: "Comfort zone में रहोगे तो growth कभी नहीं होगी, simple है।"}
+      - {lang: en, context: "A late-night motivation reel.", text: "Your future self is watching you right now. Make them proud."}
+
+  - code: G-HIST
+    title: Historical storytelling
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: sentence, style: historical}
+    instruction: "Bring history to life: vivid, but trustworthy."
+    exercises:
+      - {lang: en, context: "A history reel about Tipu Sultan.", text: "In seventeen ninety-nine, the fall of Seringapatam changed the map of southern India."}
+      - {lang: hi, context: "A reel about the Vijayanagara empire.", text: "सोलहवीं सदी में विजयनगर की राजधानी हम्पी दुनिया के सबसे बड़े और समृद्ध शहरों में गिनी जाती थी।"}
+      - {lang: hinglish, context: "A reel about the Harappan civilisation.", text: "Harappa और Mohenjo-daro जैसे शहरों में drainage system इतना planned था कि आज भी लोग हैरान रह जाते हैं।"}
+      - {lang: en, context: "A reel about communication in Mughal India.", text: "Long before the internet, relays of runners and riders carried messages across the Mughal empire."}
+
+  - code: G-BIZEX
+    title: Business explainers
+    core_first: 2
+    category: professional_narration
+    defaults: {kind: sentence, style: business_explainer}
+    instruction: Explain a business idea clearly and with energy, like a top explainer channel.
+    exercises:
+      - {lang: en, context: "A quick-commerce explainer.", text: "Here's how a ten-minute delivery app actually makes money."}
+      - {lang: hinglish, context: "A food-delivery business explainer.", text: "Food delivery apps ज़्यादातर commission model पर चलते हैं, आइए समझते हैं कैसे।"}
+      - {lang: hi, context: "A small-business finance explainer.", text: "किसी भी व्यवसाय की असली ताक़त उसका नक़द प्रवाह होता है, सिर्फ़ मुनाफ़ा नहीं।"}
+      - {lang: en, context: "A personal-finance explainer.", text: "Think of compound interest as a snowball rolling downhill: small at first, unstoppable later."}
+
+  - code: G-EDU
+    title: Educational content
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: sentence, style: educational}
+    instruction: A friendly, clear teacher. Make it easy to follow.
+    exercises:
+      - {lang: en, context: "A science explainer for students.", text: "Photosynthesis is how plants turn sunlight, water and carbon dioxide into food."}
+      - {lang: hi, context: "A water-conservation lesson.", text: "बारिश का पानी ज़मीन में रिसकर भूजल बनता है, इसलिए वर्षा जल संचयन इतना ज़रूरी है।"}
+      - {lang: hinglish, context: "A basic economics lesson.", text: "Inflation का मतलब है कि समय के साथ आपके पैसों की buying power कम होती जाती है।"}
+      - {lang: en, context: "Starting a tutorial.", text: "Let's break this down into three simple steps, starting with the basics."}
+
+  - code: G-TRAVEL
+    title: Travel videos
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: sentence, style: travel}
+    instruction: "Paint the place for the viewer: relaxed, warm, inviting."
+    exercises:
+      - {lang: en, context: "A Himalayan travel reel.", text: "Wake up to mountains, fall asleep to the sound of the river. Welcome to Spiti."}
+      - {lang: hi, context: "A Rajasthan travel reel.", text: "राजस्थान की सुनहरी रेत पर ढलता सूरज, ये नज़ारा ज़िंदगी में एक बार ज़रूर देखिए।"}
+      - {lang: hinglish, context: "A budget-travel reel.", text: "Budget कम है? कोई बात नहीं, ये रहीं पाँच hidden जगहें जो जेब पर भारी नहीं पड़ेंगी।"}
+      - {lang: en, context: "A café-discovery reel.", text: "Forget the tourist crowds. This tiny café serves my favourite filter coffee in all of Bengaluru."}
+
+  - code: G-AGRI
+    title: Agriculture videos
+    core_first: 2
+    category: documentary_narration
+    defaults: {kind: sentence, style: agriculture}
+    instruction: "Speak to farmers and curious viewers alike: practical, respectful, clear."
+    exercises:
+      - {lang: hi, context: "Introducing a water-saving technique.", text: "आज हम बात करेंगे एक ऐसी तकनीक की, जिससे कम पानी में भी अच्छी पैदावार ली जा सकती है।"}
+      - {lang: hinglish, context: "A small-farm business idea.", text: "Mushroom farming एक छोटे से कमरे से भी शुरू की जा सकती है, और इसकी demand पूरे साल रहती है।"}
+      - {lang: en, context: "A farmer-success story.", text: "Meet the farmer who turned two acres of dry land into a thriving orchard."}
+      - {lang: hi, context: "A soil-health message.", text: "मिट्टी की सेहत सुधरेगी, तभी किसान की सेहत सुधरेगी।"}
+
+  - code: G-BRAND
+    title: Personal branding
+    core_first: 2
+    category: professional_narration
+    defaults: {kind: sentence, style: personal_branding}
+    instruction: "Introduce yourself to your audience: friendly, confident, authentic."
+    exercises:
+      - {lang: en, context: "The intro of your channel trailer.", text: "Hi, I'm {name}, and I help people tell their stories with confidence."}
+      - {lang: hinglish, context: "Your Instagram bio video.", text: "मेरा नाम {name} है, और इस page पर मैं business, farming और life की real stories share {करता|करती} हूँ।"}
+      - {lang: hi, context: "Introducing your learning journey.", text: "मैं कोई विशेषज्ञ नहीं हूँ, बस सीखते-सीखते जो समझ आया, वो आपसे {बाँटता|बाँटती} हूँ।"}
+      - {lang: en, context: "Welcoming new followers.", text: "If you're new here, welcome. Every week I break down one big idea into simple, useful steps."}
+
+  - code: G-PROMO
+    title: Promotional content
+    core_first: 2
+    category: professional_narration
+    defaults: {kind: sentence, style: promotional}
+    instruction: Persuasive and upbeat, without sounding like a shouting advert.
+    exercises:
+      - {lang: en, context: "An ad for a farm-to-home delivery service.", text: "Fresh from the farm to your doorstep, in under twenty-four hours."}
+      - {lang: hinglish, context: "A festive-sale reel.", text: "Festive sale live है! हर order पर flat twenty percent off, सिर्फ़ इस weekend।"}
+      - {lang: hi, context: "A traditional food brand.", text: "शुद्ध, देसी और भरोसेमंद, यही है हमारी पहचान।"}
+      - {lang: en, context: "A product testimonial reel.", text: "Join thousands of happy customers who've already made the switch."}
+
+  - code: G-DRAMA
+    title: Dramatic opening statements
+    core_first: 2
+    category: cinematic_narration
+    defaults: {kind: sentence, style: dramatic_opening}
+    instruction: A bold first line that makes people stop. Let it land, then pause.
+    exercises:
+      - {lang: en, context: "Opening a contrarian business video.", text: "Everything you know about success is wrong."}
+      - {lang: hi, context: "Opening a biography reel.", text: "ये कहानी है उस इंसान की, जिसे दुनिया ने पागल कहा, और फिर उसी दुनिया ने उसे सलाम किया।"}
+      - {lang: hinglish, context: "Opening a finance-history reel.", text: "Two thousand eight. Market crash हुआ, और लाखों लोगों की savings कुछ ही दिनों में डूब गईं।"}
+      - {lang: en, context: "Opening a corporate-scandal story.", text: "One phone call. That's all it took to bring down an empire."}
+
+  - code: G-SUSP
+    title: Suspense-building narration
+    core_first: 2
+    category: cinematic_narration
+    defaults: {kind: sentence, style: suspense, emotion: suspense}
+    instruction: Build tension slowly. Lower, slower, with deliberate pauses.
+    exercises:
+      - {lang: en, context: "A mystery reel.", text: "At first, nobody noticed the numbers changing. By the time they did, it was already too late."}
+      - {lang: hi, context: "A locked-room mystery.", text: "दरवाज़ा अंदर से बंद था, खिड़कियाँ भी बंद थीं, फिर वो आदमी कमरे से ग़ायब कैसे हुआ?"}
+      - {lang: hinglish, context: "A fraud-story reel.", text: "सब कुछ ठीक लग रहा था... लेकिन bank statement में एक entry थी, जो नहीं होनी चाहिए थी।"}
+      - {lang: en, context: "A psychological-thriller teaser.", text: "And then she saw it. Written on the wall, in her own handwriting."}
+
+  - code: G-CONCL
+    title: Powerful concluding statements
+    core_first: 2
+    category: cinematic_narration
+    defaults: {kind: sentence, style: conclusion}
+    instruction: The last line of the video. Warm, decisive, memorable.
+    exercises:
+      - {lang: en, context: "The end of a documentary on innovation.", text: "The future doesn't just happen. It's built, one decision at a time."}
+      - {lang: hi, context: "The end of a social-awareness reel.", text: "याद रखिए, बदलाव की शुरुआत हमेशा एक छोटे से कदम से होती है।"}
+      - {lang: hinglish, context: "The sign-off of a self-improvement reel.", text: "तो अब फ़ैसला आपका है: excuses या results। मिलते हैं अगले video में।"}
+      - {lang: en, context: "A call to share at the end of a helpful reel.", text: "If this helped you, share it with one person who needs to hear it today."}
+
+  - code: G-REEL
+    title: Full reel narration scripts
+    core_first: 6
+    category: cinematic_narration
+    defaults: {kind: paragraph, style: narration}
+    instruction: "Narrate the whole reel in one take, exactly as you would for a real Instagram video: hook, story, ending."
+    exercises:
+      - {lang: en, style: agriculture, context: "A 40-second reel about drip irrigation.", text: "This farmer used half the water and harvested more than ever. How? Drip irrigation. Instead of flooding the whole field, thin pipes deliver water drop by drop, right at the roots. Less water is lost to the sun, fewer weeds grow between the rows, and the plants get exactly what they need. It costs money to set up, but in dry regions it often pays for itself within a few seasons. Water is the new gold, and farmers who save it will win."}
+      - {lang: hi, style: historical, context: "A 40-second history reel about the Indian Constitution.", text: "क्या आप जानते हैं कि हमारा संविधान दुनिया के सबसे लंबे लिखित संविधानों में से एक है? इसे बनाने में लगभग तीन साल लगे। संविधान सभा ने हर अनुच्छेद पर घंटों बहस की, ताकि हर नागरिक को बराबरी, आज़ादी और न्याय का अधिकार मिल सके। छब्बीस जनवरी उन्नीस सौ पचास को यह लागू हुआ, और तभी से हम हर साल गणतंत्र दिवस मनाते हैं। अगली बार जब आप तिरंगा फहराएँ, तो इस मेहनत को ज़रूर याद कीजिए।"}
+      - {lang: hinglish, style: business_explainer, context: "A 45-second business explainer reel.", text: "दस रुपये का एक biscuit packet, और company फिर भी करोड़ों कमाती है। कैसे? Secret है scale। जब आप रोज़ लाखों packets बनाते हो, तो हर packet की cost बहुत कम हो जाती है। ऊपर से distribution network इतना मज़बूत होता है कि product गाँव-गाँव तक पहुँच जाता है। Margin छोटा है, लेकिन volume इतना बड़ा है कि total profit बहुत बड़ा बन जाता है। यही है FMCG का असली game।"}
+      - {lang: en, style: travel, context: "A 35-second travel reel about a hill station.", text: "No traffic. No noise. Just pine trees, cold air and a cup of tea that tastes better than anywhere else. This little hill town doesn't appear on most travel lists, and maybe that's the best thing about it. Walk to the old church at sunrise, eat at the family-run café by the market, and watch the clouds roll through the valley in the evening. Some places you visit. Some places you remember forever."}
+      - {lang: hi, style: motivational, context: "A 35-second motivational reel.", text: "हर सुबह आपके पास दो रास्ते होते हैं। एक, जो आसान है: थोड़ी देर और सो जाना, काम कल पर टाल देना। और दूसरा, जो मुश्किल है: उठना, मेहनत करना, अपने सपने के लिए एक और कदम बढ़ाना। सफल लोग किसी दूसरी मिट्टी के नहीं बने होते। वे बस हर दिन दूसरा रास्ता चुनते हैं। तो आज आप कौन-सा रास्ता चुनेंगे?"}
+      - {lang: hinglish, style: educational, context: "A 40-second tech explainer reel.", text: "आपका phone आपकी हर बात सुनता है? चलिए सच जानते हैं। Phone का microphone wake word के लिए ready रहता है, जैसे Hey Google। लेकिन ज़्यादातर processing phone के अंदर ही होती है। फिर ads इतने accurate कैसे होते हैं? क्योंकि apps आपकी search history, location और आप क्या देखते हो, ये सब track करते हैं। तो settings में जाकर permissions ज़रूर check कीजिए। Privacy आपके हाथ में है।"}
+      - {lang: en, style: documentary, context: "A 40-second documentary reel about mangroves.", text: "At the edge of the sea, a strange forest grows with its roots in salt water. Mangroves protect the coast from storms, filter the water and shelter thousands of species, from tiny crabs to tigers. When a cyclone hits, villages behind healthy mangroves suffer far less damage than those without them. Yet in many places they are being cut down for farms and buildings. Protecting them isn't charity. It's insurance for the people who live along the coast."}
+      - {lang: hi, style: agriculture, context: "A 40-second reel about natural farming.", text: "महाराष्ट्र के एक छोटे से गाँव के किसान ने रासायनिक खाद छोड़ दी। लोग हँसे, बोले फ़सल बर्बाद हो जाएगी। पहले साल पैदावार थोड़ी कम हुई भी। लेकिन धीरे-धीरे मिट्टी में केंचुए लौट आए, पानी कम लगने लगा और लागत आधी हो गई। आज वही किसान अपनी सब्ज़ियाँ सीधे शहर के ग्राहकों को बेचता है, और पूरे गाँव को सिखाता है। बदलाव धीमा था, लेकिन टिकाऊ था।"}
+      - {lang: hinglish, style: personal_branding, context: "A 35-second personal-story reel for your own page.", text: "Two years पहले मेरे पास न camera था, न editing की knowledge। बस एक phone और कुछ कहने की इच्छा। पहले video पर सिर्फ़ बारह views आए थे, और उनमें से चार मेरे ही थे। लेकिन मैंने रुकना नहीं चुना। हर हफ़्ते कुछ नया सीखा, हर गलती से कुछ सुधारा। आज यह community आप सबकी वजह से है। तो अगर आप भी शुरुआत करने से डर रहे हो, तो बस शुरू करो। Perfect बाद में बन जाएगा।"}
