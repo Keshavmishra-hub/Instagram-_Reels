@@ -1,0 +1,15 @@
+# 9:16 Instagram edition (native vertical framing), rendered smaller and upscaled in comp.
+s14_hero 9x16 0.75 14
+s13_title 9x16 0.75 12 750-809
+s13_title 9x16 0.6 12 570-749
+s01_chain 9x16 0.6 12
+s02_reel 9x16 0.6 12
+s03_film 9x16 0.6 12
+s04_projector 9x16 0.6 12
+s05_ticket 9x16 0.6 12
+s06_lens 9x16 0.6 12
+s07_speaker 9x16 0.6 12
+s08_redline 9x16 0.6 12
+s09_sparks 9x16 0.6 12
+s10_spot 9x16 0.6 12
+s11_vortex 9x16 0.5 8

@@ -1,0 +1,5 @@
+# heavy intermediates (re-creatable with the build scripts)
+render/
+build/
+*.blend1
+__pycache__/
