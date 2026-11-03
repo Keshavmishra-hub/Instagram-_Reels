@@ -521,7 +521,8 @@ def main():
     ap.add_argument("--png", default="", help="write PNG stills to this folder instead of a video")
     ap.add_argument("--out", default="")
     ap.add_argument("--workers", type=int, default=3)
-    ap.add_argument("--crf", type=int, default=14)
+    ap.add_argument("--crf", type=int, default=18)
+    ap.add_argument("--resume", action="store_true")
     a = ap.parse_args()
     W, H = SIZES[a.variant]
     if a.frames:
@@ -534,15 +535,21 @@ def main():
                 frames.append(int(part))
     else:
         frames = list(range(TL.N_FRAMES))
-    jobs = [(a.variant, f) for f in frames]
     from multiprocessing import Pool
     if a.png:
         os.makedirs(a.png, exist_ok=True)
+        if a.resume:   # skip frames already written (the sequence survives interruptions)
+            frames = [f for f in frames if not os.path.exists(os.path.join(a.png, f"{f:04d}.png"))]
+    jobs = [(a.variant, f) for f in frames]
+    if a.png:
         with Pool(a.workers) as pool:
             for f, buf in pool.imap(_worker, jobs):
                 img = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
-                cv2.imwrite(os.path.join(a.png, f"{f:04d}.png"), img[..., ::-1])
-                print("png", f, flush=True)
+                tmp = os.path.join(a.png, f".{f:04d}.png")
+                cv2.imwrite(tmp, img[..., ::-1], [cv2.IMWRITE_PNG_COMPRESSION, 1])
+                os.replace(tmp, os.path.join(a.png, f"{f:04d}.png"))   # atomic: no half-written frames
+                if f % 30 == 0:
+                    print("png", f, flush=True)
         return
     out = a.out or os.path.join(ROOT, "build", f"picture_{a.variant}.mp4")
     os.makedirs(os.path.dirname(out), exist_ok=True)

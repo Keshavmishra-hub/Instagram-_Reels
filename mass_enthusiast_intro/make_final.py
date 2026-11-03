@@ -53,19 +53,26 @@ def main():
     ap.add_argument("--variant", default="16x9", choices=list(NAMES))
     ap.add_argument("--skip-comp", action="store_true")
     ap.add_argument("--workers", type=int, default=3)
+    ap.add_argument("--crf", type=int, default=18)
     a = ap.parse_args()
-    picture = os.path.join(ROOT, "build", f"picture_{a.variant}.mp4")
+    frames = os.path.join(ROOT, "build", f"frames_{a.variant}")
     audio = os.path.join(ROOT, "audio", "mass_enthusiast_mix.wav")
     out = os.path.join(ROOT, "exports", NAMES[a.variant])
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    if not a.skip_comp:
+    if not a.skip_comp:   # resumable: frames already in the sequence are kept
         run([PY, os.path.join(ROOT, "comp", "comp.py"), "--variant", a.variant, "--workers", str(a.workers),
-             "--out", picture])
+             "--png", frames, "--resume"])
     if not os.path.exists(audio):
         run([PY, os.path.join(ROOT, "audio", "sound_design.py")])
-    run(["ffmpeg", "-v", "error", "-y", "-i", picture, "-i", audio, "-map", "0:v:0", "-map", "1:a:0",
-         "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2",
-         "-shortest", "-movflags", "+faststart", "-metadata", "title=MASS ENTHUSIAST - Intro", out])
+    W, H = SIZES[a.variant]
+    run(["ffmpeg", "-v", "error", "-y", "-framerate", "30", "-start_number", "0", "-i",
+         os.path.join(frames, "%04d.png"), "-i", audio, "-map", "0:v:0", "-map", "1:a:0",
+         "-vf", "scale=out_color_matrix=bt709:out_range=tv:flags=lanczos+accurate_rnd+full_chroma_int",
+         "-c:v", "libx264", "-preset", "slow", "-crf", str(a.crf), "-tune", "film", "-profile:v", "high",
+         "-pix_fmt", "yuv420p", "-r", "30", "-colorspace", "bt709", "-color_primaries", "bt709",
+         "-color_trc", "bt709", "-color_range", "tv",
+         "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2", "-shortest",
+         "-movflags", "+faststart", "-metadata", "title=MASS ENTHUSIAST - Intro", out])
     ok = verify(out, a.variant)
     print("delivery", "OK" if ok else "has problems", "->", out)
 
