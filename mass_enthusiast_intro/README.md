@@ -5,8 +5,9 @@ A 33-second, fully original title sequence for **MASS ENTHUSIAST**, built from c
 
 | Deliverable | File |
 |---|---|
-| 16:9 master — 1920×1080, 30 fps, H.264 High / yuv420p, AAC 48 kHz 320 kb/s | `exports/MASS_ENTHUSIAST_Intro_16x9_1080p.mp4` |
+| 16:9 master — 1920×1080, 30 fps, H.264 High / yuv420p (BT.709, two-pass 18 Mb/s), AAC 48 kHz 320 kb/s, 33.0 s | `exports/MASS_ENTHUSIAST_Intro_16x9_1080p.mp4` |
 | 9:16 Instagram edition — 1080×1920, same specs, native vertical framing | `exports/MASS_ENTHUSIAST_Intro_9x16_Reels.mp4` |
+| One-click editable scenes (Blender 5.2, cameras bound with timeline markers) | `models/*.blend` |
 | Soundtrack (mastered, −15 LUFS, −1.2 dBTP) and stems | `audio/mass_enthusiast_mix.wav`, `audio/stems/` |
 
 ## The idea
@@ -73,7 +74,7 @@ PY=/path/to/venv/bin/python
 $PY assets/scripts/make_textures.py                 # only if you change photos/ticket text
 grep -v '^#' blender/jobs_16x9.txt | PY=$PY blender/queue.sh   # 3D renders (resumable)
 $PY audio/sound_design.py                           # soundtrack
-$PY make_final.py --variant 16x9                    # composite, mux, verify
+$PY make_final.py --variant 16x9                    # composite (resumable PNG sequence), encode, verify
 grep -v '^#' blender/jobs_9x16.txt | PY=$PY blender/queue.sh
 $PY make_final.py --variant 9x16
 ```
@@ -90,6 +91,14 @@ writes small PNG previews; `$PY comp/comp.py --variant 16x9 --frames 560-640 --p
   and re-run it, then re-render `s03_film` and `s04_projector`.
 * **Look** — `GRADE` table and the recipes in `comp/comp.py`; no 3D re-render needed.
 * **Music / effects** — `audio/sound_design.py` (`build()` places every element on its cue).
+
+### Quality control (`python qc.py exports/<file>.mp4`)
+Checked on the 16:9 master: delivery specs (resolution, 30/1 fps, H.264 High, yuv420p, AAC 48 kHz,
+33.0 s, 990 frames) all pass; the title spells MASS ENTHUSIAST when read back from the geometry that is
+rendered; the only black stretches are the intended ones (0–0.6 s opening, 18.83–19.0 s suck-back);
+every large frame-to-frame luminance change sits on a cut, flash or light burst; audio onsets of the
+clean hits land within a frame of their picture cue (lamp −3 ms, bass −7 ms, first slam −30 ms,
+MASS lock 0 ms, hero impact −10 ms). Contact sheets are written to `build/qc/`.
 
 ### Render settings used
 16 samples + OpenImageDenoise. Montage shots and the title close-ups render at 75 % and are upscaled in

@@ -473,12 +473,9 @@ def render_frame(variant, f):
         r_s12(ctx)
     else:
         data = sh.frame(f)
-        if data is None:
-            rgb = np.zeros((H, W, 3), np.float32)
-            alpha = np.zeros((H, W), np.float32)
-            depth = np.full((H, W), 1e10, np.float32)
-        else:
-            rgb, alpha, depth = data
+        if data is None:          # not rendered yet: skip, so a resumed run fills it in later
+            return None
+        rgb, alpha, depth = data
         ctx.update(rgb=fx.rolloff(rgb), alpha=alpha, depth=depth, cam=sh.camera(f))
         if ctx["cam"] is not None:
             RECIPES[sid](ctx)
@@ -511,7 +508,7 @@ def to_u8(img):
 def _worker(args):
     variant, f = args
     img = render_frame(variant, f)
-    return f, to_u8(img).tobytes()
+    return f, (None if img is None else to_u8(img).tobytes())
 
 
 def main():
@@ -544,6 +541,8 @@ def main():
     if a.png:
         with Pool(a.workers) as pool:
             for f, buf in pool.imap(_worker, jobs):
+                if buf is None:
+                    continue
                 img = np.frombuffer(buf, np.uint8).reshape(H, W, 3)
                 tmp = os.path.join(a.png, f".{f:04d}.png")
                 cv2.imwrite(tmp, img[..., ::-1], [cv2.IMWRITE_PNG_COMPRESSION, 1])
